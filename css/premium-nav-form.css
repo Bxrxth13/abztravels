@@ -969,6 +969,22 @@ body.menu-open {
     width: 100% !important;
 }
 
+/* CRITICAL: Force submenu items visible */
+.premium-mobile-submenu-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.premium-mobile-menu > li,
+.premium-mobile-menu > li > a,
+.premium-mobile-menu-item-has-dropdown,
+.premium-mobile-menu-item-has-dropdown > a {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 .premium-mobile-submenu-item:hover,
 .premium-mobile-submenu-item:focus,
 .premium-mobile-submenu-item:active {
@@ -1163,6 +1179,25 @@ body.menu-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
     }
+    
+    /* Force all navigation items to show */
+    .premium-mobile-menu > li:nth-child(1),
+    .premium-mobile-menu > li:nth-child(2),
+    .premium-mobile-menu > li:nth-child(3),
+    .premium-mobile-menu > li:nth-child(4) {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Show About Us and Contact links */
+    .premium-mobile-panel.active .premium-mobile-menu > li > a,
+    .premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu > li > a {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: var(--premium-text) !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1341,6 +1376,111 @@ body.menu-open {
     header.premium-header#premium-header .premium-navbar-wrapper {
         display: flex !important;
         visibility: visible !important;
+    }
+    
+    /* ULTIMATE FIX: Force all mobile menu items visible */
+    .premium-mobile-menu,
+    .premium-mobile-menu > *,
+    .premium-mobile-menu li,
+    .premium-mobile-menu li > *,
+    .premium-mobile-menu-item,
+    .premium-mobile-menu-item-has-dropdown,
+    .premium-mobile-submenu,
+    .premium-mobile-submenu-item {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .premium-mobile-menu-item,
+    .premium-mobile-menu-item-has-dropdown > a {
+        display: flex !important;
+    }
+    
+    /* Make sure panel overlay works */
+    .premium-mobile-panel {
+        display: block !important;
+    }
+    
+    .premium-mobile-panel[aria-hidden="false"],
+    .premium-mobile-panel.active {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Force menu container to show all items - NO HEIGHT RESTRICTIONS */
+    .premium-mobile-menu {
+        min-height: 100vh !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        padding-top: 70px !important;
+        padding-bottom: 50px !important;
+    }
+    
+    /* CRITICAL: Force each menu item to take space and be visible */
+    .premium-mobile-menu > li:nth-child(1),
+    .premium-mobile-menu > li:nth-child(2),
+    .premium-mobile-menu > li:nth-child(3),
+    .premium-mobile-menu > li:nth-child(4) {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        height: auto !important;
+        min-height: 48px !important;
+        max-height: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Ensure links within list items are visible */
+    .premium-mobile-menu > li:nth-child(1) > a,
+    .premium-mobile-menu > li:nth-child(2) > a,
+    .premium-mobile-menu > li:nth-child(3) > a,
+    .premium-mobile-menu > li:nth-child(4) > a {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        min-height: 48px !important;
+    }
+}
+
+/* EMERGENCY OVERRIDE - Apply to all screen sizes below 992px */
+@media (max-width: 991px) {
+    #premium-mobile-panel.active .premium-mobile-menu,
+    #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+        height: 100vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    #premium-mobile-panel.active .premium-mobile-menu > li,
+    #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu > li {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+    
+    #premium-mobile-panel.active .premium-mobile-menu-item,
+    #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu-item {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        min-height: 48px !important;
+        color: var(--premium-text) !important;
     }
 }
 

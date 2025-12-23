@@ -24,7 +24,7 @@
     <link href="css/modern-styles.css" rel="stylesheet" type="text/css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+
     <!-- Modern UI Enhancements -->
     <style>
         /* Modern UI Upgrades */
@@ -45,23 +45,26 @@
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border: 2px solid rgba(255, 255, 255, 0.3) !important;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-                        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                        0 0 40px rgba(102, 126, 234, 0.3) !important;
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 0 40px rgba(102, 126, 234, 0.3) !important;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             animation: formGlow 3s ease-in-out infinite;
         }
-        
+
         @keyframes formGlow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-                            0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                            0 0 40px rgba(102, 126, 234, 0.3);
+                    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                    0 0 40px rgba(102, 126, 234, 0.3);
             }
+
             50% {
                 box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5),
-                            0 0 0 1px rgba(255, 255, 255, 0.2) inset,
-                            0 0 60px rgba(102, 126, 234, 0.5);
+                    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                    0 0 60px rgba(102, 126, 234, 0.5);
             }
         }
 
@@ -72,23 +75,25 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, 
-                rgba(102, 126, 234, 0.5),
-                rgba(118, 75, 162, 0.5),
-                rgba(102, 126, 234, 0.5));
+            background: linear-gradient(45deg,
+                    rgba(102, 126, 234, 0.5),
+                    rgba(118, 75, 162, 0.5),
+                    rgba(102, 126, 234, 0.5));
             border-radius: inherit;
             z-index: -1;
             opacity: 0.6;
             animation: borderRotate 4s linear infinite;
         }
-        
+
         @keyframes borderRotate {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -97,8 +102,8 @@
         .glass-effect:hover {
             transform: translateY(-5px) scale(1.01);
             box-shadow: 0 15px 45px rgba(31, 38, 135, 0.5),
-                        0 0 0 1px rgba(255, 255, 255, 0.2) inset,
-                        0 0 80px rgba(102, 126, 234, 0.6) !important;
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 0 80px rgba(102, 126, 234, 0.6) !important;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 100%) !important;
             border-color: rgba(255, 255, 255, 0.4) !important;
         }
@@ -114,21 +119,24 @@
             font-size: 16px !important;
             padding: 16px 40px !important;
             box-shadow: 0 6px 20px rgba(203, 21, 21, 0.4),
-                        0 0 0 0 rgba(203, 21, 21, 0.3);
+                0 0 0 0 rgba(203, 21, 21, 0.3);
             background: #cb1515 !important;
             border: none !important;
             text-transform: uppercase !important;
             animation: buttonShine 3s ease-in-out infinite;
         }
-        
+
         @keyframes buttonShine {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 6px 20px rgba(203, 21, 21, 0.4),
-                            0 0 0 0 rgba(203, 21, 21, 0.3);
+                    0 0 0 0 rgba(203, 21, 21, 0.3);
             }
+
             50% {
                 box-shadow: 0 8px 30px rgba(203, 21, 21, 0.6),
-                            0 0 0 4px rgba(203, 21, 21, 0.2);
+                    0 0 0 4px rgba(203, 21, 21, 0.2);
             }
         }
 
@@ -150,19 +158,21 @@
         .btn-main:hover {
             transform: translateY(-4px) scale(1.05);
             box-shadow: 0 12px 40px rgba(203, 21, 21, 0.7),
-                        0 0 0 6px rgba(203, 21, 21, 0.2) !important;
+                0 0 0 6px rgba(203, 21, 21, 0.2) !important;
             background: linear-gradient(135deg, #cb1515 0%, #e63946 50%, #ff4757 100%) !important;
             background-size: 200% 200% !important;
             animation: gradientShift 2s ease infinite;
         }
-        
+
         @keyframes gradientShift {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -171,44 +181,47 @@
         .btn-main:active {
             transform: translateY(-2px) scale(1.02);
         }
-        
+
         /* CALL US Button - White with Red Hover */
         .btn-call-us,
         #section-call-to-action .btn-main {
             background: #ffffff !important;
             color: #cb1515 !important;
             box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3),
-                        0 0 0 0 rgba(255, 255, 255, 0.2) !important;
+                0 0 0 0 rgba(255, 255, 255, 0.2) !important;
         }
-        
+
         .btn-call-us::before,
         #section-call-to-action .btn-main::before {
             background: linear-gradient(90deg, transparent, rgba(203, 21, 21, 0.2), transparent);
         }
-        
+
         @keyframes buttonShineWhite {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3),
-                            0 0 0 0 rgba(255, 255, 255, 0.2);
+                    0 0 0 0 rgba(255, 255, 255, 0.2);
             }
+
             50% {
                 box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5),
-                            0 0 0 4px rgba(255, 255, 255, 0.15);
+                    0 0 0 4px rgba(255, 255, 255, 0.15);
             }
         }
-        
+
         .btn-call-us,
         #section-call-to-action .btn-main {
             animation: buttonShineWhite 3s ease-in-out infinite;
         }
-        
+
         .btn-call-us:hover,
         #section-call-to-action .btn-main:hover {
             background: linear-gradient(135deg, #cb1515 0%, #e63946 50%, #ff4757 100%) !important;
             background-size: 200% 200% !important;
             color: #ffffff !important;
             box-shadow: 0 12px 40px rgba(203, 21, 21, 0.7),
-                        0 0 0 6px rgba(203, 21, 21, 0.2) !important;
+                0 0 0 6px rgba(203, 21, 21, 0.2) !important;
             animation: gradientShift 2s ease infinite, buttonShine 3s ease-in-out infinite;
         }
 
@@ -233,11 +246,11 @@
             border-color: rgba(102, 126, 234, 0.8) !important;
             background: rgba(255, 255, 255, 0.25) !important;
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2),
-                        0 8px 25px rgba(102, 126, 234, 0.3) !important;
+                0 8px 25px rgba(102, 126, 234, 0.3) !important;
             outline: none;
             transform: translateY(-3px) scale(1.02);
         }
-        
+
         .form-control:hover {
             border-color: rgba(255, 255, 255, 0.4) !important;
             background: rgba(255, 255, 255, 0.2) !important;
@@ -245,27 +258,30 @@
         }
 
         /* Enhanced Radio Button Selection */
-        .radio-img input[type="radio"]:checked + label {
+        .radio-img input[type="radio"]:checked+label {
             transform: scale(1.1);
             filter: brightness(1.3);
             box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6),
-                        0 0 0 3px rgba(102, 126, 234, 0.3),
-                        inset 0 0 20px rgba(102, 126, 234, 0.2);
+                0 0 0 3px rgba(102, 126, 234, 0.3),
+                inset 0 0 20px rgba(102, 126, 234, 0.2);
             background: rgba(102, 126, 234, 0.2) !important;
             border: 2px solid rgba(102, 126, 234, 0.6) !important;
             animation: radioPulse 2s ease-in-out infinite;
         }
-        
+
         @keyframes radioPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6),
-                            0 0 0 3px rgba(102, 126, 234, 0.3),
-                            inset 0 0 20px rgba(102, 126, 234, 0.2);
+                    0 0 0 3px rgba(102, 126, 234, 0.3),
+                    inset 0 0 20px rgba(102, 126, 234, 0.2);
             }
+
             50% {
                 box-shadow: 0 12px 30px rgba(102, 126, 234, 0.8),
-                            0 0 0 4px rgba(102, 126, 234, 0.5),
-                            inset 0 0 25px rgba(102, 126, 234, 0.3);
+                    0 0 0 4px rgba(102, 126, 234, 0.5),
+                    inset 0 0 25px rgba(102, 126, 234, 0.3);
             }
         }
 
@@ -281,7 +297,7 @@
         .radio-img label:hover {
             transform: translateY(-8px) scale(1.05);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
-                        0 0 0 2px rgba(255, 255, 255, 0.3);
+                0 0 0 2px rgba(255, 255, 255, 0.3);
             background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.4);
         }
@@ -303,7 +319,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         select.form-select:hover,
         select.form-control:hover,
         select:hover {
@@ -311,18 +327,18 @@
             background-color: rgba(255, 255, 255, 0.2) !important;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
         }
-        
+
         select.form-select:focus,
         select.form-control:focus,
         select:focus {
             border-color: rgba(102, 126, 234, 0.8) !important;
             background-color: rgba(255, 255, 255, 0.25) !important;
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2),
-                        0 8px 25px rgba(102, 126, 234, 0.3) !important;
+                0 8px 25px rgba(102, 126, 234, 0.3) !important;
             outline: none;
             transform: translateY(-3px) scale(1.02);
         }
-        
+
         /* Date Picker Styling */
         #date-picker,
         #date-picker-2,
@@ -334,13 +350,13 @@
             font-weight: 500 !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
         }
-        
+
         .date-time-field {
             display: flex;
             gap: 10px;
             align-items: center;
         }
-        
+
         .date-time-field input,
         .date-time-field select {
             flex: 1;
@@ -354,11 +370,11 @@
             align-items: center;
             padding: 4rem 0;
         }
-        
+
         #section-hero.hero-white-bg .overlay-bg {
             background: transparent !important;
         }
-        
+
         #section-hero.hero-white-bg h1 {
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 800;
@@ -367,11 +383,11 @@
             text-shadow: none;
             animation: fadeInUp 1s ease-out;
         }
-        
+
         #section-hero.hero-white-bg .text-light {
             color: #333333 !important;
         }
-        
+
         #section-hero.hero-white-bg .id-color {
             color: #cb1515 !important;
             background: none !important;
@@ -379,88 +395,88 @@
             background-clip: unset !important;
             -webkit-text-fill-color: #cb1515 !important;
         }
-        
+
         #section-hero.hero-white-bg .glass-effect {
             background: rgba(255, 255, 255, 0.95) !important;
             border: 1px solid #e0e0e0 !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
         }
-        
+
         #section-hero.hero-white-bg h5 {
             color: #333333 !important;
         }
-        
+
         #section-hero.hero-white-bg .form-control,
         #section-hero.hero-white-bg .modern-input {
             background: #ffffff !important;
             border: 2px solid #e0e0e0 !important;
             color: #333333 !important;
         }
-        
+
         #section-hero.hero-white-bg .form-control::placeholder,
         #section-hero.hero-white-bg .modern-input::placeholder {
             color: #999999 !important;
         }
-        
+
         #section-hero.hero-white-bg .form-control:focus,
         #section-hero.hero-white-bg .modern-input:focus {
             border-color: #cb1515 !important;
             box-shadow: 0 0 0 4px rgba(203, 21, 21, 0.1) !important;
         }
-        
+
         #section-hero.hero-white-bg select {
             background-color: #ffffff !important;
             color: #333333 !important;
         }
-        
+
         #section-hero.hero-white-bg .trip-toggle {
             background: #f5f5f5;
         }
-        
+
         #section-hero.hero-white-bg .trip-toggle button {
             color: #333333;
         }
-        
+
         #section-hero.hero-white-bg .trip-toggle button.active {
             background: #cb1515;
             color: #ffffff;
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card {
             background: #ffffff;
             border: 2px solid #e0e0e0;
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card label {
             color: #333333;
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card.selected {
             background: #cb1515;
             border-color: #cb1515;
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card.selected label {
             color: #ffffff;
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card img {
             filter: brightness(0) invert(0.2);
         }
-        
+
         #section-hero.hero-white-bg .vehicle-card.selected img {
             filter: brightness(0) invert(1);
         }
-        
+
         #section-hero.hero-white-bg .country-flag-display {
             background: #f5f5f5;
             border-color: #e0e0e0;
         }
-        
+
         #section-hero.hero-white-bg .swap-locations {
             background: #cb1515;
         }
-        
+
         #section-hero.hero-white-bg .error-message {
             color: #dc3545;
         }
@@ -470,6 +486,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -585,23 +602,23 @@
             -webkit-backdrop-filter: blur(20px);
             transition: all 0.3s ease;
         }
-        
+
         header.smaller {
             background: #ffffff !important;
         }
-        
+
         /* Menu items color for white background */
         header #mainmenu a,
-        header #mainmenu li > a {
+        header #mainmenu li>a {
             color: #222222 !important;
         }
-        
-        header #mainmenu > li.has-child:after {
+
+        header #mainmenu>li.has-child:after {
             color: #222222 !important;
         }
-        
+
         header.smaller #mainmenu a,
-        header.smaller #mainmenu li > a {
+        header.smaller #mainmenu li>a {
             color: #222222 !important;
         }
 
@@ -609,7 +626,7 @@
             background: rgba(0, 0, 0, 0.3) !important;
             backdrop-filter: blur(10px);
         }
-        
+
         /* Topbar Widget Text - Bold and Visible */
         .topbar-widget a,
         .topbar-widget {
@@ -619,12 +636,12 @@
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
             opacity: 1 !important;
         }
-        
+
         .topbar-widget a:hover {
             color: #ffffff !important;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
         }
-        
+
         .topbar-widget i {
             font-weight: 700 !important;
             margin-right: 8px !important;
@@ -697,9 +714,12 @@
 
         /* Loading Animation */
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.5;
             }
@@ -714,6 +734,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -760,7 +781,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         /* Form Heading Styling */
         #contact_form h5 {
             color: #ffffff !important;
@@ -770,17 +791,18 @@
             font-size: 18px !important;
             letter-spacing: 0.5px !important;
         }
-        
+
         /* Form Container Animation */
         #contact_form {
             animation: formFadeIn 1s ease-out;
         }
-        
+
         @keyframes formFadeIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -851,7 +873,7 @@
             right: 0;
             bottom: 0;
             background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -979,12 +1001,207 @@
 
         /* Fix: Ensure premium header is visible on mobile */
         @media (max-width: 992px) {
+
             .premium-header,
             header.premium-header,
             #premium-header {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
+            }
+        }
+
+        /* CRITICAL FIX: Force hamburger menu items to show on mobile */
+        @media (max-width: 768px) {
+            /* Menu container must allow all items - NO HEIGHT LIMITS */
+            #premium-mobile-panel .premium-mobile-menu,
+            .premium-mobile-panel .premium-mobile-menu {
+                height: auto !important;
+                min-height: 100vh !important;
+                max-height: none !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                display: block !important;
+                -webkit-overflow-scrolling: touch !important;
+            }
+            
+            /* Force ALL list items to show - Use nth-child for specificity */
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(1),
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2),
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(3),
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(4) {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: auto !important;
+                min-height: 48px !important;
+                max-height: none !important;
+                position: relative !important;
+                transform: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* Force ALL menu item links to show */
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(1) > a,
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2) > a,
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(3) > a,
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(4) > a,
+            #premium-mobile-panel .premium-mobile-menu-item {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                width: 100% !important;
+                height: auto !important;
+                min-height: 48px !important;
+                align-items: center !important;
+            }
+            
+            /* Force dropdown container to show */
+            #premium-mobile-panel .premium-mobile-menu-item-has-dropdown,
+            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2) {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+            }
+            
+            /* When panel is active, ensure menu slides in */
+            #premium-mobile-panel.active .premium-mobile-menu,
+            #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu {
+                transform: translateX(0) !important;
+                display: block !important;
+            }
+            
+            /* EMERGENCY: Show all children */
+            #premium-mobile-panel.active .premium-mobile-menu > *,
+            #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu > * {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            #premium-mobile-panel.active .premium-mobile-menu-item,
+            #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu-item {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            /* CRITICAL: Force safety quote to show - BOTH LINES */
+            #new-booking-section .hero-safety-quote,
+            .hero-booking-section .hero-safety-quote,
+            .hero-booking-layout .hero-safety-quote {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                width: 100% !important;
+                justify-content: center !important;
+                align-items: flex-start !important;
+                margin: 6rem auto 0rem auto !important;
+                padding: 1rem 1rem 0.5rem 1rem !important;
+                min-height: 90px !important;
+                max-height: none !important;
+                order: -1 !important;
+                overflow: visible !important;
+                position: relative !important;
+                z-index: 10 !important;
+            }
+            
+            #new-booking-section .premium-safety-promise,
+            .hero-booking-section .premium-safety-promise,
+            .hero-booking-layout .premium-safety-promise {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                font-size: 1.4rem !important;
+                text-align: center !important;
+                line-height: 1.5 !important;
+                color: inherit !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow: visible !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            #new-booking-section .premium-safety-promise > div,
+            .hero-booking-section .premium-safety-promise > div,
+            .hero-booking-layout .premium-safety-promise > div {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                margin: 0.4rem 0 !important;
+                padding: 0 !important;
+                white-space: normal !important;
+                overflow: visible !important;
+                position: relative !important;
+            }
+            
+            /* Force individual spans to show */
+            .premium-safety-promise span {
+                display: inline !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            /* Ensure booking layout stacks properly */
+            .hero-booking-layout {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                grid-auto-flow: row !important;
+                gap: 1rem !important;
+            }
+            
+            .hero-form-section {
+                order: 1 !important;
+            }
+        }
+        
+        /* Extra specificity for very small screens */
+        @media (max-width: 576px) {
+            #new-booking-section .premium-safety-promise,
+            .hero-booking-section .premium-safety-promise {
+                font-size: 1.2rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            #new-booking-section .premium-safety-promise > div,
+            .hero-booking-section .premium-safety-promise > div {
+                margin: 0.3rem 0 !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            #new-booking-section .hero-safety-quote,
+            .hero-booking-section .hero-safety-quote {
+                min-height: 85px !important;
+                margin: 5.5rem auto 0rem auto !important;
+                padding: 0.75rem 0.75rem 0.5rem 0.75rem !important;
+            }
+        }
+        
+        /* ABSOLUTE OVERRIDE for iPhone sizes */
+        @media (max-width: 430px) {
+            #new-booking-section .hero-safety-quote,
+            .hero-booking-layout .hero-safety-quote {
+                display: flex !important;
+                visibility: visible !important;
+                min-height: 90px !important;
+                margin: 5rem auto 0rem auto !important;
+                padding: 1rem 0.5rem 0.5rem 0.5rem !important;
+            }
+            
+            #new-booking-section .premium-safety-promise {
+                font-size: 1.1rem !important;
+            }
+            
+            #new-booking-section .premium-safety-promise > div {
+                margin: 0.35rem 0 !important;
             }
         }
     </style>
@@ -1013,29 +1230,40 @@
                         <ul id="premium-main-menu" class="premium-navbar-menu" role="menubar">
                             <li role="none"><a href="#top" class="premium-menu-item" role="menuitem">Home</a></li>
                             <li role="none" class="premium-menu-item-has-dropdown">
-                                <a href="#section-cars" class="premium-menu-item" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                <a href="#section-cars" class="premium-menu-item" role="menuitem" aria-haspopup="true"
+                                    aria-expanded="false">
                                     Vehicle <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="premium-submenu" role="menu" aria-label="Vehicle categories">
-                                    <li role="none"><a href="#section-cars" class="premium-submenu-item" role="menuitem">All Vehicles</a></li>
-                                    <li role="none"><a href="#section-cars" class="premium-submenu-item" role="menuitem">Cars</a></li>
-                                    <li role="none"><a href="#section-cars" class="premium-submenu-item" role="menuitem">Traveller</a></li>
-                                    <li role="none"><a href="#section-cars" class="premium-submenu-item" role="menuitem">Bus</a></li>
-                                    <li role="none"><a href="#section-cars" class="premium-submenu-item" role="menuitem">Coaches</a></li>
+                                    <li role="none"><a href="#section-cars" class="premium-submenu-item"
+                                            role="menuitem">All Vehicles</a></li>
+                                    <li role="none"><a href="#section-cars" class="premium-submenu-item"
+                                            role="menuitem">Cars</a></li>
+                                    <li role="none"><a href="#section-cars" class="premium-submenu-item"
+                                            role="menuitem">Traveller</a></li>
+                                    <li role="none"><a href="#section-cars" class="premium-submenu-item"
+                                            role="menuitem">Bus</a></li>
+                                    <li role="none"><a href="#section-cars" class="premium-submenu-item"
+                                            role="menuitem">Coaches</a></li>
                                 </ul>
                             </li>
-                            <li role="none"><a href="#section-about" class="premium-menu-item" role="menuitem">About Us</a></li>
-                            <li role="none"><a href="#section-call-to-action" class="premium-menu-item" role="menuitem">Contact</a></li>
+                            <li role="none"><a href="#section-about" class="premium-menu-item" role="menuitem">About
+                                    Us</a></li>
+                            <li role="none"><a href="#section-call-to-action" class="premium-menu-item"
+                                    role="menuitem">Contact</a></li>
                         </ul>
 
                         <!-- Phone Call CTA -->
-                        <a href="tel:8122666644" class="premium-btn-book-now" id="premium-book-now-btn" aria-label="Call 81 22 66 66 44">
+                        <a href="tel:8122666644" class="premium-btn-book-now" id="premium-book-now-btn"
+                            aria-label="Call 81 22 66 66 44">
                             <span class="btn-text">81 22 66 66 44</span>
                             <span class="btn-icon" aria-hidden="true"><i class="fa fa-phone"></i></span>
                         </a>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="premium-mobile-toggle" id="premium-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="premium-mobile-panel">
+                        <button class="premium-mobile-toggle" id="premium-mobile-toggle"
+                            aria-label="Toggle navigation menu" aria-expanded="false"
+                            aria-controls="premium-mobile-panel">
                             <span class="hamburger-line"></span>
                             <span class="hamburger-line"></span>
                             <span class="hamburger-line"></span>
@@ -1043,1430 +1271,1520 @@
                     </div>
                 </div>
             </nav>
-            
+
             <!-- Mobile Menu Panel -->
-            <div class="premium-mobile-panel" id="premium-mobile-panel" aria-hidden="true">
+            <div class="premium-mobile-panel" id="premium-mobile-panel" aria-hidden="true" style="display: none;">
                 <ul class="premium-mobile-menu" role="menu">
-                    <li role="none"><a href="#top" class="premium-mobile-menu-item" role="menuitem">Home</a></li>
-                    <li role="none" class="premium-mobile-menu-item-has-dropdown">
-                        <a href="#section-cars" class="premium-mobile-menu-item" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#top" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Home</a>
+                    </li>
+                    <li role="none" class="premium-mobile-menu-item-has-dropdown" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#section-cars" class="premium-mobile-menu-item" role="menuitem" aria-haspopup="true"
+                            aria-expanded="false" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
                             Vehicle <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </a>
                         <ul class="premium-mobile-submenu" role="menu" aria-label="Vehicle categories">
-                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item" role="menuitem">All Vehicles</a></li>
-                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item" role="menuitem">Cars</a></li>
-                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item" role="menuitem">Traveller</a></li>
-                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item" role="menuitem">Bus</a></li>
-                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item" role="menuitem">Coaches</a></li>
+                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item"
+                                    role="menuitem">All Vehicles</a></li>
+                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item"
+                                    role="menuitem">Cars</a></li>
+                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item"
+                                    role="menuitem">Traveller</a></li>
+                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item"
+                                    role="menuitem">Bus</a></li>
+                            <li role="none"><a href="#section-cars" class="premium-mobile-submenu-item"
+                                    role="menuitem">Coaches</a></li>
                         </ul>
                     </li>
-                    <li role="none"><a href="#section-about" class="premium-mobile-menu-item" role="menuitem">About Us</a></li>
-                    <li role="none"><a href="#section-call-to-action" class="premium-mobile-menu-item" role="menuitem">Contact</a></li>
+                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#section-about" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">About Us</a>
+                    </li>
+                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#section-call-to-action" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Contact</a>
+                    </li>
                 </ul>
             </div>
-    </header>
-    <!-- header close -->
-    <!-- content begin -->
-    <div class="no-bottom no-top" id="content">
-        <div id="top"></div>
-        <!-- Premium Booking Form Modal (Mobile) -->
-        <div id="premium-booking-modal" class="premium-booking-modal" role="dialog" aria-modal="true" aria-labelledby="premium-form-title" aria-hidden="true">
-            <div class="premium-modal-backdrop" aria-label="Close booking form"></div>
-            <div class="premium-modal-container">
-                <div class="premium-modal-header">
-                    <h2 id="premium-form-title" class="premium-modal-title">Book Your Vehicle</h2>
-                    <button class="premium-modal-close" aria-label="Close booking form">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                        </div>
-                <div class="premium-modal-body">
-                    <!-- Form content will be inserted here on mobile -->
-                                                </div>
-            </div>
-                                                </div>
-
-        <!-- START: New Booking Form -->
-        <section id="new-booking-section" class="new-booking-section hero-booking-section" aria-label="Booking form">
-          <!-- Vehicle Background Image -->
-          <div class="hero-vehicle-background">
-            <img src="images/traveller14.jpg" alt="Premium Vehicle" class="hero-vehicle-bg-img">
-          </div>
-          
-          <div class="container">
-            <div class="hero-booking-layout">
-              <!-- Safety Promise Quote - Left Side -->
-              <div class="hero-safety-quote">
-                <div class="premium-safety-promise">
-                  <span class="safety-text-red">Your</span> <span class="safety-text-black">Safety</span>, <span class="safety-text-red">Our</span> <span class="safety-text-black">Promise</span>
-                </div>
-              </div>
-              
-              <!-- Form Section - 2 parts (66.67%) -->
-              <div class="hero-form-section">
-                <div class="new-booking-card">
-              <!-- Header -->
-              <div class="new-booking-header">
-                <div>
-                  <h2 class="new-booking-title">Book Now!</h2>
-                  <p class="new-booking-subtitle">Select vehicle → Fill details → Book now</p>
-                </div>
-                <div id="nb-selected-badge" class="new-booking-selected" style="display:none;" aria-live="polite">
-                  <i class="fa fa-check" aria-hidden="true"></i>
-                  <span id="nb-selected-text">Car • Sedan</span>
-                </div>
-              </div>
-
-              <!-- Category Selection -->
-              <div class="new-booking-categories">
-                <div class="nb-category-wrapper" style="position:relative;">
-                  <button type="button" class="nb-category-btn" data-category="car" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-car" aria-hidden="true"></i>
-                    <span>Car</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:10px;"></i>
-                  </button>
-                  <ul class="nb-category-dropdown" role="menu" aria-label="Car models" aria-hidden="true"></ul>
-                </div>
-                <div class="nb-category-wrapper" style="position:relative;">
-                  <button type="button" class="nb-category-btn" data-category="traveller" aria-haspopup="true" aria-expanded="false">
-                    <img src="images/icons/Van.png" alt="Traveller" aria-hidden="true" style="width: 18px; height: 18px;">
-                    <span>Traveller</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:10px;"></i>
-                  </button>
-                  <ul class="nb-category-dropdown" role="menu" aria-label="Traveller models" aria-hidden="true"></ul>
-                </div>
-                <div class="nb-category-wrapper" style="position:relative;">
-                  <button type="button" class="nb-category-btn" data-category="urbania" aria-haspopup="true" aria-expanded="false">
-                    <img src="images/icons/Urbania.png" alt="Urbania" aria-hidden="true" style="width: 18px; height: 18px;">
-                    <span>Urbania</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:10px;"></i>
-                  </button>
-                  <ul class="nb-category-dropdown" role="menu" aria-label="Urbania models" aria-hidden="true"></ul>
-                </div>
-                <div class="nb-category-wrapper" style="position:relative;">
-                  <button type="button" class="nb-category-btn" data-category="coach" aria-haspopup="true" aria-expanded="false">
-                    <img src="images/icons/Coach.png" alt="Coach" aria-hidden="true" style="width: 18px; height: 18px;">
-                    <span>Coach</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:10px;"></i>
-                  </button>
-                  <ul class="nb-category-dropdown" role="menu" aria-label="Coach models" aria-hidden="true"></ul>
-                </div>
-                <div class="nb-category-wrapper" style="position:relative;">
-                  <button type="button" class="nb-category-btn" data-category="minibus" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-bus" aria-hidden="true"></i>
-                    <span>Bus</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:10px;"></i>
-                  </button>
-                  <ul class="nb-category-dropdown" role="menu" aria-label="Mini-bus models" aria-hidden="true"></ul>
-                </div>
-              </div>
-
-              <!-- Booking Form -->
-              <form id="new-booking-form" class="new-booking-form" novalidate aria-label="Vehicle booking form">
-                <input type="hidden" id="nb-vehicle-type" name="vehicle_type" value="">
-                
-                <!-- Row 1: Name | Mobile -->
-                <div class="new-booking-form-row">
-                  <div class="nb-field-group">
-                    <label for="nb-name" class="nb-label">Name</label>
-                    <input id="nb-name" name="name" class="nb-input" type="text" placeholder="Your full name" aria-required="true" required>
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                  <div class="nb-field-group">
-                    <label for="nb-phone" class="nb-label">Mobile Number</label>
-                    <input id="nb-phone" name="phone" class="nb-input" type="tel" inputmode="numeric" placeholder="Enter mobile number" aria-required="true" required maxlength="15">
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                </div>
-
-                <!-- Row 2: Pickup Location | Destination -->
-                <div class="new-booking-form-row">
-                  <div class="nb-field-group">
-                    <label for="nb-pickup" class="nb-label">Pickup Location</label>
-                    <input id="nb-pickup" name="pickup" class="nb-input" type="text" placeholder="Enter pickup location" aria-required="true" required autocomplete="off">
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                  <div class="nb-field-group">
-                    <label for="nb-destination" class="nb-label">Destination</label>
-                    <input id="nb-destination" name="destination" class="nb-input" type="text" placeholder="Enter destination" aria-required="true" required autocomplete="off">
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                </div>
-
-                <!-- Row 3: Pickup Date | Return Date -->
-                <div class="new-booking-form-row">
-                  <div class="nb-field-group">
-                    <label for="nb-pickup-date" class="nb-label">Pickup Date</label>
-                    <div class="nb-date-input-wrapper">
-                      <input id="nb-pickup-date" name="pickup_date" class="nb-input nb-date-input" type="date" aria-required="true" required>
-                      <i class="fa fa-calendar nb-date-icon" aria-hidden="true" role="button" tabindex="0" aria-label="Open calendar"></i>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <!-- Premium Booking Form Modal (Mobile) -->
+            <div id="premium-booking-modal" class="premium-booking-modal" role="dialog" aria-modal="true"
+                aria-labelledby="premium-form-title" aria-hidden="true">
+                <div class="premium-modal-backdrop" aria-label="Close booking form"></div>
+                <div class="premium-modal-container">
+                    <div class="premium-modal-header">
+                        <h2 id="premium-form-title" class="premium-modal-title">Book Your Vehicle</h2>
+                        <button class="premium-modal-close" aria-label="Close booking form">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
                     </div>
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                  <div class="nb-field-group">
-                    <label for="nb-return-date" class="nb-label">Return Date</label>
-                    <div class="nb-date-input-wrapper">
-                      <input id="nb-return-date" name="return_date" class="nb-input nb-date-input" type="date" aria-required="true" required>
-                      <i class="fa fa-calendar nb-date-icon" aria-hidden="true" role="button" tabindex="0" aria-label="Open calendar"></i>
-                    </div>
-                    <div class="nb-error-slot" aria-live="polite" role="alert"></div>
-                  </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" id="nb-submit-btn" class="nb-submit-btn" disabled>
-                  <span class="nb-btn-text">Book Now</span>
-                  <span class="nb-loader" aria-hidden="true"><i class="fa fa-spinner fa-spin"></i></span>
-                </button>
-              </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile Modal -->
-          <div id="nb-mobile-modal" class="nb-mobile-modal" role="dialog" aria-modal="true" aria-labelledby="nb-modal-title" aria-hidden="true">
-            <div class="nb-modal-backdrop" aria-label="Close booking form"></div>
-            <div class="nb-modal-container">
-              <div class="nb-modal-header">
-                <h2 id="nb-modal-title" class="nb-modal-title">Quick Book</h2>
-                <button class="nb-modal-close" aria-label="Close booking form">
-                  <i class="fa fa-times" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="nb-modal-body">
-                <!-- Form will be cloned here on mobile -->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- END: New Booking Form -->
-
-        <section aria-label="section" class="pt40 pb40 text-light" data-bgcolor="#111111">
-            <div class="wow fadeInRight d-flex">
-                <div class="de-marquee-list">
-                    <div class="d-item">
-                        <span class="d-item-txt">SwiftDzire</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Etios</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Ciaz</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Ertiga</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Innova</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Innova Crysta</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Swift Dzire</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Minivan</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Innova Hycross</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Truck</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Minivans</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Exotic Cars</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="de-marquee-list">
-                    <div class="d-item">
-                        <span class="d-item-txt">Traveller</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Urbania</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Minibus</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Coach</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Ertiga</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Innova Crysta</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Swift Dzire</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Etios</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Ciaz</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Truck</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Force Urbania</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
-                        <span class="d-item-txt">Exotic Cars</span>
-                        <span class="d-item-display">
-                            <i class="d-item-dot"></i>
-                        </span>
+                    <div class="premium-modal-body">
+                        <!-- Form content will be inserted here on mobile -->
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section aria-label="section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 offset-lg-3 text-center">
-                        <span class="subtitle">Why Choose Us</span>
-                        <h2>Our Features</h2>
-                        <p>Discover a world of convenience, safety, and customization, paving the way for unforgettable
-                            adventures and seamless mobility solutions.</p>
-                        <div class="spacer-20"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-3">
-                        <div class="box-icon s2 p-small mb20 wow fadeInRight" data-wow-delay=".5s">
-                            <i class="fa bg-color fa-trophy"></i>
-                            <div class="d-inner">
-                                <h4>First class services</h4>
-                                Where luxury meets exceptional care, creating unforgettable moments and exceeding your
-                                every expectation.
+            <!-- START: New Booking Form -->
+            <section id="new-booking-section" class="new-booking-section hero-booking-section"
+                aria-label="Booking form">
+                <!-- Vehicle Background Image -->
+                <div class="hero-vehicle-background">
+                    <img src="images/traveller14.jpg" alt="Premium Vehicle" class="hero-vehicle-bg-img">
+                </div>
+
+                <div class="container">
+                    <div class="hero-booking-layout">
+                        <!-- Safety Promise Quote - Left Side -->
+                        <div class="hero-safety-quote">
+                            <div class="premium-safety-promise">
+                                <div><span class="safety-text-red">YOUR</span> <span class="safety-text-black">SAFETY,</span></div>
+                                <div><span class="safety-text-red">OUR</span> <span class="safety-text-black">PROMISE.</span></div>
                             </div>
                         </div>
-                        <div class="box-icon s2 p-small mb20 wow fadeInL fadeInRight" data-wow-delay=".75s">
-                            <i class="fa bg-color fa-road"></i>
-                            <div class="d-inner">
-                                <h4>24/7 road assistance</h4>
-                                Reliable support when you need it most, keeping you on the move with confidence and
-                                peace of mind.
+
+                        <!-- Form Section - 2 parts (66.67%) -->
+                        <div class="hero-form-section">
+                            <div class="new-booking-card">
+                                <!-- Header -->
+                                <div class="new-booking-header">
+                                    <div>
+                                        <h2 class="new-booking-title">Book Now!</h2>
+                                        <p class="new-booking-subtitle">Select vehicle → Fill details → Book now</p>
+                                    </div>
+                                    <div id="nb-selected-badge" class="new-booking-selected" style="display:none;"
+                                        aria-live="polite">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <span id="nb-selected-text">Car • Sedan</span>
+                                    </div>
+                                </div>
+
+                                <!-- Category Selection -->
+                                <div class="new-booking-categories">
+                                    <div class="nb-category-wrapper" style="position:relative;">
+                                        <button type="button" class="nb-category-btn" data-category="car"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-car" aria-hidden="true"></i>
+                                            <span>Car</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"
+                                                style="font-size:10px;"></i>
+                                        </button>
+                                        <ul class="nb-category-dropdown" role="menu" aria-label="Car models"
+                                            aria-hidden="true"></ul>
+                                    </div>
+                                    <div class="nb-category-wrapper" style="position:relative;">
+                                        <button type="button" class="nb-category-btn" data-category="traveller"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/icons/Van.png" alt="Traveller" aria-hidden="true"
+                                                style="width: 18px; height: 18px;">
+                                            <span>Traveller</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"
+                                                style="font-size:10px;"></i>
+                                        </button>
+                                        <ul class="nb-category-dropdown" role="menu" aria-label="Traveller models"
+                                            aria-hidden="true"></ul>
+                                    </div>
+                                    <div class="nb-category-wrapper" style="position:relative;">
+                                        <button type="button" class="nb-category-btn" data-category="urbania"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/icons/Urbania.png" alt="Urbania" aria-hidden="true"
+                                                style="width: 18px; height: 18px;">
+                                            <span>Urbania</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"
+                                                style="font-size:10px;"></i>
+                                        </button>
+                                        <ul class="nb-category-dropdown" role="menu" aria-label="Urbania models"
+                                            aria-hidden="true"></ul>
+                                    </div>
+                                    <div class="nb-category-wrapper" style="position:relative;">
+                                        <button type="button" class="nb-category-btn" data-category="coach"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/icons/Coach.png" alt="Coach" aria-hidden="true"
+                                                style="width: 18px; height: 18px;">
+                                            <span>Coach</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"
+                                                style="font-size:10px;"></i>
+                                        </button>
+                                        <ul class="nb-category-dropdown" role="menu" aria-label="Coach models"
+                                            aria-hidden="true"></ul>
+                                    </div>
+                                    <div class="nb-category-wrapper" style="position:relative;">
+                                        <button type="button" class="nb-category-btn" data-category="minibus"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-bus" aria-hidden="true"></i>
+                                            <span>Bus</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"
+                                                style="font-size:10px;"></i>
+                                        </button>
+                                        <ul class="nb-category-dropdown" role="menu" aria-label="Mini-bus models"
+                                            aria-hidden="true"></ul>
+                                    </div>
+                                </div>
+
+                                <!-- Booking Form -->
+                                <form id="new-booking-form" class="new-booking-form" novalidate
+                                    aria-label="Vehicle booking form">
+                                    <input type="hidden" id="nb-vehicle-type" name="vehicle_type" value="">
+
+                                    <!-- Row 1: Name | Mobile -->
+                                    <div class="new-booking-form-row">
+                                        <div class="nb-field-group">
+                                            <label for="nb-name" class="nb-label">Name</label>
+                                            <input id="nb-name" name="name" class="nb-input" type="text"
+                                                placeholder="Your full name" aria-required="true" required>
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                        <div class="nb-field-group">
+                                            <label for="nb-phone" class="nb-label">Mobile Number</label>
+                                            <input id="nb-phone" name="phone" class="nb-input" type="tel"
+                                                inputmode="numeric" placeholder="Enter mobile number"
+                                                aria-required="true" required maxlength="15">
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row 2: Pickup Location | Destination -->
+                                    <div class="new-booking-form-row">
+                                        <div class="nb-field-group">
+                                            <label for="nb-pickup" class="nb-label">Pickup Location</label>
+                                            <input id="nb-pickup" name="pickup" class="nb-input" type="text"
+                                                placeholder="Enter pickup location" aria-required="true" required
+                                                autocomplete="off">
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                        <div class="nb-field-group">
+                                            <label for="nb-destination" class="nb-label">Destination</label>
+                                            <input id="nb-destination" name="destination" class="nb-input" type="text"
+                                                placeholder="Enter destination" aria-required="true" required
+                                                autocomplete="off">
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row 3: Pickup Date | Return Date -->
+                                    <div class="new-booking-form-row">
+                                        <div class="nb-field-group">
+                                            <label for="nb-pickup-date" class="nb-label">Pickup Date</label>
+                                            <div class="nb-date-input-wrapper">
+                                                <input id="nb-pickup-date" name="pickup_date"
+                                                    class="nb-input nb-date-input" type="date" aria-required="true"
+                                                    required>
+                                                <i class="fa fa-calendar nb-date-icon" aria-hidden="true" role="button"
+                                                    tabindex="0" aria-label="Open calendar"></i>
+                                            </div>
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                        <div class="nb-field-group">
+                                            <label for="nb-return-date" class="nb-label">Return Date</label>
+                                            <div class="nb-date-input-wrapper">
+                                                <input id="nb-return-date" name="return_date"
+                                                    class="nb-input nb-date-input" type="date" aria-required="true"
+                                                    required>
+                                                <i class="fa fa-calendar nb-date-icon" aria-hidden="true" role="button"
+                                                    tabindex="0" aria-label="Open calendar"></i>
+                                            </div>
+                                            <div class="nb-error-slot" aria-live="polite" role="alert"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" id="nb-submit-btn" class="nb-submit-btn" disabled>
+                                        <span class="nb-btn-text">Book Now</span>
+                                        <span class="nb-loader" aria-hidden="true"><i
+                                                class="fa fa-spinner fa-spin"></i></span>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-6">
-                        <!-- Modern Vehicle Carousel -->
-                        <div class="features-carousel-wrapper">
-                            <div class="swiper features-carousel">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="images/cars/18 seater.webp" alt="Vehicle 1" class="carousel-image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/cars/carousel2.png" alt="Vehicle 2" class="carousel-image">
-                                    </div>
-                                     <div class="swiper-slide">
-                                        <img src="images/cars/carousel3.png" alt="Vehicle 3" class="carousel-image">
-                                    </div>
-                                <!-- <div class="swiper-slide">
+                <!-- Mobile Modal -->
+                <div id="nb-mobile-modal" class="nb-mobile-modal" role="dialog" aria-modal="true"
+                    aria-labelledby="nb-modal-title" aria-hidden="true">
+                    <div class="nb-modal-backdrop" aria-label="Close booking form"></div>
+                    <div class="nb-modal-container">
+                        <div class="nb-modal-header">
+                            <h2 id="nb-modal-title" class="nb-modal-title">Quick Book</h2>
+                            <button class="nb-modal-close" aria-label="Close booking form">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="nb-modal-body">
+                            <!-- Form will be cloned here on mobile -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: New Booking Form -->
+
+            <section aria-label="section" class="pt40 pb40 text-light" data-bgcolor="#111111">
+                <div class="wow fadeInRight d-flex">
+                    <div class="de-marquee-list">
+                        <div class="d-item">
+                            <span class="d-item-txt">SwiftDzire</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Etios</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Ciaz</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Ertiga</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Innova</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Innova Crysta</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Swift Dzire</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Minivan</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Innova Hycross</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Truck</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Minivans</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Exotic Cars</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="de-marquee-list">
+                        <div class="d-item">
+                            <span class="d-item-txt">Traveller</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Urbania</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Minibus</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Coach</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Ertiga</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Innova Crysta</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Swift Dzire</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Etios</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Ciaz</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Truck</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Force Urbania</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                            <span class="d-item-txt">Exotic Cars</span>
+                            <span class="d-item-display">
+                                <i class="d-item-dot"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-label="section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <span class="subtitle">Why Choose Us</span>
+                            <h2>Our Features</h2>
+                            <p>Discover a world of convenience, safety, and customization, paving the way for
+                                unforgettable
+                                adventures and seamless mobility solutions.</p>
+                            <div class="spacer-20"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-3">
+                            <div class="box-icon s2 p-small mb20 wow fadeInRight" data-wow-delay=".5s">
+                                <i class="fa bg-color fa-trophy"></i>
+                                <div class="d-inner">
+                                    <h4>First class services</h4>
+                                    Where luxury meets exceptional care, creating unforgettable moments and exceeding
+                                    your
+                                    every expectation.
+                                </div>
+                            </div>
+                            <div class="box-icon s2 p-small mb20 wow fadeInL fadeInRight" data-wow-delay=".75s">
+                                <i class="fa bg-color fa-road"></i>
+                                <div class="d-inner">
+                                    <h4>24/7 road assistance</h4>
+                                    Reliable support when you need it most, keeping you on the move with confidence and
+                                    peace of mind.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- Modern Vehicle Carousel -->
+                            <div class="features-carousel-wrapper">
+                                <div class="swiper features-carousel">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="images/cars/18 seater.webp" alt="Vehicle 1"
+                                                class="carousel-image">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/cars/carousel2.png" alt="Vehicle 2" class="carousel-image">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/cars/carousel3.png" alt="Vehicle 3" class="carousel-image">
+                                        </div>
+                                        <!-- <div class="swiper-slide">
                                         <img src="images/tempo4.png" alt="Vehicle 4" class="carousel-image">
                                     </div>  -->
-                                </div>
-                                <!-- Pagination -->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="box-icon s2 d-invert p-small mb20 wow fadeInL fadeInLeft" data-wow-delay="1s">
-                            <i class="fa bg-color fa-tag"></i>
-                            <div class="d-inner">
-                                <h4>Quality at Minimum Expense</h4>
-                                Unlocking affordable brilliance with elevating quality while minimizing costs for
-                                maximum value.
-                            </div>
-                        </div>
-                        <div class="box-icon s2 d-invert p-small mb20 wow fadeInL fadeInLeft" data-wow-delay="1.25s">
-                            <i class="fa bg-color fa-map-pin"></i>
-                            <div class="d-inner">
-                                <h4>Free Pick-Up & Drop-Off</h4>
-                                Enjoy free pickup and drop-off services, adding an extra layer of ease to your car
-                                rental experience.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-light jarallax stats-video-section" aria-label="section"
-            data-video-src="https://www.youtube.com/watch?v=hY26-gCrJfc">
-            <div class="overlay-bg">
-            <div class="container">
-                    <div class="spacer-double"></div>
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInRight">
-                        <h2>We offer customers a wide range of <span class="id-color">commercial cars</span> and <span
-                                class="id-color">luxury cars</span> for any occasion.</h2>
-                    </div>
-                    <div class="col-lg-6 wow fadeInLeft">
-                        At our car rental agency, we believe that everyone deserves to experience the pleasure of
-                        driving a reliable and comfortable vehicle, regardless of their budget. We have curated a
-                        diverse fleet of well-maintained cars, ranging from sleek sedans to spacious
-                        SUVs, all at competitive prices. With our streamlined rental process, you can quickly and
-                        conveniently reserve your desired vehicle. Whether you need transportation for a business trip,
-                        family vacation, or simply want to enjoy
-                        a weekend getaway, we have flexible rental options to accommodate your schedule.
-                    </div>
-                </div>
-                <div class="spacer-double"></div>
-                <div class="row text-center">
-                    <div class="col-md-3 col-sm-6 mb-sm-30">
-                        <div class="de_count bg-dark text-light wow fadeInUp">
-                            <h3 class="timer" data-to="15425" data-speed="3000">0</h3>
-                            Completed Orders
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-sm-30">
-                        <div class="de_count bg-dark text-light wow fadeInUp">
-                            <h3 class="timer" data-to="8745" data-speed="3000">0</h3>
-                            Happy Customers
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-sm-30">
-                        <div class="de_count bg-dark text-light wow fadeInUp">
-                            <h3 class="timer" data-to="235" data-speed="3000">0</h3>
-                            Vehicles Fleet
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-sm-30">
-                        <div class="de_count bg-dark text-light wow fadeInUp">
-                            <h3 class="timer" data-to="5" data-speed="3000">0</h3>
-                            Years Experience
-                        </div>
-                    </div>
-                    </div>
-                    <div class="spacer-double"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="section-cars">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 offset-lg-3 text-center">
-                        <span class="subtitle">Enjoy Your Ride</span>
-                        <h2>Our Vehicle Fleet</h2>
-                        <p>Driving your dreams to reality with an exquisite fleet of versatile vehicles for
-                            unforgettable journeys.</p>
-                        <div class="spacer-20"></div>
-                    </div>
-
-                    <div id="items-carousel" class="owl-carousel wow fadeIn">
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/innova.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Toyato Innova</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>74</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7+1</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">SUV</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
                                     </div>
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/XUV 500.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>XUV 500</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">SUV</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-3">
+                            <div class="box-icon s2 d-invert p-small mb20 wow fadeInL fadeInLeft" data-wow-delay="1s">
+                                <i class="fa bg-color fa-tag"></i>
+                                <div class="d-inner">
+                                    <h4>Quality at Minimum Expense</h4>
+                                    Unlocking affordable brilliance with elevating quality while minimizing costs for
+                                    maximum value.
                                 </div>
                             </div>
-                        </div>
-
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Xcent.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Xcent</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                Sedan</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Wagon R.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Wagon R</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                Hatchback</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Tiago.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Tiago</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                Hatchback</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Santro.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Santro</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                Hatchback</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Safari.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Safari</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">SUV</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Ertiga.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Ertiga</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">MPV</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Dzire.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Dzire</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                Sedan</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/Amaze.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Amaze</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Sedan</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/carousel2.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Force Urbania</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">20+1</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Van</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/tata winger.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Tata Winger</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">10+1</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
-                                                Van</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/traveller 26 seater.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Traveller 26 Seater</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">26</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">4</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">6</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Bus</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/traveller 17 seater.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Traveller 17 Seater</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">17</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
-                                                Bus</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item mb30">
-                                <div class="d-img">
-                                    <img src="images/cars/traveller 12 seater.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Traveller 12 Seater</h4>
-                                        <div class="d-item_like">
-                                            <i class="fa fa-heart"></i><span>19</span>
-                                        </div>
-                                        <div class="d-atr-group">
-                                            <span class="d-atr"><img src="images/icons/1-green.svg" alt="">12</span>
-                                            <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                            <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                            <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Van</span>
-                                        </div>
-                                        <div class="d-price">
-                                            <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                        </div>
-                                    </div>
+                            <div class="box-icon s2 d-invert p-small mb20 wow fadeInL fadeInLeft"
+                                data-wow-delay="1.25s">
+                                <i class="fa bg-color fa-map-pin"></i>
+                                <div class="d-inner">
+                                    <h4>Free Pick-Up & Drop-Off</h4>
+                                    Enjoy free pickup and drop-off services, adding an extra layer of ease to your car
+                                    rental experience.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="text-light jarallax" aria-label="section">
-            <img src="images/background/3.webp" alt="" class="jarallax-img">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h1>Let The Adventure Begin</h1>
-                        <div class="spacer-20"></div>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fa fa-trophy de-icon mb20"></i>
-                        <h4>First Class Services</h4>
-                        <p>Where luxury meets exceptional care, creating unforgettable moments and exceeding your every
-                            expectation.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fa fa-road de-icon mb20"></i>
-                        <h4>24/7 road assistance</h4>
-                        <p>Reliable support when you need it most, keeping you on the move with confidence and peace of
-                            mind.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fa fa-map-pin de-icon mb20"></i>
-                        <h4>Free Pick-Up & Drop-Off</h4>
-                        <p>Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental
-                            experience.</p>
+            <section class="text-light jarallax stats-video-section" aria-label="section"
+                data-video-src="https://www.youtube.com/watch?v=hY26-gCrJfc">
+                <div class="overlay-bg">
+                    <div class="container">
+                        <div class="spacer-double"></div>
+                        <div class="row g-5">
+                            <div class="col-lg-6 wow fadeInRight">
+                                <h2>We offer customers a wide range of <span class="id-color">commercial cars</span> and
+                                    <span class="id-color">luxury cars</span> for any occasion.</h2>
+                            </div>
+                            <div class="col-lg-6 wow fadeInLeft">
+                                At our car rental agency, we believe that everyone deserves to experience the pleasure
+                                of
+                                driving a reliable and comfortable vehicle, regardless of their budget. We have curated
+                                a
+                                diverse fleet of well-maintained cars, ranging from sleek sedans to spacious
+                                SUVs, all at competitive prices. With our streamlined rental process, you can quickly
+                                and
+                                conveniently reserve your desired vehicle. Whether you need transportation for a
+                                business trip,
+                                family vacation, or simply want to enjoy
+                                a weekend getaway, we have flexible rental options to accommodate your schedule.
+                            </div>
+                        </div>
+                        <div class="spacer-double"></div>
+                        <div class="row text-center">
+                            <div class="col-md-3 col-sm-6 mb-sm-30">
+                                <div class="de_count bg-dark text-light wow fadeInUp">
+                                    <h3 class="timer" data-to="15425" data-speed="3000">0</h3>
+                                    Completed Orders
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-sm-30">
+                                <div class="de_count bg-dark text-light wow fadeInUp">
+                                    <h3 class="timer" data-to="8745" data-speed="3000">0</h3>
+                                    Happy Customers
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-sm-30">
+                                <div class="de_count bg-dark text-light wow fadeInUp">
+                                    <h3 class="timer" data-to="235" data-speed="3000">0</h3>
+                                    Vehicles Fleet
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-sm-30">
+                                <div class="de_count bg-dark text-light wow fadeInUp">
+                                    <h3 class="timer" data-to="5" data-speed="3000">0</h3>
+                                    Years Experience
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacer-double"></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="section-testimonials" class="no-top no-bottom">
-            <div class="container-fluid">
-                <div class="row g-2 p-2 align-items-center">
+            <section id="section-cars">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <span class="subtitle">Enjoy Your Ride</span>
+                            <h2>Our Vehicle Fleet</h2>
+                            <p>Driving your dreams to reality with an exquisite fleet of versatile vehicles for
+                                unforgettable journeys.</p>
+                            <div class="spacer-20"></div>
+                        </div>
 
-                    <div class="col-md-4">
-                        <div class="de-image-text">
-                            <div class="d-text">
-                                <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                <h4>Excellent Service! Car Rent Service!</h4>
-                                <blockquote>
-                                    I have been using Rentaly for my Car Rental needs for over 5 years now. I have never
-                                    had any problems with their service. Their customer support is always responsive and
-                                    helpful. I would recommend Rentaly to anyone looking for a reliable Car Rental
-                                    provider.
-                                    <span class="by">Shiva Prakasam</span>
-                                </blockquote>
+                        <div id="items-carousel" class="owl-carousel wow fadeIn">
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/innova.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Toyato Innova</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>74</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg"
+                                                        alt="">7+1</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">SUV</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <img src="images/testimonial/1.jpg" class="img-fluid" alt="">
+
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/XUV 500.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>XUV 500</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">SUV</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Xcent.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Xcent</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
+                                                    Sedan</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Wagon R.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Wagon R</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
+                                                    Hatchback</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Tiago.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Tiago</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
+                                                    Hatchback</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Santro.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Santro</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
+                                                    Hatchback</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Safari.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Safari</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">SUV</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Ertiga.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Ertiga</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">MPV</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Dzire.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Dzire</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
+                                                    Sedan</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/Amaze.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Amaze</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">Sedan</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/carousel2.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Force Urbania</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg"
+                                                        alt="">20+1</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">Van</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/tata winger.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Tata Winger</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg"
+                                                        alt="">10+1</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
+                                                    Van</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/traveller 26 seater.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Traveller 26 Seater</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">26</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">4</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">6</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">Bus</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/traveller 17 seater.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Traveller 17 Seater</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">17</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
+                                                    Bus</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="de-item mb30">
+                                    <div class="d-img">
+                                        <img src="images/cars/traveller 12 seater.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="d-info">
+                                        <div class="d-text">
+                                            <h4>Traveller 12 Seater</h4>
+                                            <div class="d-item_like">
+                                                <i class="fa fa-heart"></i><span>19</span>
+                                            </div>
+                                            <div class="d-atr-group">
+                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">12</span>
+                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
+                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
+                                                <span class="d-atr"><img src="images/icons/4-green.svg"
+                                                        alt="">Van</span>
+                                            </div>
+                                            <div class="d-price">
+                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-
-                    <div class="col-md-4">
-                        <div class="de-image-text">
-                            <div class="d-text">
-                                <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                <h4>Excellent Service! Car Rent Service!</h4>
-                                <blockquote>
-                                    We have been using Rentaly for our trips needs for several years now and have always
-                                    been happy with their service. Their customer support is Excellent Service! and they
-                                    are always available to help with any issues we have. Their prices are also very
-                                    competitive.
-                                    <span class="by">Jennish</span>
-                                </blockquote>
-                            </div>
-                            <img src="images/testimonial/2.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="de-image-text">
-                            <div class="d-text">
-                                <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                <h4>Excellent Service! Car Rent Service!</h4>
-                                <blockquote>
-                                    Endorsed by industry experts, Rentaly is the Car Rental solution you can trust. With
-                                    years of experience in the field, we provide fast, reliable and secure Car Rental
-                                    services.
-                                    <span class="by">Karthi</span>
-                                </blockquote>
-                            </div>
-                            <img src="images/testimonial/3.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="section-faq">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <span class="subtitle">Do You Have</span>
-                        <h2>Any Questions?</h2>
-                        <div class="spacer-20"></div>
-                    </div>
-                </div>
-                <div class="row g-custom-x">
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="accordion secondary">
-                            <div class="accordion-section">
-                                <div class="accordion-section-title" data-tab="#accordion-1">
-                                    How do I book a vehicle with your service?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-1">
-                                    <p>Booking a vehicle is easy! You can either call our hotline or use our
-                                        user-friendly online booking system on the website. Just provide your location,
-                                        destination, pickup date & time, return date & time and any special requests.
-                                    </p>
-                                </div>
-                                <div class="accordion-section-title" data-tab="#accordion-2">
-                                    What types of vehicles do you offer?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-2">
-                                    <p>We have a diverse fleet, including sedans, SUVs, Traveller and even larger
-                                        vehicles for group travel. You can choose the one that best suits your needs and
-                                        preferences.</p>
-                                </div>
-                                <div class="accordion-section-title" data-tab="#accordion-3">
-                                    Are your drivers licensed and experienced?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-3">
-                                    <p>Absolutely. All our drivers are licensed professionals with extensive experience.
-                                        Your safety and comfort are our top priorities.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 wow fadeInUp">
-                        <div class="accordion secondary">
-                            <div class="accordion-section">
-                                <div class="accordion-section-title" data-tab="#accordion-b-4">
-                                    How can I track my booked Vehicle?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-b-4">
-                                    <p> Once your Vechicle is dispatched, you'll receive a tracking link via WhatsApp.
-                                        You can monitor the real-time location of your taxi until it arrives at your
-                                        doorstep.</p>
-                                </div>
-                                <div class="accordion-section-title" data-tab="#accordion-b-5">
-                                    What payment methods do you accept?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-b-5">
-                                    <p>We accept a variety of payment options, including cash, credit/debit cards, and
-                                        mobile wallets. Choose the method that's most convenient for you.</p>
-                                </div>
-                                <div class="accordion-section-title" data-tab="#accordion-b-6">
-                                    Is it possible to schedule a service in advance?
-                                </div>
-                                <div class="accordion-section-content" id="accordion-b-6">
-                                    <p>Absolutely! You can schedule a Vechicle in advance through our website or by
-                                        calling our hotline. This is a convenient option for airport transfers,
-                                        important meetings, or any pre-planned travel.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="section-call-to-action" class="bg-color-2 pt60 pb60 text-light">
-            <div class="container">
+            <section class="text-light jarallax" aria-label="section">
+                <img src="images/background/3.webp" alt="" class="jarallax-img">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-4 offset-lg-2">
-                            <span class="subtitle text-white">Call us for further information</span>
-                            <h2 class="s2">Rentaly customer care is here to help you anytime.</h2>
+                        <div class="col-lg-3">
+                            <h1>Let The Adventure Begin</h1>
+                            <div class="spacer-20"></div>
                         </div>
-
-                        <div class="col-lg-4 text-lg-center text-sm-center">
-                            <div class="phone-num-big">
-                                <i class="fa fa-phone"></i>
-                                <span class="pnb-text">
-                                    Call Us Now
-                                </span>
-                                <span class="pnb-num">
-                                    81 22 66 66 44
-                                </span>
-                            </div>
-                            <a href="tel:+9181222666644" class="btn-main btn-call-us">Call Us</a>
+                        <div class="col-md-3">
+                            <i class="fa fa-trophy de-icon mb20"></i>
+                            <h4>First Class Services</h4>
+                            <p>Where luxury meets exceptional care, creating unforgettable moments and exceeding your
+                                every
+                                expectation.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-    <!-- content close -->
-    <!-- footer begin -->
-    <footer id="section-about" class="text-light abz-footer-redesign">
-        <div class="container">
-            <div class="row g-custom-x">
-                <!-- Column 1: Logo & Social -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget abz-footer-logo-section">
-                        <div class="abz-footer-logo-wrapper">
-                            <img src="images/logo.webp" alt="AUTOBOTZ Tours & Travels Logo" class="abz-footer-logo">
+                        <div class="col-md-3">
+                            <i class="fa fa-road de-icon mb20"></i>
+                            <h4>24/7 road assistance</h4>
+                            <p>Reliable support when you need it most, keeping you on the move with confidence and peace
+                                of
+                                mind.</p>
                         </div>
-                        <p class="abz-footer-follow-text">Follow Us On:</p>
-                        <div class="social-icons abz-footer-social-icons">
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/autobotztouring/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <div class="col-md-3">
+                            <i class="fa fa-map-pin de-icon mb20"></i>
+                            <h4>Free Pick-Up & Drop-Off</h4>
+                            <p>Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental
+                                experience.</p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Column 2: Resources -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget">
-                        <h5 class="abz-footer-heading">Resources</h5>
-                        <ul class="abz-footer-links-list">
-                            <li><a href="#section-about">About Us</a></li>
-                            <li><a href="#new-booking-section">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <section id="section-testimonials" class="no-top no-bottom">
+                <div class="container-fluid">
+                    <div class="row g-2 p-2 align-items-center">
 
-                <!-- Column 3: Fleet -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget">
-                        <h5 class="abz-footer-heading">Fleet</h5>
-                        <ul class="abz-footer-links-list">
-                            <li><a href="#section-cars">Urbania Rental</a></li>
-                            <li><a href="#section-cars">Tempo Traveller Rental</a></li>
-                            <li><a href="#section-cars">Mini Van Rental</a></li>
-                            <li><a href="#section-cars">Bus Rental</a></li>
-                            <li><a href="#section-cars">Car Rental</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Column 4: Contact -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget">
-                        <h5 class="abz-footer-heading">Contact</h5>
-                        <div class="abz-footer-contact-details">
-                            <div class="abz-footer-contact-item">
-                                <strong>Address:</strong>
-                                <p>23, Ramraj Nagar, Kovilpalayam, Coimbatore-641107</p>
-                            </div>
-                            <div class="abz-footer-contact-item">
-                                <strong>Email:</strong>
-                                <p><a href="mailto:enquiry@autobotztravels.com">enquiry@autobotztravels.com</a></p>
-                            </div>
-                            <div class="abz-footer-contact-item">
-                                <strong>Phone Number:</strong>
-                                <p><a href="tel:+918122666644">+91 81 22 66 66 44</a></p>
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                        I have been using Rentaly for my Car Rental needs for over 5 years now. I have
+                                        never
+                                        had any problems with their service. Their customer support is always responsive
+                                        and
+                                        helpful. I would recommend Rentaly to anyone looking for a reliable Car Rental
+                                        provider.
+                                        <span class="by">Shiva Prakasam</span>
+                                    </blockquote>
+                                </div>
+                                <img src="images/testimonial/1.jpg" class="img-fluid" alt="">
                             </div>
                         </div>
+
+
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                        We have been using Rentaly for our trips needs for several years now and have
+                                        always
+                                        been happy with their service. Their customer support is Excellent Service! and
+                                        they
+                                        are always available to help with any issues we have. Their prices are also very
+                                        competitive.
+                                        <span class="by">Jennish</span>
+                                    </blockquote>
+                                </div>
+                                <img src="images/testimonial/2.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                        Endorsed by industry experts, Rentaly is the Car Rental solution you can trust.
+                                        With
+                                        years of experience in the field, we provide fast, reliable and secure Car
+                                        Rental
+                                        services.
+                                        <span class="by">Karthi</span>
+                                    </blockquote>
+                                </div>
+                                <img src="images/testimonial/3.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section id="section-faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <span class="subtitle">Do You Have</span>
+                            <h2>Any Questions?</h2>
+                            <div class="spacer-20"></div>
+                        </div>
+                    </div>
+                    <div class="row g-custom-x">
+                        <div class="col-md-6 wow fadeInUp">
+                            <div class="accordion secondary">
+                                <div class="accordion-section">
+                                    <div class="accordion-section-title" data-tab="#accordion-1">
+                                        How do I book a vehicle with your service?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-1">
+                                        <p>Booking a vehicle is easy! You can either call our hotline or use our
+                                            user-friendly online booking system on the website. Just provide your
+                                            location,
+                                            destination, pickup date & time, return date & time and any special
+                                            requests.
+                                        </p>
+                                    </div>
+                                    <div class="accordion-section-title" data-tab="#accordion-2">
+                                        What types of vehicles do you offer?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-2">
+                                        <p>We have a diverse fleet, including sedans, SUVs, Traveller and even larger
+                                            vehicles for group travel. You can choose the one that best suits your needs
+                                            and
+                                            preferences.</p>
+                                    </div>
+                                    <div class="accordion-section-title" data-tab="#accordion-3">
+                                        Are your drivers licensed and experienced?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-3">
+                                        <p>Absolutely. All our drivers are licensed professionals with extensive
+                                            experience.
+                                            Your safety and comfort are our top priorities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 wow fadeInUp">
+                            <div class="accordion secondary">
+                                <div class="accordion-section">
+                                    <div class="accordion-section-title" data-tab="#accordion-b-4">
+                                        How can I track my booked Vehicle?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-b-4">
+                                        <p> Once your Vechicle is dispatched, you'll receive a tracking link via
+                                            WhatsApp.
+                                            You can monitor the real-time location of your taxi until it arrives at your
+                                            doorstep.</p>
+                                    </div>
+                                    <div class="accordion-section-title" data-tab="#accordion-b-5">
+                                        What payment methods do you accept?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-b-5">
+                                        <p>We accept a variety of payment options, including cash, credit/debit cards,
+                                            and
+                                            mobile wallets. Choose the method that's most convenient for you.</p>
+                                    </div>
+                                    <div class="accordion-section-title" data-tab="#accordion-b-6">
+                                        Is it possible to schedule a service in advance?
+                                    </div>
+                                    <div class="accordion-section-content" id="accordion-b-6">
+                                        <p>Absolutely! You can schedule a Vechicle in advance through our website or by
+                                            calling our hotline. This is a convenient option for airport transfers,
+                                            important meetings, or any pre-planned travel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-call-to-action" class="bg-color-2 pt60 pb60 text-light">
+                <div class="container">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4 offset-lg-2">
+                                <span class="subtitle text-white">Call us for further information</span>
+                                <h2 class="s2">Rentaly customer care is here to help you anytime.</h2>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-center text-sm-center">
+                                <div class="phone-num-big">
+                                    <i class="fa fa-phone"></i>
+                                    <span class="pnb-text">
+                                        Call Us Now
+                                    </span>
+                                    <span class="pnb-num">
+                                        81 22 66 66 44
+                                    </span>
+                                </div>
+                                <a href="tel:+9181222666644" class="btn-main btn-call-us">Call Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
-        <div class="subfooter">
+        <!-- content close -->
+        <!-- footer begin -->
+        <footer id="section-about" class="text-light abz-footer-redesign">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="abz-subfooter-content">
-                            <div class="abz-subfooter-left">
-                               <p style="margin: 0; color: rgba(255, 255, 255, 0.6); font-size: 13px;">
-                                    Designed and Developed by <a href="https://www.elitecoder.in" target="_blank" rel="noopener noreferrer" class="abz-elitecoder-glitter">EliteCoder</a>
-                                </p> 
+                <div class="row g-custom-x">
+                    <!-- Column 1: Logo & Social -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget abz-footer-logo-section">
+                            <div class="abz-footer-logo-wrapper">
+                                <img src="images/logo.webp" alt="AUTOBOTZ Tours & Travels Logo" class="abz-footer-logo">
                             </div>
-                            <div class="abz-subfooter-right">
-                                <p style="margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 14px; text-align: center;">
-                                    &copy; <span id="abz-footer-year">2024</span> AUTOBOTZ Tours & Travels. All rights reserved.
-                                </p>
-                                <script>
-                                    (function() {
-                                        var yearSpan = document.getElementById('abz-footer-year');
-                                        if (yearSpan) {
-                                            yearSpan.textContent = new Date().getFullYear();
-                                        }
-                                    })();
-                                </script>
+                            <p class="abz-footer-follow-text">Follow Us On:</p>
+                            <div class="social-icons abz-footer-social-icons">
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/autobotztouring/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                                    aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                                    aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Resources -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget">
+                            <h5 class="abz-footer-heading">Resources</h5>
+                            <ul class="abz-footer-links-list">
+                                <li><a href="#section-about">About Us</a></li>
+                                <li><a href="#new-booking-section">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Fleet -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget">
+                            <h5 class="abz-footer-heading">Fleet</h5>
+                            <ul class="abz-footer-links-list">
+                                <li><a href="#section-cars">Urbania Rental</a></li>
+                                <li><a href="#section-cars">Tempo Traveller Rental</a></li>
+                                <li><a href="#section-cars">Mini Van Rental</a></li>
+                                <li><a href="#section-cars">Bus Rental</a></li>
+                                <li><a href="#section-cars">Car Rental</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget">
+                            <h5 class="abz-footer-heading">Contact</h5>
+                            <div class="abz-footer-contact-details">
+                                <div class="abz-footer-contact-item">
+                                    <strong>Address:</strong>
+                                    <p>23, Ramraj Nagar, Kovilpalayam, Coimbatore-641107</p>
+                                </div>
+                                <div class="abz-footer-contact-item">
+                                    <strong>Email:</strong>
+                                    <p><a href="mailto:enquiry@autobotztravels.com">enquiry@autobotztravels.com</a></p>
+                                </div>
+                                <div class="abz-footer-contact-item">
+                                    <strong>Phone Number:</strong>
+                                    <p><a href="tel:+918122666644">+91 81 22 66 66 44</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script>
-        (function (w, d, s, bu, cv) {
-            w.wbwacw = {
-                base_url: bu,
-                cache_variant: cv,
-                config: {
-                    brand: {
-                        phone_number: "+918122666644",
-                        primary_color: "#cb1515"
-                    },
-                    button: {
-                        background_color: "#25D366",
-                        icon: "white",
-                        icon_size: 32,
-                        padding: 12,
-                        position: "bottom-right",
-                        margin: {
-                            bottom: 20,
-                            right: 20,
-                            left: 0
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="abz-subfooter-content">
+                                <div class="abz-subfooter-left">
+                                    <p style="margin: 0; color: rgba(255, 255, 255, 0.6); font-size: 13px;">
+                                        Designed and Developed by <a href="https://www.elitecoder.in" target="_blank"
+                                            rel="noopener noreferrer" class="abz-elitecoder-glitter">EliteCoder</a>
+                                    </p>
+                                </div>
+                                <div class="abz-subfooter-right">
+                                    <p
+                                        style="margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 14px; text-align: center;">
+                                        &copy; <span id="abz-footer-year">2024</span> AUTOBOTZ Tours & Travels. All
+                                        rights reserved.
+                                    </p>
+                                    <script>
+                                        (function () {
+                                            var yearSpan = document.getElementById('abz-footer-year');
+                                            if (yearSpan) {
+                                                yearSpan.textContent = new Date().getFullYear();
+                                            }
+                                        })();
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            (function (w, d, s, bu, cv) {
+                w.wbwacw = {
+                    base_url: bu,
+                    cache_variant: cv,
+                    config: {
+                        brand: {
+                            phone_number: "+918122666644",
+                            primary_color: "#cb1515"
+                        },
+                        button: {
+                            background_color: "#25D366",
+                            icon: "white",
+                            icon_size: 32,
+                            padding: 12,
+                            position: "bottom-right",
+                            margin: {
+                                bottom: 20,
+                                right: 20,
+                                left: 0
+                            }
+                        },
+                        prompt: {
+                            text: "Rise and shine! ✨ Wishing you a joyful and adventurous journey! 🚗✈️",
+                            delay: 5
+                        },
+                        popup: {
+                            title: "AUTOBOTZ TOURING",
+                            subtitle: "Your Safety, Our Promise.",
+                            welcome_text: "Rise and shine! ✨ Wishing you a joyful and adventurous journey! 🚗✈️",
+                            customer_text_default: "Hello. I've a question."
                         }
-                    },
-                    prompt: {
-                        text: "Rise and shine! ✨ Wishing you a joyful and adventurous journey! 🚗✈️",
-                        delay: 5
-                    },
-                    popup: {
-                        title: "AUTOBOTZ TOURING",
-                        subtitle: "Your Safety, Our Promise.",
-                        welcome_text: "Rise and shine! ✨ Wishing you a joyful and adventurous journey! 🚗✈️",
-                        customer_text_default: "Hello. I've a question."
                     }
-                }
-            };
-            const h = d.getElementsByTagName(s)[0],
-                j = d.createElement(s);
-            j.async = true;
-            j.src = bu + "/init.js?cv=" + cv;
-            h.parentNode.insertBefore(j, h);
-        })(window, document, "script", "https://wacw.whatsbox.io", "1741532225660");
-    </script>
+                };
+                const h = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s);
+                j.async = true;
+                j.src = bu + "/init.js?cv=" + cv;
+                h.parentNode.insertBefore(j, h);
+            })(window, document, "script", "https://wacw.whatsbox.io", "1741532225660");
+        </script>
 
-    <!-- Javascript Files
+        <!-- Javascript Files
     ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/buildteam.js"></script>
-    <script src="js/whatsapp.js"></script>
-    <!-- Modern Booking Form Handler -->
-    <script src="js/modern-booking.js"></script>
-    <!-- Modern Navbar & Form Handler -->
-    <script src="js/modern-nav-form.js"></script>
-    <!-- Premium Navbar & Booking Form Handler -->
-    <script src="js/premium-nav-form.js"></script>
-    <!-- Hamburger Menu & Interactive Elements Fixes -->
-    <script src="js/hamburger-fixes.js"></script>
-    <!-- New Booking Form Handler -->
-    <script src="js/new-booking.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    <!-- Features Carousel Initialization -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Features Carousel
-            if (typeof Swiper !== 'undefined') {
-                const featuresCarousel = new Swiper('.features-carousel', {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
-                    speed: 600,
-                    effect: 'slide',
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        dynamicBullets: true,
-                    },
-                    grabCursor: true,
-                    keyboard: {
-                        enabled: true,
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                        },
-                        768: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                        },
-                        1024: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                        },
-                    },
-                });
+        <script src="js/plugins.js"></script>
+        <script src="js/buildteam.js"></script>
+        <script src="js/whatsapp.js"></script>
+        <!-- Modern Booking Form Handler -->
+        <script src="js/modern-booking.js"></script>
+        <!-- Modern Navbar & Form Handler -->
+        <script src="js/modern-nav-form.js"></script>
+        <!-- Premium Navbar & Booking Form Handler -->
+        <script src="js/premium-nav-form.js"></script>
+        <!-- Hamburger Menu & Interactive Elements Fixes -->
+        <script src="js/hamburger-fixes.js"></script>
+        <!-- New Booking Form Handler -->
+        <script src="js/new-booking.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-                // Pause on hover
-                const carouselEl = document.querySelector('.features-carousel');
-                if (carouselEl) {
-                    carouselEl.addEventListener('mouseenter', () => {
-                        featuresCarousel.autoplay.stop();
+        <!-- Features Carousel Initialization -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Initialize Features Carousel
+                if (typeof Swiper !== 'undefined') {
+                    const featuresCarousel = new Swiper('.features-carousel', {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        loop: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        speed: 600,
+                        effect: 'slide',
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                            dynamicBullets: true,
+                        },
+                        grabCursor: true,
+                        keyboard: {
+                            enabled: true,
+                        },
+                        breakpoints: {
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                            },
+                            1024: {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                            },
+                        },
                     });
-                    carouselEl.addEventListener('mouseleave', () => {
-                        featuresCarousel.autoplay.start();
-                    });
-                }
-            }
-        });
-    </script>
-    
-    <!-- Country Flag Update Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const countryCodeSelect = document.getElementById('country-code');
-            const countryFlagDisplay = document.getElementById('country-flag');
-            
-            // Function to extract flag emoji from option text
-            function updateFlag() {
-                const selectedOption = countryCodeSelect.options[countryCodeSelect.selectedIndex];
-                const optionText = selectedOption.text;
-                
-                // Extract flag emoji - flags are typically the first 2 characters in the format "🇮🇳 +91 (India)"
-                // Use a simple approach: get characters until we hit a space or number
-                const flagEnd = optionText.indexOf(' ');
-                if (flagEnd > 0) {
-                    countryFlagDisplay.textContent = optionText.substring(0, flagEnd).trim();
-                } else {
-                    // Fallback: try to extract emoji using regex
-                    const emojiMatch = optionText.match(/^[\u{1F1E6}-\u{1F1FF}]{2}|^[\u{1F300}-\u{1F9FF}]/u);
-                    if (emojiMatch) {
-                        countryFlagDisplay.textContent = emojiMatch[0];
-                    } else {
-                        // Last resort: get first 2 characters
-                        countryFlagDisplay.textContent = optionText.substring(0, 2) || '🇮🇳';
+
+                    // Pause on hover
+                    const carouselEl = document.querySelector('.features-carousel');
+                    if (carouselEl) {
+                        carouselEl.addEventListener('mouseenter', () => {
+                            featuresCarousel.autoplay.stop();
+                        });
+                        carouselEl.addEventListener('mouseleave', () => {
+                            featuresCarousel.autoplay.start();
+                        });
                     }
                 }
-            }
-            
-            // Update flag when country code changes
-            countryCodeSelect.addEventListener('change', updateFlag);
-            
-            // Initialize flag on page load
-            updateFlag();
-        });
-    </script>
-    
-    <!-- Sticky Call Action Button - Redesigned -->
-    <style>
-        /* Sticky Call Button - Desktop - Premium Design */
-        .sticky-call-button {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-        
-        .sticky-call-button a {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #cb1515;
-            color: #ffffff;
-            padding: 24px 16px;
-            border-radius: 25px 0 0 25px;
-            text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            width: 90px;
-            min-height: 90px;
-            font-weight: 700;
-            font-size: 11px;
-            text-align: center;
-            line-height: 1.3;
-            box-shadow: 0 8px 25px rgba(203, 21, 21, 0.4);
-            border: none;
-        }
-        
-        .sticky-call-button a:hover {
-            transform: translateX(-8px) scale(1.05);
-            background: #b01212;
-            box-shadow: 0 12px 35px rgba(203, 21, 21, 0.6);
-        }
-        
-        .sticky-call-button a:active {
-            transform: translateX(-5px) scale(1.02);
-        }
-        
-        .sticky-call-button i {
-            font-size: 28px;
-            margin-bottom: 8px;
-            display: block;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .sticky-call-button .call-text {
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            line-height: 1.4;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Mobile Sticky Call Button - Premium Design */
-        .sticky-call-button-mobile {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 999;
-            display: none;
-        }
-        
-        .sticky-call-button-mobile a {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #cb1515;
-            color: #ffffff;
-            padding: 16px 20px;
-            border-radius: 25px 0 0 25px;
-            text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-weight: 700;
-            font-size: 12px;
-            gap: 10px;
-            box-shadow: 0 6px 20px rgba(203, 21, 21, 0.4);
-            border: none;
-        }
-        
-        .sticky-call-button-mobile a:hover {
-            transform: translateX(-8px) scale(1.05);
-            background: #b01212;
-            box-shadow: 0 10px 30px rgba(203, 21, 21, 0.6);
-        }
-        
-        .sticky-call-button-mobile i {
-            font-size: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .sticky-call-button-mobile .call-text {
-            position: relative;
-            z-index: 1;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-        
-        /* Responsive - Hide desktop on mobile, show mobile button */
-        @media (max-width: 768px) {
+            });
+        </script>
+
+        <!-- Country Flag Update Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const countryCodeSelect = document.getElementById('country-code');
+                const countryFlagDisplay = document.getElementById('country-flag');
+
+                // Function to extract flag emoji from option text
+                function updateFlag() {
+                    const selectedOption = countryCodeSelect.options[countryCodeSelect.selectedIndex];
+                    const optionText = selectedOption.text;
+
+                    // Extract flag emoji - flags are typically the first 2 characters in the format "🇮🇳 +91 (India)"
+                    // Use a simple approach: get characters until we hit a space or number
+                    const flagEnd = optionText.indexOf(' ');
+                    if (flagEnd > 0) {
+                        countryFlagDisplay.textContent = optionText.substring(0, flagEnd).trim();
+                    } else {
+                        // Fallback: try to extract emoji using regex
+                        const emojiMatch = optionText.match(/^[\u{1F1E6}-\u{1F1FF}]{2}|^[\u{1F300}-\u{1F9FF}]/u);
+                        if (emojiMatch) {
+                            countryFlagDisplay.textContent = emojiMatch[0];
+                        } else {
+                            // Last resort: get first 2 characters
+                            countryFlagDisplay.textContent = optionText.substring(0, 2) || '🇮🇳';
+                        }
+                    }
+                }
+
+                // Update flag when country code changes
+                countryCodeSelect.addEventListener('change', updateFlag);
+
+                // Initialize flag on page load
+                updateFlag();
+            });
+        </script>
+
+        <!-- Sticky Call Action Button - Redesigned -->
+        <style>
+            /* Sticky Call Button - Desktop - Premium Design */
             .sticky-call-button {
-                display: none;
+                position: fixed;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
             }
-            
-            .sticky-call-button-mobile {
+
+            .sticky-call-button a {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #cb1515;
+                color: #ffffff;
+                padding: 24px 16px;
+                border-radius: 25px 0 0 25px;
+                text-decoration: none;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                width: 90px;
+                min-height: 90px;
+                font-weight: 700;
+                font-size: 11px;
+                text-align: center;
+                line-height: 1.3;
+                box-shadow: 0 8px 25px rgba(203, 21, 21, 0.4);
+                border: none;
+            }
+
+            .sticky-call-button a:hover {
+                transform: translateX(-8px) scale(1.05);
+                background: #b01212;
+                box-shadow: 0 12px 35px rgba(203, 21, 21, 0.6);
+            }
+
+            .sticky-call-button a:active {
+                transform: translateX(-5px) scale(1.02);
+            }
+
+            .sticky-call-button i {
+                font-size: 28px;
+                margin-bottom: 8px;
                 display: block;
+                position: relative;
+                z-index: 1;
             }
-        }
-        
-        /* Hide mobile button on desktop */
-        @media (min-width: 769px) {
+
+            .sticky-call-button .call-text {
+                font-size: 10px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                line-height: 1.4;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* Mobile Sticky Call Button - Premium Design */
             .sticky-call-button-mobile {
+                position: fixed;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 999;
                 display: none;
             }
-        }
-    </style>
-    
-    <!-- Desktop Sticky Call Button -->
-    <div class="sticky-call-button" role="complementary" aria-label="Quick call button">
-        <a href="tel:+917092666644" aria-label="Call us now at +91 81 22 66 66 44">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span class="call-text">
-                <span>CALL</span><br>
-                <span>US NOW</span>
-            </span>
-        </a>
-    </div>
-    
-    <!-- Mobile Sticky Call Button -->
-    <div class="sticky-call-button-mobile" role="complementary" aria-label="Mobile quick call button">
-        <a href="tel:+917092666644" aria-label="Call us now at +91 81 22 66 66 44">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span class="call-text">CALL</span>
-        </a>
-    </div>
+
+            .sticky-call-button-mobile a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #cb1515;
+                color: #ffffff;
+                padding: 16px 20px;
+                border-radius: 25px 0 0 25px;
+                text-decoration: none;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                font-weight: 700;
+                font-size: 12px;
+                gap: 10px;
+                box-shadow: 0 6px 20px rgba(203, 21, 21, 0.4);
+                border: none;
+            }
+
+            .sticky-call-button-mobile a:hover {
+                transform: translateX(-8px) scale(1.05);
+                background: #b01212;
+                box-shadow: 0 10px 30px rgba(203, 21, 21, 0.6);
+            }
+
+            .sticky-call-button-mobile i {
+                font-size: 20px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .sticky-call-button-mobile .call-text {
+                position: relative;
+                z-index: 1;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+
+            /* Responsive - Hide desktop on mobile, show mobile button */
+            @media (max-width: 768px) {
+                .sticky-call-button {
+                    display: none;
+                }
+
+                .sticky-call-button-mobile {
+                    display: block;
+                }
+            }
+
+            /* Hide mobile button on desktop */
+            @media (min-width: 769px) {
+                .sticky-call-button-mobile {
+                    display: none;
+                }
+            }
+        </style>
+
+        <!-- Desktop Sticky Call Button -->
+        <div class="sticky-call-button" role="complementary" aria-label="Quick call button">
+            <a href="tel:+917092666644" aria-label="Call us now at +91 81 22 66 66 44">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="call-text">
+                    <span>CALL</span><br>
+                    <span>US NOW</span>
+                </span>
+            </a>
+        </div>
+
+        <!-- Mobile Sticky Call Button -->
+        <div class="sticky-call-button-mobile" role="complementary" aria-label="Mobile quick call button">
+            <a href="tel:+917092666644" aria-label="Call us now at +91 81 22 66 66 44">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="call-text">CALL</span>
+            </a>
+        </div>
 </body>
 
 </html>

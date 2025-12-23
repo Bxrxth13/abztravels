@@ -743,19 +743,57 @@
     }
     
     .hero-booking-layout {
+        display: grid !important;
         grid-template-columns: 1fr !important;
-        gap: 0.75rem !important;
+        gap: 0.5rem !important;
+        grid-auto-flow: row !important;
+    }
+    
+    .hero-safety-quote {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        order: -1 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 5rem 0 0rem 0 !important;
+        padding: 1rem 1rem 0.5rem 1rem !important;
+        width: 100% !important;
+        min-height: 70px !important;
+        overflow: visible !important;
+    }
+    
+    .premium-safety-promise {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        letter-spacing: 0.5px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+    
+    .premium-safety-promise > div {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        white-space: normal !important;
+        margin: 0.25rem 0 !important;
     }
     
     .new-booking-card {
-        padding: 0.875rem !important;
-        border-radius: 12px !important;
-        margin: 0 0.75rem !important;
+        padding: 0.625rem !important;
+        border-radius: 10px !important;
+        margin: 0 0.5rem !important;
     }
     
     .new-booking-header {
-        margin-bottom: 0.5rem !important;
-        padding-bottom: 0.4rem !important;
+        margin-bottom: 0.35rem !important;
+        padding-bottom: 0.3rem !important;
     }
     
     .new-booking-selected {
@@ -763,28 +801,28 @@
     }
     
     .new-booking-title {
-        font-size: 0.95rem !important;
+        font-size: 0.9rem !important;
         margin: 0 !important;
     }
     
     .new-booking-subtitle {
-        font-size: 9px !important;
+        font-size: 8px !important;
         margin: 1px 0 0 0 !important;
     }
     
     .new-booking-categories {
-        gap: 0.4rem !important;
-        margin-bottom: 0.6rem !important;
+        gap: 0.3rem !important;
+        margin-bottom: 0.4rem !important;
     }
     
     .nb-category-btn {
-        padding: 7px 9px !important;
-        font-size: 10px !important;
-        gap: 5px !important;
+        padding: 6px 8px !important;
+        font-size: 9px !important;
+        gap: 4px !important;
     }
     
     .nb-category-btn i {
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
     
     /* Ensure dropdown stays within viewport on mobile */
@@ -801,57 +839,50 @@
     }
     
     .new-booking-form {
-        gap: 0.5rem !important;
+        gap: 0.3rem !important;
     }
     
     .new-booking-form-row {
-        gap: 0.5rem !important;
+        gap: 0.3rem !important;
         margin-bottom: 0 !important;
     }
     
     .nb-field-group {
-        margin-bottom: 0.5rem !important;
-        gap: 3px !important;
-        grid-template-rows: auto 38px 16px !important;
+        margin-bottom: 0.3rem !important;
+        gap: 2px !important;
+        grid-template-rows: auto 34px 14px !important;
     }
     
     .nb-input {
-        font-size: 11px !important;
-        padding: 7px 10px !important;
-        height: 38px !important;
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+        height: 34px !important;
     }
     
     .nb-label {
-        font-size: 10px !important;
-        margin-bottom: 0.2rem !important;
+        font-size: 9px !important;
+        margin-bottom: 0.15rem !important;
     }
     
     .nb-error-slot {
-        height: 16px !important;
-        font-size: 10px !important;
+        height: 14px !important;
+        font-size: 9px !important;
     }
     
     .nb-submit-btn {
-        padding: 9px 18px !important;
-        font-size: 12px !important;
-        margin-top: 0.4rem !important;
-    }
-    
-    .premium-safety-promise {
-        font-size: 18px !important;
-        margin-bottom: 0.75rem !important;
-        text-align: center !important;
-        line-height: 1.2 !important;
-        letter-spacing: 0.5px !important;
-    }
-    
-    .hero-safety-quote {
-        margin-bottom: 0.25rem !important;
+        padding: 8px 16px !important;
+        font-size: 11px !important;
+        margin-top: 0.3rem !important;
     }
     
     .hero-safety-section {
         order: -1;
         min-height: auto;
+    }
+    
+    .hero-form-section {
+        order: 1 !important;
+        width: 100% !important;
     }
 }
 
@@ -892,8 +923,34 @@
     }
     
     .premium-safety-promise {
-        font-size: 1.5rem !important;
-        letter-spacing: 1px;
+        font-size: 1.25rem !important;
+        letter-spacing: 0.5px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+    
+    .premium-safety-promise > div {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0.25rem 0 !important;
+    }
+    
+    .hero-safety-quote {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0.5rem 0 1rem 0 !important;
+        padding: 0.5rem !important;
+        min-height: 70px !important;
+        overflow: visible !important;
     }
 }
 
@@ -912,33 +969,33 @@
     }
     
     .new-booking-card {
-        padding: 0.75rem !important;
-        margin: 0 0.5rem !important;
-        border-radius: 10px !important;
+        padding: 0.5rem !important;
+        margin: 0 0.4rem !important;
+        border-radius: 8px !important;
     }
     
     .new-booking-header {
-        margin-bottom: 0.4rem !important;
-        padding-bottom: 0.35rem !important;
+        margin-bottom: 0.3rem !important;
+        padding-bottom: 0.25rem !important;
     }
     
     .new-booking-categories {
-        gap: 0.3rem !important;
-        margin-bottom: 0.4rem !important;
+        gap: 0.25rem !important;
+        margin-bottom: 0.3rem !important;
     }
     
     .nb-category-btn {
-        padding: 6px 8px !important;
-        font-size: 9px !important;
-        gap: 4px !important;
+        padding: 5px 7px !important;
+        font-size: 8.5px !important;
+        gap: 3px !important;
     }
     
     .nb-category-btn i {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
     
     .nb-category-btn span {
-        font-size: 9px !important;
+        font-size: 8.5px !important;
     }
     
     /* Ensure dropdown stays within viewport on small mobile */
@@ -950,49 +1007,49 @@
     }
     
     .new-booking-title {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
     }
     
     .new-booking-subtitle {
-        font-size: 8px !important;
+        font-size: 7.5px !important;
     }
     
     .new-booking-form {
-        gap: 0.4rem !important;
+        gap: 0.25rem !important;
     }
     
     .new-booking-form-row {
-        gap: 0.4rem !important;
+        gap: 0.25rem !important;
         margin-bottom: 0 !important;
     }
     
     .nb-field-group {
-        margin-bottom: 0.4rem !important;
-        gap: 2px !important;
-        grid-template-rows: auto 36px 14px !important;
+        margin-bottom: 0.25rem !important;
+        gap: 1px !important;
+        grid-template-rows: auto 32px 12px !important;
     }
     
     .nb-input {
-        font-size: 10px !important;
-        padding: 6px 9px !important;
-        height: 36px !important;
+        font-size: 9.5px !important;
+        padding: 5px 8px !important;
+        height: 32px !important;
     }
     
     .nb-label {
-        font-size: 9px !important;
-        margin-bottom: 0.15rem !important;
+        font-size: 8.5px !important;
+        margin-bottom: 0.1rem !important;
     }
     
     .nb-error-slot {
-        height: 14px !important;
-        font-size: 9px !important;
+        height: 12px !important;
+        font-size: 8.5px !important;
     }
     
     .nb-submit-btn {
-        padding: 8px 16px !important;
-        font-size: 11px !important;
+        padding: 7px 14px !important;
+        font-size: 10px !important;
         width: 100% !important;
-        margin-top: 0.3rem !important;
+        margin-top: 0.25rem !important;
     }
     
     .premium-safety-promise {
@@ -1000,10 +1057,16 @@
         margin-bottom: 0.5rem !important;
         line-height: 1.2 !important;
         letter-spacing: 0.3px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .hero-safety-quote {
         margin-bottom: 0.2rem !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .nb-toggle-more {

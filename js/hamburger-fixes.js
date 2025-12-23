@@ -97,12 +97,31 @@
                 mobileMenu.offsetHeight; // Trigger reflow
             }
             
+            // ABSOLUTE CRITICAL FIX: Ensure menu container can show all items
+            if (mobileMenu) {
+                // Remove any height constraints that might be hiding items
+                mobileMenu.style.removeProperty('max-height');
+                mobileMenu.style.setProperty('height', '100vh', 'important');
+                mobileMenu.style.setProperty('min-height', '100vh', 'important');
+                mobileMenu.style.setProperty('overflow-y', 'auto', 'important');
+                mobileMenu.style.setProperty('overflow-x', 'hidden', 'important');
+                mobileMenu.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');
+            }
+            
             // Force list items visibility FIRST (parent elements) - CRITICAL
             // Use setProperty with !important to override any CSS
             const listItems = mobilePanel.querySelectorAll('.premium-mobile-menu > li');
-            console.log('Found list items:', listItems.length); // Debug
+            console.log('🔍 Found list items:', listItems.length); // Debug
+            console.log('📋 List items:', Array.from(listItems).map((li, i) => ({
+                index: i,
+                text: li.textContent.trim().substring(0, 30),
+                display: window.getComputedStyle(li).display,
+                visibility: window.getComputedStyle(li).visibility,
+                opacity: window.getComputedStyle(li).opacity
+            })));
+            
             listItems.forEach((li, index) => {
-                console.log('Processing list item', index, li); // Debug
+                console.log('✅ Processing list item', index, li.textContent.trim().substring(0, 30)); // Debug
                 // Set inline styles with !important
                 li.style.setProperty('display', 'block', 'important');
                 li.style.setProperty('visibility', 'visible', 'important');
@@ -172,6 +191,25 @@
                 li.style.setProperty('visibility', 'visible', 'important');
                 li.style.setProperty('opacity', '1', 'important');
             });
+            
+            // FINAL CHECK: Log the computed styles after all forcing
+            setTimeout(() => {
+                console.log('🎯 FINAL CHECK - After forcing all styles:');
+                const finalCheck = mobilePanel.querySelectorAll('.premium-mobile-menu > li');
+                finalCheck.forEach((li, i) => {
+                    const computed = window.getComputedStyle(li);
+                    console.log(`Item ${i}:`, {
+                        text: li.textContent.trim().substring(0, 30),
+                        display: computed.display,
+                        visibility: computed.visibility,
+                        opacity: computed.opacity,
+                        height: computed.height,
+                        position: computed.position
+                    });
+                });
+                console.log('📐 Menu container height:', mobileMenu ? mobileMenu.scrollHeight : 'N/A');
+                console.log('👁️ Menu container visible height:', mobileMenu ? mobileMenu.clientHeight : 'N/A');
+            }, 100);
             
             // Update focusable elements and focus first item
             updateFocusableElements();
