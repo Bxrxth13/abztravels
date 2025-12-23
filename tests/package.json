@@ -1,0 +1,16 @@
+{
+  "name": "abz-travels-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for ABz Travels website",
+  "scripts": {
+    "test": "playwright test",
+    "test:mobile": "playwright test --project='Mobile Chrome'",
+    "test:desktop": "playwright test --project='Desktop Chrome'",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
+

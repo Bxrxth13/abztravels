@@ -1,0 +1,852 @@
+/* ==================================================
+   COMPACT BOOKING FORM STYLES
+   AUTOBOTZ TOURS & TRAVELS
+   ================================================== */
+
+:root {
+    --compact-primary: #cb1515;
+    --compact-primary-dark: #a01010;
+    --compact-text: #1a1a1a;
+    --compact-text-light: #666;
+    --compact-bg: #ffffff;
+    --compact-bg-light: #f8f9fa;
+    --compact-border: #e0e0e0;
+    --compact-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --compact-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --compact-radius: 12px;
+    --compact-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== COMPACT BOOKING SECTION ===== */
+.compact-booking-section {
+    padding: 7rem 0 4rem;
+    background: var(--compact-bg-light);
+    color: #1a1a1a; /* Ensure black text */
+}
+
+.compact-booking-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--compact-bg);
+    padding: 1.25rem;
+    border-radius: var(--compact-radius);
+    box-shadow: var(--compact-shadow-lg);
+    color: #1a1a1a; /* Ensure black text */
+}
+
+/* ==========================
+   COMPACT FORM: STABLE LAYOUT + CATEGORY DROPDOWNS
+   ========================== */
+
+/* Category buttons */
+.category-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--compact-text);
+    font-weight: 600;
+    transition: var(--compact-transition);
+}
+
+.category-btn i {
+    font-size: 16px;
+    min-width: 18px;
+    text-align: center;
+    color: var(--compact-primary);
+}
+
+.category-btn[aria-expanded="true"] {
+    background: rgba(203, 21, 21, 0.08);
+    box-shadow: 0 2px 6px rgba(203, 21, 21, 0.06);
+}
+
+/* Dropdown panel (absolute but does not affect layout) */
+.category-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--compact-border);
+    box-shadow: var(--compact-shadow);
+    padding: 6px;
+    z-index: 1200;
+    display: block;
+}
+
+.category-dropdown[hidden] {
+    display: none;
+}
+
+.category-dropdown li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-dropdown button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 10px;
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.category-dropdown button:hover,
+.category-dropdown button:focus {
+    background: var(--compact-bg-light);
+    outline: none;
+}
+
+/* Model option highlight when selected */
+.compact-model-option.selected {
+    background: var(--compact-primary);
+    color: white;
+}
+
+/* Ensure the form uses a grid with fixed row heights to prevent jumps */
+.compact-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+/* Field group uses 3-row grid: label / input(s) / error (fixed height) */
+.compact-field-group {
+    display: grid;
+    grid-template-rows: auto 48px 18px; /* label, input area, reserved error */
+    gap: 6px;
+    align-items: start;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+}
+
+/* Inputs occupy second row and have fixed height */
+.compact-field-group .compact-input,
+.compact-datetime-wrapper .compact-input {
+    grid-row: 2;
+    height: 44px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1.25px solid var(--compact-border);
+    background: var(--compact-bg);
+    font-size: 14px;
+}
+
+/* Datetime wrapper inputs share equal size */
+.compact-datetime-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Errors: reserved slot, show/hide via class .show but never change layout */
+.compact-field-group .compact-error {
+    grid-row: 3;
+    height: 18px;
+    line-height: 1;
+    font-size: 12px;
+    color: #dc3545;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.compact-field-group .compact-error.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    white-space: normal;
+}
+
+/* Phone group layout */
+.compact-phone-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.compact-country-code {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1.25px solid var(--compact-border);
+    background: var(--compact-bg);
+}
+
+/* CTA */
+.compact-cta-group {
+    min-width: 220px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.compact-btn-submit {
+    min-width: 220px;
+}
+
+/* More options toggle and trip options */
+.compact-trip-toggle {
+    background: transparent;
+    border: none;
+    color: var(--compact-text);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.compact-trip-option {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--compact-border);
+    background: var(--compact-bg-light);
+    cursor: pointer;
+}
+
+.compact-trip-option[aria-pressed="true"] {
+    background: var(--compact-primary);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* Mobile modal rules already present — ensure high z-index */
+.compact-mobile-modal {
+    z-index: 1400;
+}
+
+/* Accessibility focus ring */
+.category-btn:focus,
+.category-dropdown button:focus,
+.compact-input:focus,
+.compact-btn-submit:focus {
+    outline: 3px solid rgba(203, 21, 21, 0.12);
+    outline-offset: 2px;
+}
+
+/* ===== COMPACT FORM LAYOUT ===== */
+.compact-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #1a1a1a; /* Ensure black text in form */
+}
+
+/* Force black text for all form elements */
+.compact-booking-form label,
+.compact-booking-form input,
+.compact-booking-form select,
+.compact-booking-form option,
+.compact-booking-form button:not(.compact-btn-submit):not(.compact-segment[aria-pressed="true"]):not(.compact-model-chip.selected):not(.compact-trip-option.active),
+.compact-booking-form span:not(.compact-btn-text) {
+    color: #1a1a1a !important;
+}
+
+.compact-booking-form select,
+.compact-booking-form option {
+    color: #1a1a1a !important; /* Force black for all selects */
+    background: #ffffff !important;
+}
+
+.compact-booking-form select option {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* Old duplicate removed - using styles from new section above */
+
+.compact-label-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.compact-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--compact-text);
+    margin-bottom: 0.25rem;
+}
+
+/* ===== SEGMENTED CONTROL (Category Pills) ===== */
+.compact-segmented-control {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--compact-bg-light);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--compact-border);
+}
+
+.compact-segment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 0.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--compact-transition);
+    font-size: 12px;
+    font-weight: 600;
+    color: #333333 !important; /* Dark gray for better contrast */
+    min-width: 0;
+}
+
+.compact-segment:hover,
+.compact-segment:focus {
+    background: rgba(203, 21, 21, 0.05);
+    outline: none;
+}
+
+.compact-segment[aria-pressed="true"],
+.compact-segment[aria-checked="true"] {
+    background: var(--compact-primary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(203, 21, 21, 0.2);
+}
+
+.compact-segment i {
+    font-size: 18px;
+}
+
+/* ===== MODEL CHIPS (Horizontal Scrollable) ===== */
+.compact-model-chips {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.compact-chips-scroll {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.25rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--compact-border) transparent;
+}
+
+.compact-chips-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+.compact-chips-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.compact-chips-scroll::-webkit-scrollbar-thumb {
+    background: var(--compact-border);
+    border-radius: 2px;
+}
+
+.compact-model-chip {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    background: var(--compact-bg-light);
+    border: 1px solid var(--compact-border);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--compact-text);
+    cursor: pointer;
+    transition: var(--compact-transition);
+    white-space: nowrap;
+    border: none;
+}
+
+.compact-model-chip:hover,
+.compact-model-chip:focus {
+    background: var(--compact-primary);
+    color: white;
+    transform: translateY(-1px);
+    outline: none;
+}
+
+.compact-model-chip.selected {
+    background: var(--compact-primary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(203, 21, 21, 0.2);
+}
+
+/* ===== COMPACT INPUTS ===== */
+/* General input styles for inputs not in field groups */
+.compact-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--compact-border);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    background: var(--compact-bg);
+    color: #1a1a1a !important; /* Black text for inputs */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 44px;
+}
+
+.compact-input:focus {
+    outline: none;
+    border-color: var(--compact-primary);
+    box-shadow: 0 0 0 3px rgba(203, 21, 21, 0.1);
+}
+
+/* If you used input.error class, keep it visually highlighted without changing layout */
+.compact-field-group .compact-input.error {
+    border-color: #dc3545;
+    box-shadow: none;
+}
+
+.compact-input.error {
+    border-color: #dc3545;
+}
+
+.compact-input::placeholder {
+    color: var(--compact-text-light);
+    opacity: 0.6;
+}
+
+/* ===== DATE/TIME WRAPPER ===== */
+.compact-datetime-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0.5rem;
+}
+
+.compact-date,
+.compact-time {
+    font-size: 13px;
+}
+
+/* Date input calendar icon styling */
+input[type="date"].compact-date {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="date"].compact-date::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+}
+
+input[type="date"].compact-date::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* ===== PHONE GROUP ===== */
+.compact-phone-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+.compact-country-code {
+    flex-shrink: 0;
+    width: 100px;
+    padding: 0.75rem 0.5rem;
+    border: 1.5px solid var(--compact-border);
+    border-radius: 10px;
+    font-size: 13px;
+    background: var(--compact-bg);
+    color: #1a1a1a !important; /* Black text for select */
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.compact-country-code option {
+    color: #1a1a1a !important; /* Black text for options */
+    background: #ffffff;
+}
+
+.compact-country-code:focus {
+    outline: none;
+    border-color: var(--compact-primary);
+    box-shadow: 0 0 0 3px rgba(203, 21, 21, 0.1);
+}
+
+.compact-phone-input {
+    flex: 1;
+}
+
+/* ===== CTA GROUP ===== */
+.compact-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.compact-btn-submit {
+    padding: 0.875rem 1.5rem;
+    background: var(--compact-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--compact-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(203, 21, 21, 0.25);
+    white-space: nowrap;
+}
+
+.compact-btn-submit:hover:not(:disabled),
+.compact-btn-submit:focus:not(:disabled) {
+    background: var(--compact-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(203, 21, 21, 0.35);
+    outline: none;
+}
+
+.compact-btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.compact-btn-loader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.compact-selected-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #f0f7ff;
+    border: 1px solid var(--compact-primary);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--compact-primary);
+}
+
+.compact-selected-summary i {
+    font-size: 14px;
+}
+
+/* ===== ERROR MESSAGES ===== */
+/* Error slot is a reserved area (fixed height). Show/hide using visibility + opacity so space is reserved. */
+.compact-field-group .compact-error {
+    grid-row: 3;
+    margin: 0;
+    height: 18px;              /* reserved height to avoid layout shift */
+    line-height: 1.0;
+    font-size: 12px;
+    color: #dc3545;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* Hidden state (still takes space) */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Visible state — text fades in but does not push layout */
+.compact-field-group .compact-error.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    white-space: normal; /* allow word wrap when visible if needed */
+}
+
+/* also ensure label stays in row 1 and doesn't move */
+.compact-field-group .compact-label {
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+    align-self: end;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* General error styles for errors not in field groups */
+.compact-error {
+    color: #dc3545;
+    font-size: 11px;
+    margin-top: 0.25rem;
+    min-height: 18px;
+    line-height: 1.4;
+    position: relative;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.compact-error.show {
+    visibility: visible;
+    opacity: 1;
+    white-space: normal;
+    overflow: visible;
+}
+
+
+/* ===== FORM STATUS ===== */
+.compact-form-status {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 13px;
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.compact-form-status.show {
+    display: block;
+}
+
+.compact-form-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.compact-form-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== MOBILE MODAL ===== */
+.compact-mobile-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--compact-transition);
+}
+
+.compact-mobile-modal[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.compact-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.compact-modal-container {
+    position: relative;
+    background: var(--compact-bg);
+    width: 100%;
+    max-height: 90vh;
+    border-radius: 20px 20px 0 0;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.compact-mobile-modal[aria-hidden="false"] .compact-modal-container {
+    transform: translateY(0);
+}
+
+.compact-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--compact-border);
+    position: sticky;
+    top: 0;
+    background: var(--compact-bg);
+    z-index: 10;
+}
+
+.compact-modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--compact-text);
+    margin: 0;
+}
+
+.compact-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--compact-text-light);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--compact-transition);
+}
+
+.compact-modal-close:hover,
+.compact-modal-close:focus {
+    background: var(--compact-bg-light);
+    color: var(--compact-text);
+    outline: none;
+}
+
+.compact-modal-body {
+    padding: 1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .compact-booking-card {
+        padding: 1.5rem;
+    }
+
+    .compact-form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .compact-datetime-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .compact-cta-group {
+        order: -1;
+        width: 100%;
+    }
+
+    .compact-segmented-control {
+        flex-wrap: wrap;
+    }
+
+    .compact-segment {
+        min-width: calc(50% - 0.25rem);
+    }
+
+    .compact-selected-summary {
+        display: none !important;
+    }
+
+    .category-dropdown {
+        left: auto;
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .compact-booking-section {
+        padding: 6rem 0 2rem;
+    }
+
+    .compact-booking-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .compact-segment {
+        font-size: 11px;
+        padding: 0.625rem 0.375rem;
+    }
+
+    .compact-segment i {
+        font-size: 16px;
+    }
+
+    .compact-input {
+        font-size: 13px;
+        padding: 0.625rem 0.875rem;
+    }
+
+    .compact-btn-submit {
+        font-size: 13px;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .compact-booking-card {
+        padding: 1rem;
+    }
+
+    .compact-segmented-control {
+        gap: 0.25rem;
+        padding: 3px;
+    }
+
+    .compact-segment {
+        min-width: calc(50% - 0.125rem);
+        padding: 0.5rem 0.25rem;
+    }
+
+    .compact-datetime-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Safety: ensure that any direct min-height in other places won't fight this layout */
+.compact-booking-card .compact-form-row,
+.compact-booking-card .compact-field-group,
+.compact-booking-card .compact-input,
+.compact-booking-card .compact-error {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility: keep an aria-live region style if you use one for errors */
+/* Note: .compact-form-status[aria-live] may expand independently but is separate from the field slots */
+

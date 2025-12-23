@@ -1,0 +1,472 @@
+/* Modern Styles for AUTOBOTZ TOURS & TRAVELS - Optimized & GPU-Friendly */
+
+:root {
+    --primary-red: #cb1515;
+    --primary-red-dark: #b01212;
+    --primary-red-light: #e63946;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-light: #f5f5f5;
+    --gray-dark: #333333;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.4s ease;
+}
+
+/* Modern Hero Section */
+#section-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#section-hero .overlay-bg {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+#section-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#section-hero .id-color {
+    color: var(--primary-red);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: var(--primary-red);
+}
+
+/* Modern Booking Form */
+.booking-form-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.booking-form-container h5 {
+    color: var(--gray-dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Modern Radio Buttons - Card Style */
+.vehicle-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.vehicle-card {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background: var(--white);
+    transition: all var(--transition-base);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-red);
+}
+
+.vehicle-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vehicle-card input[type="radio"]:checked + label,
+.vehicle-card.selected {
+    border-color: var(--primary-red);
+    background: var(--primary-red);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(203, 21, 21, 0.3);
+}
+
+.vehicle-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    filter: brightness(0) invert(0.3);
+    transition: filter var(--transition-base);
+}
+
+.vehicle-card.selected img,
+.vehicle-card input[type="radio"]:checked ~ label img {
+    filter: brightness(0) invert(1);
+}
+
+.vehicle-card label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    cursor: pointer;
+    margin: 0;
+}
+
+.vehicle-card.selected label,
+.vehicle-card input[type="radio"]:checked ~ label {
+    color: var(--white);
+}
+
+/* Modern Form Inputs */
+.modern-input {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--gray-dark);
+    transition: all var(--transition-base);
+    transform: translateZ(0);
+}
+
+.modern-input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 4px rgba(203, 21, 21, 0.1);
+    transform: translateY(-2px);
+}
+
+.modern-input::placeholder {
+    color: #999;
+}
+
+.modern-input.error {
+    border-color: #dc3545;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Modern Buttons */
+.btn-modern {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    transform: translateZ(0);
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-modern-primary {
+    background: var(--primary-red);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-modern-primary:hover {
+    background: var(--primary-red-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-modern-primary:active {
+    transform: translateY(0);
+}
+
+.btn-modern-secondary {
+    background: var(--white);
+    color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+}
+
+.btn-modern-secondary:hover {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+/* Loading State */
+.btn-loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Swap Locations Button */
+.swap-locations {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.swap-locations:hover {
+    background: var(--primary-red-dark);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Round Trip Toggle */
+.trip-toggle {
+    display: flex;
+    background: var(--gray-light);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.trip-toggle button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.trip-toggle button.active {
+    background: var(--primary-red);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Form Validation Messages */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Trust Section */
+.trust-section {
+    background: var(--gray-light);
+    padding: 4rem 0;
+}
+
+.trust-badge {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.trust-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.trust-badge .rating {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.trust-badge .stars {
+    color: #ffc107;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Modern Car Cards */
+.car-card-modern {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    transform: translateZ(0);
+}
+
+.car-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.car-card-modern img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card-modern .card-body {
+    padding: 1.5rem;
+}
+
+.car-card-modern h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.car-specs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.car-spec {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+}
+
+.car-spec img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Modern Footer */
+.footer-modern {
+    background: var(--gray-dark);
+    color: var(--white);
+    padding: 4rem 0 2rem;
+}
+
+.footer-modern h5 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.footer-modern a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-modern a:hover {
+    color: var(--primary-red);
+}
+
+.footer-modern .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: all var(--transition-base);
+}
+
+.footer-modern .social-icons a:hover {
+    background: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 1.5rem;
+    }
+    
+    .vehicle-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #section-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Performance Optimizations */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Remove heavy animations */
+.glass-effect {
+    animation: none !important;
+}
+
+.glass-effect::before,
+.glass-effect::after {
+    display: none !important;
+}
+
