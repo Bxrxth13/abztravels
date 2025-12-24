@@ -91,6 +91,11 @@
     display: inline-block;
 }
 
+.premium-safety-promise > div {
+    display: block;
+    white-space: nowrap;
+}
+
 /* Form Section - 2 parts (Right Side) */
 .hero-form-section {
     position: relative;
