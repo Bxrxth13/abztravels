@@ -1051,6 +1051,9 @@ body.menu-open {
         white-space: nowrap !important;
         overflow: visible !important;
         box-sizing: border-box !important;
+        position: relative !important;
+        top: -5px !important;
+        margin-top: -5px !important;
     }
 
     .premium-btn-book-now .btn-text {

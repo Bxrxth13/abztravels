@@ -754,6 +754,257 @@
             .de-item {
                 margin-bottom: 20px;
             }
+
+            /* Footer Mobile Alignment */
+            footer {
+                padding: 40px 0 20px 0 !important;
+                text-align: center !important;
+            }
+
+            footer .widget {
+                margin-bottom: 30px !important;
+                text-align: center !important;
+                padding: 15px !important;
+            }
+
+            footer .col-lg-3,
+            footer .col-md-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            .abz-footer-logo-section {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .abz-footer-logo-wrapper {
+                text-align: center !important;
+                margin-bottom: 15px !important;
+            }
+
+            .abz-footer-logo {
+                max-width: 150px !important;
+                margin: 0 auto !important;
+            }
+
+            .abz-footer-follow-text {
+                text-align: center !important;
+                margin: 10px 0 !important;
+            }
+
+            .abz-footer-social-icons {
+                justify-content: center !important;
+                text-align: center !important;
+            }
+
+            .abz-footer-heading {
+                text-align: center !important;
+                margin-bottom: 15px !important;
+                font-size: 18px !important;
+            }
+
+            .abz-footer-links-list {
+                text-align: center !important;
+                list-style: none !important;
+                padding: 0 !important;
+            }
+
+            .abz-footer-links-list li {
+                text-align: center !important;
+                margin: 8px 0 !important;
+            }
+
+            .abz-footer-contact-details {
+                text-align: center !important;
+            }
+
+            .abz-footer-contact-item {
+                text-align: center !important;
+                margin-bottom: 15px !important;
+            }
+
+            .subfooter {
+                text-align: center !important;
+                padding: 20px 0 !important;
+            }
+
+            .abz-subfooter-content {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 10px !important;
+            }
+
+            .abz-subfooter-left,
+            .abz-subfooter-right {
+                text-align: center !important;
+                width: 100% !important;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 576px) {
+            footer {
+                padding: 30px 0 15px 0 !important;
+            }
+
+            footer .widget {
+                padding: 10px !important;
+                margin-bottom: 25px !important;
+            }
+
+            .abz-footer-logo {
+                max-width: 120px !important;
+            }
+
+            .abz-footer-heading {
+                font-size: 16px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .abz-footer-links-list li {
+                margin: 6px 0 !important;
+                font-size: 14px !important;
+            }
+
+            .abz-footer-contact-item {
+                margin-bottom: 12px !important;
+                font-size: 13px !important;
+            }
+
+            .abz-footer-social-icons a {
+                width: 36px !important;
+                height: 36px !important;
+                line-height: 36px !important;
+                font-size: 16px !important;
+            }
+
+            .subfooter {
+                padding: 15px 0 !important;
+            }
+
+            .abz-subfooter-content p {
+                font-size: 12px !important;
+            }
+        }
+
+        /* Hide Quick Book Pop-up Forms and Hamburger Menu on Mobile */
+        @media (max-width: 768px) {
+            #premium-booking-modal,
+            #nb-mobile-modal,
+            .premium-booking-modal,
+            .nb-mobile-modal {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
+
+            /* Hide hamburger menu button */
+            .premium-mobile-toggle,
+            #premium-mobile-toggle {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+
+            /* Hide mobile menu panel */
+            .premium-mobile-panel,
+            #premium-mobile-panel {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+
+            /* Move phone number button upward */
+            .premium-btn-book-now,
+            #premium-book-now-btn {
+                position: relative !important;
+                top: -3px !important;
+                margin-top: -3px !important;
+            }
+
+            /* Adjust navbar wrapper alignment */
+            .premium-navbar-wrapper {
+                align-items: flex-start !important;
+            }
+
+            /* Make main booking form bold and user-friendly on mobile */
+            .new-booking-card {
+                background: rgba(255, 255, 255, 0.98) !important;
+                border: 2px solid #cb1515 !important;
+                box-shadow: 0 8px 32px rgba(203, 21, 21, 0.25) !important;
+            }
+
+            .new-booking-title {
+                font-weight: 800 !important;
+                color: #000 !important;
+                text-shadow: none !important;
+            }
+
+            .nb-label {
+                font-weight: 700 !important;
+                color: #333 !important;
+            }
+
+            .nb-input {
+                border: 2px solid #ddd !important;
+                background: #fff !important;
+                font-weight: 500 !important;
+                color: #000 !important;
+            }
+
+            .nb-input:focus {
+                border-color: #cb1515 !important;
+                box-shadow: 0 0 0 3px rgba(203, 21, 21, 0.15) !important;
+            }
+
+            .nb-category-btn {
+                border: 2px solid #ddd !important;
+                font-weight: 700 !important;
+                background: #fff !important;
+            }
+
+            .nb-category-btn.active,
+            .nb-category-btn[aria-expanded="true"] {
+                background: #cb1515 !important;
+                border-color: #cb1515 !important;
+                color: #fff !important;
+                font-weight: 800 !important;
+            }
+
+            .nb-submit-btn {
+                font-weight: 800 !important;
+                background: #cb1515 !important;
+                border: none !important;
+                box-shadow: 0 4px 16px rgba(203, 21, 21, 0.4) !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+            }
+
+            .nb-submit-btn:active {
+                transform: scale(0.98) !important;
+            }
+
+            /* Make dropdown options more visible */
+            .nb-category-dropdown {
+                border: 2px solid #cb1515 !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+            }
+
+            .nb-model-option {
+                font-weight: 600 !important;
+                border-bottom: 1px solid #eee !important;
+            }
+
+            .nb-model-option.selected {
+                background: #cb1515 !important;
+                color: #fff !important;
+                font-weight: 700 !important;
+            }
         }
 
         /* Custom Scrollbar */
@@ -2437,10 +2688,10 @@
                         <div class="widget">
                             <h5 class="abz-footer-heading">Contact</h5>
                             <div class="abz-footer-contact-details">
-                                <div class="abz-footer-contact-item">
+                                <!-- <div class="abz-footer-contact-item">
                                     <strong>Address:</strong>
                                     <p>23, Ramraj Nagar, Kovilpalayam, Coimbatore-641107</p>
-                                </div>
+                                </div> -->
                                 <div class="abz-footer-contact-item">
                                     <strong>Email:</strong>
                                     <p><a href="mailto:enquiry@autobotztravels.com">enquiry@autobotztravels.com</a></p>
@@ -2460,10 +2711,10 @@
                         <div class="col-md-12">
                             <div class="abz-subfooter-content">
                                 <div class="abz-subfooter-left">
-                                    <p style="margin: 0; color: rgba(255, 255, 255, 0.6); font-size: 13px;">
+                                    <!-- <p style="margin: 0; color: rgba(255, 255, 255, 0.6); font-size: 13px;">
                                         Designed and Developed by <a href="https://www.elitecoder.in" target="_blank"
                                             rel="noopener noreferrer" class="abz-elitecoder-glitter">EliteCoder</a>
-                                    </p>
+                                    </p> -->
                                 </div>
                                 <div class="abz-subfooter-right">
                                     <p
