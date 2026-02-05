@@ -2171,7 +2171,7 @@
     // scroll magic end
 
     $(window).on('load', function () {
-        jQuery('#de-preloader').fadeOut(375);
+        jQuery('#de-preloader').fadeOut(300);
         filter_gallery();
         load_owl();
         window.dispatchEvent(new Event('resize'));
