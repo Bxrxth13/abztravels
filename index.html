@@ -893,6 +893,7 @@
 
         /* Hide Quick Book Pop-up Forms and Hamburger Menu on Mobile */
         @media (max-width: 768px) {
+
             #premium-booking-modal,
             #nb-mobile-modal,
             .premium-booking-modal,
@@ -1264,6 +1265,7 @@
 
         /* CRITICAL FIX: Force hamburger menu items to show on mobile */
         @media (max-width: 768px) {
+
             /* Menu container must allow all items - NO HEIGHT LIMITS */
             #premium-mobile-panel .premium-mobile-menu,
             .premium-mobile-panel .premium-mobile-menu {
@@ -1275,12 +1277,12 @@
                 display: block !important;
                 -webkit-overflow-scrolling: touch !important;
             }
-            
+
             /* Force ALL list items to show - Use nth-child for specificity */
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(1),
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2),
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(3),
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(4) {
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(1),
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(2),
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(3),
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(4) {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
@@ -1293,12 +1295,12 @@
                 margin: 0 !important;
                 padding: 0 !important;
             }
-            
+
             /* Force ALL menu item links to show */
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(1) > a,
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2) > a,
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(3) > a,
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(4) > a,
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(1)>a,
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(2)>a,
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(3)>a,
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(4)>a,
             #premium-mobile-panel .premium-mobile-menu-item {
                 display: flex !important;
                 visibility: visible !important;
@@ -1308,38 +1310,38 @@
                 min-height: 48px !important;
                 align-items: center !important;
             }
-            
+
             /* Force dropdown container to show */
             #premium-mobile-panel .premium-mobile-menu-item-has-dropdown,
-            #premium-mobile-panel .premium-mobile-menu > li:nth-child(2) {
+            #premium-mobile-panel .premium-mobile-menu>li:nth-child(2) {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
                 position: relative !important;
             }
-            
+
             /* When panel is active, ensure menu slides in */
             #premium-mobile-panel.active .premium-mobile-menu,
             #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu {
                 transform: translateX(0) !important;
                 display: block !important;
             }
-            
+
             /* EMERGENCY: Show all children */
-            #premium-mobile-panel.active .premium-mobile-menu > *,
-            #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu > * {
+            #premium-mobile-panel.active .premium-mobile-menu>*,
+            #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu>* {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
             }
-            
+
             #premium-mobile-panel.active .premium-mobile-menu-item,
             #premium-mobile-panel[aria-hidden="false"] .premium-mobile-menu-item {
                 display: flex !important;
                 visibility: visible !important;
                 opacity: 1 !important;
             }
-            
+
             /* CRITICAL: Force safety quote to show - BOTH LINES */
             #new-booking-section .hero-safety-quote,
             .hero-booking-section .hero-safety-quote,
@@ -1359,7 +1361,7 @@
                 position: relative !important;
                 z-index: 10 !important;
             }
-            
+
             #new-booking-section .premium-safety-promise,
             .hero-booking-section .premium-safety-promise,
             .hero-booking-layout .premium-safety-promise {
@@ -1376,10 +1378,10 @@
                 margin: 0 !important;
                 padding: 0 !important;
             }
-            
-            #new-booking-section .premium-safety-promise > div,
-            .hero-booking-section .premium-safety-promise > div,
-            .hero-booking-layout .premium-safety-promise > div {
+
+            #new-booking-section .premium-safety-promise>div,
+            .hero-booking-section .premium-safety-promise>div,
+            .hero-booking-layout .premium-safety-promise>div {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
@@ -1392,14 +1394,14 @@
                 overflow: visible !important;
                 position: relative !important;
             }
-            
+
             /* Force individual spans to show */
             .premium-safety-promise span {
                 display: inline !important;
                 visibility: visible !important;
                 opacity: 1 !important;
             }
-            
+
             /* Ensure booking layout stacks properly */
             .hero-booking-layout {
                 display: grid !important;
@@ -1407,27 +1409,28 @@
                 grid-auto-flow: row !important;
                 gap: 1rem !important;
             }
-            
+
             .hero-form-section {
                 order: 1 !important;
             }
         }
-        
+
         /* Extra specificity for very small screens */
         @media (max-width: 576px) {
+
             #new-booking-section .premium-safety-promise,
             .hero-booking-section .premium-safety-promise {
                 font-size: 1.2rem !important;
                 line-height: 1.5 !important;
             }
-            
-            #new-booking-section .premium-safety-promise > div,
-            .hero-booking-section .premium-safety-promise > div {
+
+            #new-booking-section .premium-safety-promise>div,
+            .hero-booking-section .premium-safety-promise>div {
                 margin: 0.3rem 0 !important;
                 display: block !important;
                 visibility: visible !important;
             }
-            
+
             #new-booking-section .hero-safety-quote,
             .hero-booking-section .hero-safety-quote {
                 min-height: 85px !important;
@@ -1435,9 +1438,10 @@
                 padding: 0.75rem 0.75rem 0.5rem 0.75rem !important;
             }
         }
-        
+
         /* ABSOLUTE OVERRIDE for iPhone sizes */
         @media (max-width: 430px) {
+
             #new-booking-section .hero-safety-quote,
             .hero-booking-layout .hero-safety-quote {
                 display: flex !important;
@@ -1446,12 +1450,12 @@
                 margin: 5rem auto 0rem auto !important;
                 padding: 1rem 0.5rem 0.5rem 0.5rem !important;
             }
-            
+
             #new-booking-section .premium-safety-promise {
                 font-size: 1.1rem !important;
             }
-            
-            #new-booking-section .premium-safety-promise > div {
+
+            #new-booking-section .premium-safety-promise>div {
                 margin: 0.35rem 0 !important;
             }
         }
@@ -1526,12 +1530,16 @@
             <!-- Mobile Menu Panel -->
             <div class="premium-mobile-panel" id="premium-mobile-panel" aria-hidden="true" style="display: none;">
                 <ul class="premium-mobile-menu" role="menu">
-                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-                        <a href="#top" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Home</a>
+                    <li role="none"
+                        style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#top" class="premium-mobile-menu-item" role="menuitem"
+                            style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Home</a>
                     </li>
-                    <li role="none" class="premium-mobile-menu-item-has-dropdown" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                    <li role="none" class="premium-mobile-menu-item-has-dropdown"
+                        style="display: block !important; visibility: visible !important; opacity: 1 !important;">
                         <a href="#section-cars" class="premium-mobile-menu-item" role="menuitem" aria-haspopup="true"
-                            aria-expanded="false" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
+                            aria-expanded="false"
+                            style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
                             Vehicle <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </a>
                         <ul class="premium-mobile-submenu" role="menu" aria-label="Vehicle categories">
@@ -1547,11 +1555,16 @@
                                     role="menuitem">Coaches</a></li>
                         </ul>
                     </li>
-                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-                        <a href="#section-about" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">About Us</a>
+                    <li role="none"
+                        style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#section-about" class="premium-mobile-menu-item" role="menuitem"
+                            style="display: flex !important; visibility: visible !important; opacity: 1 !important;">About
+                            Us</a>
                     </li>
-                    <li role="none" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-                        <a href="#section-call-to-action" class="premium-mobile-menu-item" role="menuitem" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Contact</a>
+                    <li role="none"
+                        style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                        <a href="#section-call-to-action" class="premium-mobile-menu-item" role="menuitem"
+                            style="display: flex !important; visibility: visible !important; opacity: 1 !important;">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -1590,8 +1603,10 @@
                         <!-- Safety Promise Quote - Left Side -->
                         <div class="hero-safety-quote">
                             <div class="premium-safety-promise">
-                                <div><span class="safety-text-red">YOUR</span> <span class="safety-text-black">SAFETY,</span></div>
-                                <div><span class="safety-text-red">OUR</span> <span class="safety-text-black">PROMISE.</span></div>
+                                <div><span class="safety-text-red">YOUR</span> <span
+                                        class="safety-text-black">SAFETY,</span></div>
+                                <div><span class="safety-text-red">OUR</span> <span
+                                        class="safety-text-black">PROMISE.</span></div>
                             </div>
                         </div>
 
@@ -1968,7 +1983,8 @@
                         <div class="row g-5">
                             <div class="col-lg-6 wow fadeInRight">
                                 <h2>We offer customers a wide range of <span class="id-color">commercial cars</span> and
-                                    <span class="id-color">luxury cars</span> for any occasion.</h2>
+                                    <span class="id-color">luxury cars</span> for any occasion.
+                                </h2>
                             </div>
                             <div class="col-lg-6 wow fadeInLeft">
                                 At our car rental agency, we believe that everyone deserves to experience the pleasure
@@ -2016,6 +2032,132 @@
                 </div>
             </section>
 
+            <style>
+                .new-fleet-card {
+                    background: #ffffff;
+                    border-radius: 12px;
+                    border: 1px solid #e1e4e8;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    display: flex;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .new-fleet-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                }
+
+                .new-fleet-card:hover .fc-img-wrapper img {
+                    transform: scale(1.08); /* Implement zoom in on hover */
+                }
+
+                .fc-img-wrapper {
+                    width: 100%;
+                    height: 230px;
+                    overflow: hidden;
+                    background: #f8f9fa;
+                    padding: 10px;
+                }
+
+                .fc-img-wrapper img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: transform 0.4s ease;
+                }
+
+                .fc-content {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                }
+
+                .fc-stars {
+                    color: #ffc107;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    letter-spacing: 2px;
+                }
+
+                .fc-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #222;
+                    margin-bottom: 15px;
+                    line-height: 1.4;
+                    min-height: 56px;
+                }
+
+                .fc-price {
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #eee;
+                    display: flex;
+                    align-items: baseline;
+                    gap: 5px;
+                }
+
+                .fc-amount {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #ff3333;
+                }
+
+                .fc-period {
+                    font-size: 13px;
+                    color: #666;
+                    font-weight: 500;
+                }
+
+                .fc-features {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 25px;
+                    padding: 0 5px;
+                }
+
+                .fc-feature {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #333;
+                }
+
+                .fc-feature i {
+                    width: 20px;
+                    text-align: center;
+                }
+
+                .fc-btn {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 12px 0;
+                    background: #ffffff;
+                    color: #222;
+                    border: 2px solid #222;
+                    border-radius: 6px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    transition: all 0.3s ease;
+                    margin-top: auto;
+                    cursor: pointer;
+                }
+
+                .fc-btn:hover {
+                    background: #ff3333;
+                    color: #ffffff;
+                    border-color: #ff3333;
+                    text-decoration: none;
+                }
+            </style>
             <section id="section-cars">
                 <div class="container">
                     <div class="row align-items-center">
@@ -2030,396 +2172,530 @@
                         <div id="items-carousel" class="owl-carousel wow fadeIn">
 
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/innova.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Toyato%20Innova'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/innova.png" class="img-fluid" alt="Toyato Innova">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Toyato Innova</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>74</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Toyato Innova Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 3000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">7+1 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg"
-                                                        alt="">7+1</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">SUV</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/XUV 500.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>XUV 500</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">SUV</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Xcent.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Xcent</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                    Sedan</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Wagon R.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Wagon R</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                    Hatchback</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Toyato%20Innova"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Tiago.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=XUV%20500'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/XUV 500.png" class="img-fluid" alt="XUV 500">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Tiago</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">XUV 500 Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 3500</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                    Hatchback</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Santro.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Santro</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                    Hatchback</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Safari.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Safari</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">SUV</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Ertiga.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Ertiga</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">7</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">MPV</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Dzire.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Dzire</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
-                                            </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Compact
-                                                    Sedan</span>
-                                            </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
-                                            </div>
-                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=XUV%20500"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/Amaze.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Xcent'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Xcent.png" class="img-fluid" alt="Xcent">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Amaze</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Xcent Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 2000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">1</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">Sedan</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Xcent"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/carousel2.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Wagon%20R'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Wagon R.png" class="img-fluid" alt="Wagon R">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Force Urbania</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Wagon R Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 1500</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg"
-                                                        alt="">20+1</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">Van</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Wagon%20R"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/tata winger.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Tiago'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Tiago.png" class="img-fluid" alt="Tiago">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Tata Winger</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Tiago Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 1500</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg"
-                                                        alt="">10+1</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
-                                                    Van</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Tiago"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/traveller 26 seater.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Santro'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Santro.png" class="img-fluid" alt="Santro">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Traveller 26 Seater</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Santro Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 1200</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">26</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">4</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">6</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">Bus</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Santro"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/traveller 17 seater.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Safari'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Safari.png" class="img-fluid" alt="Safari">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Traveller 17 Seater</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Safari Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 4000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">7 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">17</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">5</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg" alt="">Mini
-                                                    Bus</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Safari"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-lg-12">
-                                <div class="de-item mb30">
-                                    <div class="d-img">
-                                        <img src="images/cars/traveller 12 seater.png" class="img-fluid" alt="">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Ertiga'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Ertiga.png" class="img-fluid" alt="Ertiga">
                                     </div>
-                                    <div class="d-info">
-                                        <div class="d-text">
-                                            <h4>Traveller 12 Seater</h4>
-                                            <div class="d-item_like">
-                                                <i class="fa fa-heart"></i><span>19</span>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Ertiga Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 2500</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">7 People</span>
                                             </div>
-                                            <div class="d-atr-group">
-                                                <span class="d-atr"><img src="images/icons/1-green.svg" alt="">12</span>
-                                                <span class="d-atr"><img src="images/icons/2-green.svg" alt="">3</span>
-                                                <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                                <span class="d-atr"><img src="images/icons/4-green.svg"
-                                                        alt="">Van</span>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
                                             </div>
-                                            <div class="d-price">
-                                                <a class="btn-main" href="#new-booking-section">Rent Now</a>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
                                             </div>
                                         </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Ertiga"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Dzire'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Dzire.png" class="img-fluid" alt="Dzire">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Dzire Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 1800</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Dzire"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Amaze'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/Amaze.png" class="img-fluid" alt="Amaze">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Amaze Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 1800</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">5 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Amaze"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Force%20Urbania'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/carousel2.png" class="img-fluid" alt="Force Urbania">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Force Urbania Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 8000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">20+1 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Force%20Urbania"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Tata%20Winger'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/tata winger.png" class="img-fluid" alt="Tata Winger">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Tata Winger Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 5000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">10+1 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Tata%20Winger"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Traveller%2026%20Seater'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/traveller 26 seater.png" class="img-fluid"
+                                            alt="Traveller 26 Seater">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Traveller 26 Seater Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 10000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">26 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Traveller%2026%20Seater"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Traveller%2017%20Seater'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/traveller 17 seater.png" class="img-fluid"
+                                            alt="Traveller 17 Seater">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Traveller 17 Seater Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 8000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">17 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Traveller%2017%20Seater"">Rent Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Traveller%2012%20Seater'">
+                                    <div class="fc-img-wrapper">
+                                        <img src="images/cars/traveller 12 seater.png" class="img-fluid"
+                                            alt="Traveller 12 Seater">
+                                    </div>
+                                    <div class="fc-content">
+                                        <div class="fc-stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <h4 class="fc-title">Traveller 12 Seater Rental in Coimbatore</h4>
+                                        <div class="fc-price">
+                                            <span class="fc-amount">₹ 6000</span><span class="fc-period">/ Day</span>
+                                        </div>
+                                        <div class="fc-features">
+                                            <div class="fc-feature">
+                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">12 People</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
+                                            </div>
+                                            <div class="fc-feature">
+                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
+                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
+                                            </div>
+                                        </div>
+                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Traveller%2012%20Seater"">Rent Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -2459,6 +2735,365 @@
                     </div>
                 </div>
             </section>
+
+            <!-- START: FAMOUS DESTINATIONS BENTO GRID -->
+            <style>
+                .destinations-section {
+                    padding: 100px 0;
+                    background: linear-gradient(145deg, #fdfdfd, #f4f5f8);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .dest-header {
+                    text-align: center;
+                    margin-bottom: 70px;
+                    padding: 0 20px;
+                }
+
+                .dest-header h2 {
+                    font-size: clamp(2.2rem, 5vw, 3.2rem);
+                    font-weight: 800;
+                    color: #1a1a1a;
+                    margin-bottom: 15px;
+                    letter-spacing: -0.5px;
+                }
+
+                .dest-header p {
+                    font-size: 1.15rem;
+                    color: #666;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                .bento-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-auto-rows: 280px;
+                    gap: 20px;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 0 5%;
+                }
+
+                .bento-card {
+                    position: relative;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    background: #fff;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    transform: translateY(0);
+                    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+                }
+
+                .bento-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+
+                .bento-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 30px;
+                    transition: background 0.5s ease;
+                }
+
+                .bento-distance {
+                    display: inline-block;
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                    padding: 6px 14px;
+                    border-radius: 30px;
+                    font-size: 0.8rem;
+                    color: #fff;
+                    font-weight: 500;
+                    align-self: flex-start;
+                    margin-bottom: auto;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                }
+
+                .bento-content-wrap {
+                    transform: translateY(15px);
+                    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+                }
+
+                .bento-title {
+                    color: #fff;
+                    font-size: 1.6rem;
+                    font-weight: 800;
+                    margin: 0 0 6px 0;
+                    letter-spacing: -0.5px;
+                }
+
+                .bento-subtitle {
+                    color: #ff9800; /* Warm travel sunset tone */
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin: 0 0 20px 0;
+                }
+
+                .bento-explore {
+                    opacity: 0;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 0.95rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: opacity 0.4s ease;
+                }
+
+                .bento-explore i {
+                    transition: transform 0.3s ease;
+                }
+
+                /* Hover States */
+                .bento-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                }
+
+                .bento-card:hover .bento-img {
+                    transform: scale(1.08);
+                }
+
+                .bento-card:hover .bento-overlay {
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.2) 100%);
+                }
+
+                .bento-card:hover .bento-content-wrap {
+                    transform: translateY(0);
+                }
+
+                .bento-card:hover .bento-explore {
+                    opacity: 1;
+                }
+
+                .bento-card:hover .bento-explore i {
+                    transform: translateX(5px);
+                }
+
+                /* Asymmetric Layout Spans */
+                .bspan-2 { grid-column: span 2; }
+                .brow-2 { grid-row: span 2; }
+
+                /* Feature Card overrides */
+                .bento-card.brow-2 .bento-title {
+                    font-size: 2.2rem;
+                }
+                .bento-card.brow-2 .bento-img {
+                    min-height: 100%;
+                }
+
+                /* CTA Area inside section */
+                .dest-cta-area {
+                    text-align: center;
+                    margin-top: 80px;
+                    padding: 40px 20px;
+                    background: #111;
+                    border-radius: 24px;
+                    max-width: 1000px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 90%;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+                }
+
+                .cta-text-left {
+                    text-align: left;
+                }
+
+                .cta-text-left h3 {
+                    font-size: 2rem;
+                    font-weight: 800;
+                    margin: 0 0 10px 0;
+                    color: #fff;
+                }
+
+                .cta-text-left p {
+                    margin: 0;
+                    color: #aaa;
+                    font-size: 1.1rem;
+                }
+
+                /* Responsiveness */
+                @media (max-width: 1024px) {
+                    .bento-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .dest-cta-area {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 30px;
+                    }
+                    .cta-text-left {
+                        text-align: center;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .bento-grid {
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: 320px;
+                    }
+                    .bspan-2, .brow-2 {
+                        grid-column: span 1;
+                        grid-row: span 1;
+                    }
+                    .bento-card.brow-2 .bento-title {
+                        font-size: 1.6rem;
+                    }
+                }
+            </style>
+
+            <section class="destinations-section" id="section-destinations">
+                <div class="dest-header">
+                    <span class="subtitle" style="display:inline-block; margin-bottom:10px; color:#ff3333; font-weight:700; letter-spacing:2px; text-transform:uppercase; font-size:0.85rem;">Discover South India</span>
+                    <h2>Explore Coimbatore’s Best Destinations</h2>
+                    <p>From spiritual retreats nestled deep in the Western Ghats to scenic, cloud-covered hill stations.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Card 1: Adiyogi (Large Vert) -->
+                    <div class="bento-card bspan-2 brow-2">
+                        <img src="https://images.unsplash.com/photo-1621831776943-448f2a58baf0?auto=format&fit=crop&q=80" alt="Adiyogi Statue" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">35 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Adiyogi Statue</h3>
+                                <p class="bento-subtitle">Spiritual Hub</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Ooty (Large Horiz) -->
+                    <div class="bento-card bspan-2">
+                        <img src="https://images.unsplash.com/photo-1598893114003-88981d3bc01b?auto=format&fit=crop&q=80" alt="Ooty" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">85 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Ooty (Udhagamandalam)</h3>
+                                <p class="bento-subtitle">Queen of Hill Stations</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Marudhamalai -->
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1610414457787-8ea0b9ce4fbc?auto=format&fit=crop&q=80" alt="Marudhamalai Temple" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">15 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Marudhamalai</h3>
+                                <p class="bento-subtitle">Sacred Heritage</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Siruvani -->
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80" alt="Siruvani Waterfalls" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">35 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Siruvani Falls</h3>
+                                <p class="bento-subtitle">Nature's Paradise</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Valparai (Horiz) -->
+                    <div class="bento-card bspan-2">
+                        <img src="https://images.unsplash.com/photo-1625805792945-31f4fc1424ed?auto=format&fit=crop&q=80" alt="Valparai" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">105 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Valparai</h3>
+                                <p class="bento-subtitle">Lush Tea Estates</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Perur -->
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1600080336214-72213cf9a3e6?auto=format&fit=crop&q=80" alt="Perur Temple" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">9 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Perur Temple</h3>
+                                <p class="bento-subtitle">Historical Architecture</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Isha Yoga -->
+                    <div class="bento-card">
+                        <img src="https://images.unsplash.com/photo-1602416049286-90f757d5494a?auto=format&fit=crop&q=80" alt="Isha Yoga Center" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">30 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Isha Yoga</h3>
+                                <p class="bento-subtitle">Inner Peace</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Kodaikanal (Horiz) -->
+                    <div class="bento-card bspan-2">
+                        <img src="https://images.unsplash.com/photo-1582223838275-cd337e6da48a?auto=format&fit=crop&q=80" alt="Kodaikanal" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">170 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Kodaikanal</h3>
+                                <p class="bento-subtitle">The Princess of Hill Stations</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Card 9: Black Thunder (Horiz) -->
+                     <div class="bento-card bspan-2">
+                        <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&q=80" alt="Black Thunder Theme Park" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">40 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Black Thunder</h3>
+                                <p class="bento-subtitle">Adventure & Thrills</p>
+                                <span class="bento-explore">Explore More <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-cta-area">
+                    <div class="cta-text-left">
+                        <h3>Plan Your Trip Now</h3>
+                        <p>Relax and enjoy the view. We handle the driving.</p>
+                    </div>
+                    <a href="#section-cars" class="btn btn-gold btn-ripple" style="padding: 15px 40px; font-size:1.1rem;">Book a Ride</a>
+                </div>
+            </section>
+            <!-- END: FAMOUS DESTINATIONS BENTO GRID -->
 
             <section id="section-testimonials" class="no-top no-bottom">
                 <div class="container-fluid">

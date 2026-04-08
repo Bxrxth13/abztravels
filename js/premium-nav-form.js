@@ -3,7 +3,7 @@
  * AUTOBOTZ TOURS & TRAVELS
  * Namespaced IIFE - No global leaks
  */
-(function() {
+(function () {
     'use strict';
 
     // State management
@@ -36,7 +36,7 @@
 
         initNavbar();
         initMobileMenu();
-        
+
         // Only initialize form-related features if form exists
         if (form) {
             initCategoryPills();
@@ -67,7 +67,7 @@
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > 50) {
                 header.classList.add('scrolled');
             } else {
@@ -83,7 +83,7 @@
             lastScroll = currentScroll;
         }, { passive: true });
 
-        // Phone Call button - tel: link handles the call automatically
+        // Phone Call button - tel: link handles the call Manualally
         // No need for click handler as the tel: link will trigger phone call
         // On mobile: directly initiates call
         // On desktop: may open default phone app or prompt
@@ -137,7 +137,7 @@
 
         // Close dropdowns when clicking outside
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.premium-category-pill') && 
+            if (!e.target.closest('.premium-category-pill') &&
                 !e.target.closest('.premium-category-dropdown')) {
                 closeAllDropdowns();
             }
@@ -176,7 +176,7 @@
 
     function toggleCategoryDropdown(category, pill) {
         const dropdown = document.querySelector(`.premium-category-dropdown[data-category="${category}"]`);
-        
+
         if (state.openDropdown === category) {
             closeAllDropdowns();
         } else {
@@ -207,7 +207,7 @@
     function selectModel(category, model, optionElement) {
         state.selectedCategory = category;
         state.selectedModel = model;
-        
+
         // Update hidden field
         const vehicleTypeField = document.getElementById('premium-vehicle-type');
         if (vehicleTypeField) {
@@ -447,7 +447,7 @@
             // Show loading state
             const btnText = submitBtn.querySelector('.premium-btn-text');
             const btnLoader = submitBtn.querySelector('.premium-btn-loader');
-            
+
             submitBtn.disabled = true;
             if (btnText) btnText.style.display = 'none';
             if (btnLoader) btnLoader.style.display = 'flex';
@@ -459,7 +459,7 @@
             setTimeout(() => {
                 if (typeof sendToWhatsapp === 'function') {
                     const syntheticEvent = {
-                        preventDefault: () => {},
+                        preventDefault: () => { },
                         target: form
                     };
                     sendToWhatsapp(syntheticEvent);

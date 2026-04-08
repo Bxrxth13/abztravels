@@ -177,7 +177,7 @@ npx playwright test
 
 ## Screenshots
 
-Screenshots will be generated automatically when running Playwright tests:
+Screenshots will be generated Manualally when running Playwright tests:
 - Location: `tests/test-results/`
 - Format: PNG
 - Captured on: test failures and key interactions

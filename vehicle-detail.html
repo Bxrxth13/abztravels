@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toyota Innova Crysta | Premium Rental</title>
+  <meta name="description" content="Book the Toyota Innova Crysta in Coimbatore. Luxury 7-seater SUV at ₹3000/day.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-dark: #b5952f;
+      --black: #0a0a0a;
+      --dark: #141414;
+      --dark-gray: #1f1f1f;
+      --gray: #f4f4f5;
+      --white: #ffffff;
+      --text: #333333;
+      --text-muted: #888888;
+      --primary-red: #cb1515;
+      --red-dark: #a01010;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+      --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.25);
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* UTILITIES */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .text-gold {
+      color: var(--gold);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 50px;
+      max-width: 600px;
+    }
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: var(--transition);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+
+    .btn-gold {
+      background: var(--primary-red);
+      color: var(--white);
+      box-shadow: 0 10px 30px rgba(203, 21, 21, 0.25);
+    }
+
+    .btn-gold:hover {
+      background: var(--red-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(203, 21, 21, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid rgba(203, 21, 21, 0.5);
+      color: var(--primary-red);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-red);
+      color: var(--white);
+      background: var(--primary-red);
+    }
+
+    /* RIPPLE EFFECT */
+    .ripple {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border-radius: 50%;
+      animation: ripples 0.6s linear;
+    }
+
+    @keyframes ripples {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+      }
+
+      100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+      }
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background: var(--gray);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden;
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 100%);
+      z-index: 1;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .hero-content {
+      color: var(--text);
+      animation: fadeUp 1s ease 0.2s forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      margin-top: 40px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(203, 21, 21, 0.1);
+      border: 1px solid var(--primary-red);
+      color: var(--primary-red);
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .hero-desc {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .hero-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .hero-price .amount {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--primary-red);
+      line-height: 1;
+    }
+
+    .hero-price .duration {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      perspective: 1000px;
+      animation: floatIn 1.2s ease 0.4s forwards;
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    .hero-image-wrapper img {
+      width: 130%;
+      margin-left: -15%;
+      margin-top: -28%;
+      /* Force the vehicle up to align with text */
+      filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.3));
+      transform: rotateY(-15deg);
+      transition: var(--transition);
+    }
+
+    .hero-image-wrapper:hover img {
+      transform: rotateY(0deg) scale(1.05);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* LAYOUT - MAIN & STICKY PANEL */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 50px;
+      position: relative;
+      padding: 60px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .main-content {
+      min-width: 0;
+    }
+
+    .text-gold {
+      color: var(--primary-red);
+    }
+
+    /* HIGHLIGHTS SECTION */
+    .highlights-bar {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 40px;
+      transform: translateY(-50px);
+      position: relative;
+      z-index: 10;
+      margin: 0 5%;
+      max-width: 1300px;
+    }
+
+    .highlight-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .highlight-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(203, 21, 21, 0.1);
+      color: var(--primary-red);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .highlight-item:hover .highlight-icon {
+      background: var(--primary-red);
+      color: var(--white);
+      transform: scale(1.1);
+    }
+
+    .highlight-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .highlight-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    /* GALLERY SECTION */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      grid-auto-rows: 250px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-title {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 1.2rem;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-title {
+      transform: translateY(0);
+    }
+
+    /* DESCRIPTION SECTION */
+    .desc-wrapper {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .desc-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .desc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .desc-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    .desc-list i {
+      color: var(--primary-red);
+      font-size: 1.2rem;
+    }
+
+    .desc-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .desc-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .desc-img:hover img {
+      transform: scale(1.05);
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--gray);
+      padding: 30px 20px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: var(--primary-red);
+      margin-bottom: 16px;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .feature-card span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .feature-card:hover {
+      background: var(--white);
+      border-color: rgba(203, 21, 21, 0.3);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+
+    .feature-card:hover i {
+      transform: scale(1.2);
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 1px solid #eaeaea;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card.popular {
+      background: var(--primary-red);
+      color: var(--white);
+      border: none;
+      box-shadow: 0 10px 30px rgba(203, 21, 21, 0.3);
+      transform: scale(1.05);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .pricing-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .pricing-price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 30px;
+    }
+
+    .popular .pricing-price {
+      color: var(--white);
+    }
+
+    .pricing-price span {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .popular .pricing-price span {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .pricing-features i {
+      color: var(--primary-red);
+    }
+
+    .popular .pricing-features i {
+      color: var(--white);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-card.popular:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+
+    /* REVIEWS */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .review-card {
+      background: var(--gray);
+      padding: 40px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+
+    .stars {
+      color: var(--primary-red);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .review-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .author-info h4 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .author-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* STICKY BOOKING PANEL */
+    .sticky-wrapper {
+      position: sticky;
+      top: 30px;
+      z-index: 10;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    
+    .sticky-wrapper::-webkit-scrollbar {
+      width: 4px;
+    }
+    .sticky-wrapper::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 4px;
+    }
+
+    .booking-panel {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 25px 30px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .bp-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .bp-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #eaeaea;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--text);
+      background: var(--gray);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-red);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(203, 21, 21, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .bp-summary {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px dashed #ddd;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .summary-row.total {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-top: 15px;
+      border-top: 1px solid #eaeaea;
+      padding-top: 15px;
+    }
+
+    .bp-submit {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* FOOTER CTA */
+    .footer-cta {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 100px 5%;
+      position: relative;
+      padding-bottom: 150px;
+    }
+
+    .footer-cta h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .footer-cta p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 40px;
+    }
+
+    /* MOBILE DETECT */
+    .mobile-booking-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      padding: 15px 5%;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+    }
+
+    .mb-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-red);
+    }
+
+    .mb-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-image-wrapper img {
+        width: 100%;
+        margin: 0;
+      }
+
+      .hero-price,
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .page-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+      }
+
+      .sticky-wrapper {
+        display: none;
+      }
+
+      .mobile-booking-bar {
+        display: flex;
+      }
+
+      .desc-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .highlights-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .desc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fa-solid fa-crown" style="margin-right: 8px;"></i> Premium Fleet</span>
+        <h1 class="hero-title">Toyota <span class="text-gold">Innova Crysta</span></h1>
+        <p class="hero-desc">Comfort Meets Luxury for Every Journey. The ultimate choice for family trips, corporate
+          travel, and long-distance cruising.</p>
+        <div class="hero-price">
+          <span class="amount">₹3,000</span>
+          <span class="duration">/ Day</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#book" class="btn btn-gold btn-ripple">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:8122666644" class="btn btn-outline btn-ripple">Check Availability</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Assuming generic realistic car placement given request -->
+        <img src="images/cars/innova.png" alt="Innova Crysta"
+          onerror="this.src='https://www.picng.com/upload/toyota_innova/png_toyota_innova_49817.png'; this.style.filter='none';">
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK HIGHLIGHTS -->
+  <div class="highlights-bar">
+    <div class="highlight-item">
+      <div class="highlight-icon"><i class="fa-solid fa-users"></i></div>
+      <div class="highlight-label">Seating</div>
+      <div class="highlight-value">7+1 People</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon"><i class="fa-solid fa-gears"></i></div>
+      <div class="highlight-label">Transmission</div>
+      <div class="highlight-value">Manual</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon"><i class="fa-solid fa-gas-pump"></i></div>
+      <div class="highlight-label">Fuel Type</div>
+      <div class="highlight-value">Diesel</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon"><i class="fa-regular fa-snowflake"></i></div>
+      <div class="highlight-label">Air Con</div>
+      <div class="highlight-value">Dual Zone</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
+      <div class="highlight-label">Luggage</div>
+      <div class="highlight-value">4 Bags</div>
+    </div>
+  </div>
+
+  <!-- MAIN PAGE COMPONENT -->
+  <div class="page-layout">
+
+    <!-- LEFT CONTENT -->
+    <div class="main-content">
+
+      <!-- DESCRIPTION -->
+      <section class="section reveal" style="padding-top: 40px;">
+        <h2 class="section-title">Experience Unmatched <span class="text-gold">Comfort</span></h2>
+        <div class="desc-wrapper">
+          <div class="desc-text">
+            <p>The Toyota Innova Crysta redefines luxury travel. Whether you're planning a weekend family getaway or
+              require sophisticated transport for important business delegates, this premium MPV delivers an
+              exceptionally smooth, quiet, and spacious ride.</p>
+            <p>Equipped with plush captain seats, superior suspension, and top-tier safety features, every mile feels
+              effortless.</p>
+            <ul class="desc-list">
+              <li><i class="fa-solid fa-circle-check"></i> Spacious cabin with legroom</li>
+              <li><i class="fa-solid fa-circle-check"></i> Butter-smooth ride quality</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ideal for long-distance travel</li>
+              <li><i class="fa-solid fa-circle-check"></i> Premium leather upholstery</li>
+            </ul>
+          </div>
+          <div class="desc-img">
+            <img src="images/background/2.webp" alt="Interior Details"
+              onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800'">
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section reveal">
+        <h2 class="section-title">Vehicle <span class="text-gold">Gallery</span></h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/cars/innova.png" alt="Front angle" class="gallery-img"
+              onerror="this.src='https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800'">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Dynamic Front Profile</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/background/3.webp" alt="Interior" class="gallery-img"
+              onerror="this.src='https://images.unsplash.com/photo-1600742188448-9366dfdfc29c?auto=format&fit=crop&w=800'">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Luxury Interiors</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/traveller14.jpg" alt="Dashboard" class="gallery-img"
+              onerror="this.src='https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=800'">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Modern Dashboard</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/cars/Safari.png" alt="Side angle" class="gallery-img"
+              onerror="this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800'">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Sleek Silhouette</h3>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/background/2.webp" alt="Rear view" class="gallery-img"
+              onerror="this.src='https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800'">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Spacious Rear</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section reveal">
+        <h2 class="section-title">Premium <span class="text-gold">Features</span></h2>
+        <div class="features-grid">
+          <div class="feature-card"><i class="fa-solid fa-shield-halved"></i><span>ABS & EBD</span></div>
+          <div class="feature-card"><i class="fa-solid fa-wind"></i><span>7 Airbags</span></div>
+          <div class="feature-card"><i class="fa-solid fa-music"></i><span>Premium Audio</span></div>
+          <div class="feature-card"><i class="fa-solid fa-plug"></i><span>USB Charging</span></div>
+          <div class="feature-card"><i class="fa-solid fa-location-dot"></i><span>GPS System</span></div>
+          <div class="feature-card"><i class="fa-regular fa-snowflake"></i><span>Rear AC Vents</span></div>
+          <div class="feature-card"><i class="fa-solid fa-video"></i><span>Reverse Camera</span></div>
+          <div class="feature-card"><i class="fa-solid fa-couch"></i><span>Captain Seats</span></div>
+        </div>
+      </section>
+
+      <!-- PRICING PACKAGES -->
+      <section class="section reveal">
+        <h2 class="section-title">Rental <span class="text-gold">Packages</span></h2>
+        <div class="pricing-grid">
+          <div class="pricing-card" onclick="selectPlan(this, 'Daily Rate')">
+            <h3 class="pricing-title">Daily Rental</h3>
+            <div class="pricing-price">₹3,000<span>/day</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> With Professional Driver</li>
+              <li><i class="fa-solid fa-check"></i> 100 KMS Included</li>
+              <li><i class="fa-solid fa-check"></i> Tolls Extra</li>
+            </ul>
+            <button class="btn btn-outline plan-btn" style="width:100%; color: var(--black); border-color: #ddd;">Select
+              Plan</button>
+          </div>
+
+          <div class="pricing-card popular" onclick="selectPlan(this, 'Weekly Escape')">
+            <div class="pricing-badge">Best Value</div>
+            <h3 class="pricing-title">Weekly Escape</h3>
+            <div class="pricing-price">₹18,000<span>/week</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> With Professional Driver</li>
+              <li><i class="fa-solid fa-check"></i> 800 KMS Included</li>
+              <li><i class="fa-solid fa-check"></i> Free Sanitization</li>
+              <li><i class="fa-solid fa-check"></i> Priority Support</li>
+            </ul>
+            <button class="btn btn-gold btn-ripple plan-btn" style="width:100%;">Select Plan</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="section reveal">
+        <h2 class="section-title">Client <span class="text-gold">Experiences</span></h2>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"The Innova Crysta was maintained immaculately. Our family trip to Ooty was extremely
+              comfortable, and the driver was highly professional."</p>
+            <div class="review-author">
+              <img src="images/testimonial/1.jpg" alt="Reviewer" class="author-img"
+                onerror="this.src='https://ui-avatars.com/api/?name=Arjun+S&background=random'">
+              <div class="author-info">
+                <h4>Arjun Sharma</h4>
+                <p>Family Trip</p>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="review-text">"Booked for corporate guests. The vehicle was on time, super clean, and the ride
+              quality is unmatched. Will definitely use AUTOBOTZ again."</p>
+            <div class="review-author">
+              <img src="images/testimonial/2.jpg" alt="Reviewer" class="author-img"
+                onerror="this.src='https://ui-avatars.com/api/?name=Priya+M&background=random'">
+              <div class="author-info">
+                <h4>Priya Menon</h4>
+                <p>Corporate Booking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div> <!-- END MAIN CONTENT -->
+
+    <!-- RIGHT STICKY PANEL -->
+    <div>
+      <div class="sticky-wrapper" id="book">
+        <div class="booking-panel reveal">
+          <h3 class="bp-title">Reserve <span class="text-gold">Vehicle</span></h3>
+          <p class="bp-subtitle">Confirm your dates for Innova Crysta</p>
+
+          <form id="reserve-form">
+            <div class="form-group">
+              <label class="form-label" for="pickup-location">Pickup Location</label>
+              <input type="text" id="pickup-location" class="form-control" placeholder="Enter city or airport" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dropoff-location">Drop-off Location</label>
+              <input type="text" id="dropoff-location" class="form-control" placeholder="Enter drop destination" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pickup-time">Pickup Time</label>
+                <input type="time" id="pickup-time" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="bp-summary">
+              <div class="summary-row">
+                <span>Daily Rate</span>
+                <span>₹3,000</span>
+              </div>
+              <div class="summary-row">
+                <span>Driver Fees</span>
+                <span class="text-gold">Included</span>
+              </div>
+              <div class="summary-row total">
+                <span>Estimated Total</span>
+                <span>₹3,000</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-ripple bp-submit">Confirm Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- END PAGE LAYOUT -->
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta reveal">
+    <h2>Ready to Ride in <span class="text-gold">Comfort?</span></h2>
+    <p>Book the Innova Crysta today and secure a premium travel experience.</p>
+    <a href="#book" class="btn btn-gold btn-ripple" style="padding: 18px 40px; font-size: 1.1rem;">Book Your Vehicle
+      Now</a>
+  </section>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <div class="mobile-booking-bar">
+    <div>
+      <div class="mb-price">₹3,000</div>
+      <span class="mb-desc">Per Day / With Driver</span>
+    </div>
+    <a href="#book" class="btn btn-gold btn-ripple" style="padding: 12px 24px;">Book Now</a>
+  </div>
+
+  <script>
+    // URL PARAMETER HANDLING FOR DYNAMIC CARS
+    const urlParams = new URLSearchParams(window.location.search);
+    const vehicleName = urlParams.get('vehicle');
+
+    // Database of vehicles mapped roughly from what might be requested
+    const vehicleDB = {
+      'Toyato Innova': { name: 'Toyota Innova', img: 'innova.png', price: '3,000', seats: '7+1', type: 'MPV' },
+      'XUV 500': { name: 'Mahindra XUV 500', img: 'XUV 500.png', price: '3,500', seats: '5', type: 'SUV' },
+      'Xcent': { name: 'Hyundai Xcent', img: 'Xcent.png', price: '2,000', seats: '5', type: 'Sedan' },
+      'Wagon R': { name: 'Maruti Wagon R', img: 'Wagon R.png', price: '1,500', seats: '5', type: 'Hatchback' },
+      'Tiago': { name: 'Tata Tiago', img: 'Tiago.png', price: '1,500', seats: '5', type: 'Hatchback' },
+      'Santro': { name: 'Hyundai Santro', img: 'Santro.png', price: '1,200', seats: '5', type: 'Hatchback' },
+      'Safari': { name: 'Tata Safari', img: 'Safari.png', price: '4,000', seats: '7', type: 'SUV' },
+      'Ertiga': { name: 'Maruti Ertiga', img: 'Ertiga.png', price: '2,500', seats: '7', type: 'MPV' },
+      'Dzire': { name: 'Maruti Dzire', img: 'Dzire.png', price: '1,800', seats: '5', type: 'Sedan' },
+      'Amaze': { name: 'Honda Amaze', img: 'Amaze.png', price: '1,800', seats: '5', type: 'Sedan' },
+      'Force Urbania': { name: 'Force Urbania', img: 'force urbania.webp', price: '8,000', seats: '17', type: 'Van' },
+      'Tata Winger': { name: 'Tata Winger', img: 'tata winger.png', price: '5,000', seats: '15', type: 'Van' },
+      'Traveller 26 Seater': { name: 'Traveller 26', img: 'traveller 26 seater.png', price: '10,000', seats: '26', type: 'Bus' },
+      'Traveller 17 Seater': { name: 'Traveller 17', img: 'traveller 17 seater.png', price: '8,000', seats: '17', type: 'Bus' },
+      'Traveller 12 Seater': { name: 'Traveller 12', img: 'traveller 12 seater.png', price: '6,000', seats: '12', type: 'Van' },
+    };
+
+    if (vehicleName && vehicleDB[vehicleName]) {
+      const v = vehicleDB[vehicleName];
+      document.title = `${v.name} | Premium Rental`;
+
+      // Replace titles and names
+      document.querySelector('.hero-title').innerHTML = `${v.name.split(' ')[0]} <span class="text-gold">${v.name.split(' ').slice(1).join(' ')}</span>`;
+      document.querySelector('.bp-subtitle').innerText = `Confirm your dates for ${v.name}`;
+
+      // Update seat highlights properly based on DB
+      document.querySelector('.highlight-item:nth-child(1) .highlight-value').innerText = `${v.seats} People`;
+
+      // Update Images
+      document.querySelector('.hero-image-wrapper img').src = `images/cars/${v.img}`;
+      document.querySelector('.gallery-item:nth-child(1) .gallery-img').src = `images/cars/${v.img}`;
+
+      // Fix Pricing elements individually
+      const priceEls = document.querySelectorAll('.hero-price .amount, .mb-price');
+      priceEls.forEach(el => el.innerText = `₹${v.price}`);
+
+      const rateEls = document.querySelectorAll('.summary-row:nth-child(1) span:nth-child(2), .summary-row.total span:nth-child(2)');
+      rateEls.forEach(el => el.innerText = `₹${v.price}`);
+
+      const pacPriceEls = document.querySelectorAll('.pricing-price');
+      if (pacPriceEls.length > 0) pacPriceEls[0].innerHTML = `₹${v.price}<span>/day</span>`;
+      
+      const cleanPriceInt = parseInt(v.price.replace(/,/g, ''));
+      if (pacPriceEls.length > 1) {
+        const weeklyPrice = (cleanPriceInt * 5).toLocaleString('en-IN'); 
+        pacPriceEls[1].innerHTML = `₹${weeklyPrice}<span>/week</span>`;
+      }
+    }
+
+    // PACKAGE SELECTOR HANDLER
+    window.selectPlan = function(card, planName) {
+      // Reset all cards
+      document.querySelectorAll('.pricing-card').forEach(c => {
+        c.classList.remove('popular');
+        const btn = c.querySelector('.plan-btn');
+        if(btn) {
+          btn.className = 'btn btn-outline plan-btn';
+          btn.style.borderColor = '#ddd';
+          btn.style.color = 'var(--black)';
+        }
+      });
+      
+      // Activate clicked card
+      card.classList.add('popular');
+      const activeBtn = card.querySelector('.plan-btn');
+      if(activeBtn) {
+        activeBtn.className = 'btn btn-gold btn-ripple plan-btn';
+        activeBtn.style.color = '';
+        activeBtn.style.borderColor = '';
+      }
+      
+      // Update the Sticky Booking Form
+      const rawPriceHTML = card.querySelector('.pricing-price').innerHTML;
+      const cleanPrice = rawPriceHTML.split('<span>')[0]; // Extract just the currency value
+      
+      const summaryLabel = document.querySelector('.summary-row:nth-child(1) span:nth-child(1)');
+      if(summaryLabel) summaryLabel.innerText = planName;
+      
+      const summaryPrices = document.querySelectorAll('.summary-row:nth-child(1) span:nth-child(2), .summary-row.total span:nth-child(2), .mb-price');
+      summaryPrices.forEach(el => el.innerText = cleanPrice);
+      
+      // Scroll smoothly to form Mobile or Desktop
+      if(window.innerWidth > 1024) {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // sticky form is at the top
+      } else {
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    // SCROLL REVEAL ANIMATION
+    document.addEventListener("DOMContentLoaded", function () {
+      const reveals = document.querySelectorAll(".reveal");
+
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+
+        reveals.forEach((reveal) => {
+          const elementTop = reveal.getBoundingClientRect().top;
+          if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add("active");
+          }
+        });
+      };
+
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll(); // Trigger on load
+
+      // BUTTON RIPPLE EFFECT
+      const buttons = document.querySelectorAll('.btn-ripple');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          const x = e.clientX - e.target.getBoundingClientRect().left;
+          const y = e.clientY - e.target.getBoundingClientRect().top;
+
+          const ripple = document.createElement('span');
+          ripple.classList.add('ripple');
+          ripple.style.left = `${x}px`;
+          ripple.style.right = `${y}px`;
+
+          this.appendChild(ripple);
+
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+
+      // WHATSAPP RESERVATION HANDLER
+      const reserveForm = document.getElementById('reserve-form');
+      if (reserveForm) {
+        reserveForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const pickupLoc = document.getElementById('pickup-location').value;
+          const dropoffLoc = document.getElementById('dropoff-location').value;
+          const pickupDate = document.getElementById('pickup-date').value;
+          const pickupTime = document.getElementById('pickup-time').value;
+
+          const vehicleTitle = document.title.split('|')[0].trim() || 'Vehicle';
+
+          const message = `Hello AUTOBOTZ, I would like to reserve a vehicle.\n\n*Vehicle:* ${vehicleTitle}\n*Pickup Location:* ${pickupLoc}\n*Drop-off Location:* ${dropoffLoc}\n*Date:* ${pickupDate}\n*Time:* ${pickupTime}`;
+
+          const whatsappUrl = `https://wa.me/918122666644?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
