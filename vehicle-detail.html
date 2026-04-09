@@ -1180,7 +1180,7 @@
     // Database of vehicles mapped roughly from what might be requested
     const vehicleDB = {
       'Toyato Innova': { name: 'Toyota Innova', img: 'innova.png', price: '3,000', seats: '7+1', type: 'MPV' },
-      'XUV 500': { name: 'Mahindra XUV 500', img: 'XUV 500.png', price: '3,500', seats: '5', type: 'SUV' },
+      'XUV 500': { name: 'Mahindra XUV 500', heroImg: 'xuv500d.webp', img: 'xuv500.webp', price: '3,500', seats: '5', type: 'SUV', gal: ['Mahindra-XUV500 2.webp', 'mahindra-xuv500.webp'] },
       'Xcent': { name: 'Hyundai Xcent', img: 'Xcent.png', price: '2,000', seats: '5', type: 'Sedan' },
       'Wagon R': { name: 'Maruti Wagon R', img: 'Wagon R.png', price: '1,500', seats: '5', type: 'Hatchback' },
       'Tiago': { name: 'Tata Tiago', img: 'Tiago.png', price: '1,500', seats: '5', type: 'Hatchback' },
@@ -1208,8 +1208,15 @@
       document.querySelector('.highlight-item:nth-child(1) .highlight-value').innerText = `${v.seats} People`;
 
       // Update Images
-      document.querySelector('.hero-image-wrapper img').src = `images/cars/${v.img}`;
+      document.querySelector('.hero-image-wrapper img').src = `images/cars/${v.heroImg || v.img}`;
       document.querySelector('.gallery-item:nth-child(1) .gallery-img').src = `images/cars/${v.img}`;
+      
+      // Inject Custom Galleries if provided
+      if(v.gal) {
+          const defaultItems = document.querySelectorAll('.gallery-item .gallery-img');
+          if(defaultItems.length > 1 && v.gal.length >= 1) defaultItems[1].src = `images/cars/${v.gal[0]}`;
+          if(defaultItems.length > 2 && v.gal.length >= 2) defaultItems[2].src = `images/cars/${v.gal[1]}`;
+      }
 
       // Fix Pricing elements individually
       const priceEls = document.querySelectorAll('.hero-price .amount, .mb-price');
