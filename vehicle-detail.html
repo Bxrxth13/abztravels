@@ -172,7 +172,7 @@
       justify-content: center;
       overflow: hidden;
       padding-top: 40px;
-      padding-bottom: 80px;
+      padding-bottom: 0px;
     }
 
     .hero-bg {
@@ -269,10 +269,12 @@
       width: 130%;
       margin-left: -15%;
       margin-top: -28%;
+      margin-bottom: -15%;
       /* Force the vehicle up to align with text */
       filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.3));
       transform: rotateY(-15deg);
       transition: var(--transition);
+      display: block;
     }
 
     .hero-image-wrapper:hover img {
