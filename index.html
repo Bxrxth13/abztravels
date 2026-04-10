@@ -1527,6 +1527,7 @@
                 transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             }
             .dest-modal.active .dest-modal-content { transform: translateY(0); }
+            .fc-price { display: none !important; margin: 15px 0; padding-bottom: 15px; border-bottom: 1px solid #eee; }
             .dest-modal-header { padding: 20px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
             .dest-modal-header h3 { margin: 0; font-size: 1.8rem; font-weight: 800; }
             .dest-modal-close { background: #f4f4f4; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; transition: background 0.3s; }
@@ -2635,41 +2636,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Tata%20Winger'">
-                                    <div class="fc-img-wrapper">
-                                        <img src="images/cars/tata winger.png" class="img-fluid" alt="Tata Winger">
-                                    </div>
-                                    <div class="fc-content">
-                                        <div class="fc-stars">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <h4 class="fc-title">Tata Winger Rental in Coimbatore</h4>
-                                        <div class="fc-price">
-                                            <span class="fc-amount">₹ 5000</span><span class="fc-period">/ Day</span>
-                                        </div>
-                                        <div class="fc-features">
-                                            <div class="fc-feature">
-                                                <i class="fa fa-user" style="color:#ff3333; font-size:16px;"></i>
-                                                <span style="font-weight: 500; font-size: 15px;">10+1 People</span>
-                                            </div>
-                                            <div class="fc-feature">
-                                                <i class="fa fa-snowflake-o" style="color:#ff3333; font-size:16px;"></i>
-                                                <span style="font-weight: 500; font-size: 15px;">A/C</span>
-                                            </div>
-                                            <div class="fc-feature">
-                                                <i class="fa fa-suitcase" style="color:#ff3333; font-size:16px;"></i>
-                                                <span style="font-weight: 500; font-size: 15px;">Yes</span>
-                                            </div>
-                                        </div>
-                                        <a class="fc-btn" href="vehicle-detail.html?vehicle=Tata%20Winger">Rent Now</a>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-lg-12">
                                 <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Traveller%2026%20Seater'">
                                     <div class="fc-img-wrapper">
@@ -2709,7 +2676,7 @@
                             <div class="col-lg-12">
                                 <div class="new-fleet-card mb30" onclick="window.location.href='vehicle-detail.html?vehicle=Traveller%2017%20Seater'">
                                     <div class="fc-img-wrapper">
-                                        <img src="images/cars/traveller 17 seater.png" class="img-fluid"
+                                        <img src="images/cars/18 seater.webp" class="img-fluid"
                                             alt="Traveller 17 Seater">
                                     </div>
                                     <div class="fc-content">
@@ -3318,70 +3285,255 @@
             </section>
             <!-- END: FAMOUS DESTINATIONS BENTO GRID -->
 
-            <section id="section-testimonials" class="no-top no-bottom">
-                <div class="container-fluid">
-                    <div class="row g-2 p-2 align-items-center">
 
-                        <div class="col-md-4">
-                            <div class="de-image-text">
-                                <div class="d-text">
-                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                    <h4>Excellent Service! Car Rent Service!</h4>
-                                    <blockquote>
-                                        I have been using Rentaly for my Car Rental needs for over 5 years now. I have
-                                        never
-                                        had any problems with their service. Their customer support is always responsive
-                                        and
-                                        helpful. I would recommend Rentaly to anyone looking for a reliable Car Rental
-                                        provider.
-                                        <span class="by">Shiva Prakasam</span>
-                                    </blockquote>
-                                </div>
-                                <img src="images/testimonial/1.jpg" class="img-fluid" alt="">
-                            </div>
-                        </div>
+        <!-- PREMIUM CUSTOMER REVIEWS -->
+        <style>
+            .premium-reviews { background: url('images/back.jpeg') center/cover no-repeat; position: relative; padding: 100px 0; overflow: hidden; }
+            .pr-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10, 15, 30, 0.75), rgba(0, 0, 0, 0.85)); backdrop-filter: blur(14px); }
+            .pr-container { position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; padding: 0 5%; }
+            
+            .pr-header { text-align: center; margin-bottom: 60px; color: white; }
+            .pr-google-badge { display: inline-flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.08); padding: 12px 25px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            .pr-google-badge i { font-size: 1.5rem; color: #4285F4; }
+            .pr-google-badge .avg-rate { font-weight: 800; font-size: 1.2rem; }
+            .pr-google-badge .stars { color: #fbbc04; }
+            
+            .pr-header h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+            .pr-header p { color: #a1a1aa; font-size: 1.1rem; }
 
+            .pr-carousel { display: flex; gap: 25px; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding: 20px 0 40px; scrollbar-width: none; }
+            .pr-carousel::-webkit-scrollbar { display: none; }
+            
+            .pr-card { flex: 0 0 calc(33.333% - 17px); scroll-snap-align: center; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border-radius: 20px; padding: 40px 35px; color: white; transition: all 0.4s ease; position: relative; }
+            .pr-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+            
+            .pr-stars { color: #fbbc04; font-size: 1.2rem; margin-bottom: 20px; letter-spacing: 2px; }
+            .pr-text { font-size: 1.05rem; line-height: 1.7; color: #d1d5db; margin-bottom: 25px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; transition: all 0.3s; }
+            .pr-text.expanded { -webkit-line-clamp: unset; }
+            .pr-more { color: #ff5555; cursor: pointer; font-weight: 700; font-size: 0.95rem; display: inline-block; }
+            .pr-more:hover { color: white; }
+            
+            .pr-author { display: flex; align-items: center; gap: 15px; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
+            .pr-avatar { width: 50px; height: 50px; background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: 1.3rem; }
+            .pr-name { margin: 0; font-weight: 700; font-size: 1.15rem; color: #fff; }
+            .pr-time { margin: 0; font-size: 0.85rem; color: #a1a1aa; font-weight: 500; }
+            .pr-quote-icon { position: absolute; top: 25px; right: 25px; font-size: 5rem; color: rgba(255,255,255,0.03); line-height: 1; font-style: italic; font-family: serif; }
 
-                        <div class="col-md-4">
-                            <div class="de-image-text">
-                                <div class="d-text">
-                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                    <h4>Excellent Service! Car Rent Service!</h4>
-                                    <blockquote>
-                                        We have been using Rentaly for our trips needs for several years now and have
-                                        always
-                                        been happy with their service. Their customer support is Excellent Service! and
-                                        they
-                                        are always available to help with any issues we have. Their prices are also very
-                                        competitive.
-                                        <span class="by">Jennish</span>
-                                    </blockquote>
-                                </div>
-                                <img src="images/testimonial/2.jpg" class="img-fluid" alt="">
-                            </div>
-                        </div>
+            .pr-controls { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+            .pr-btn { width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s; }
+            .pr-btn:hover { background: #cb1515; border-color: #cb1515; }
 
-                        <div class="col-md-4">
-                            <div class="de-image-text">
-                                <div class="d-text">
-                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
-                                    <h4>Excellent Service! Car Rent Service!</h4>
-                                    <blockquote>
-                                        Endorsed by industry experts, Rentaly is the Car Rental solution you can trust.
-                                        With
-                                        years of experience in the field, we provide fast, reliable and secure Car
-                                        Rental
-                                        services.
-                                        <span class="by">Karthi</span>
-                                    </blockquote>
-                                </div>
-                                <img src="images/testimonial/3.jpg" class="img-fluid" alt="">
-                            </div>
-                        </div>
+            @media (max-width: 991px) { .pr-card { flex: 0 0 calc(50% - 13px); } }
+            @media (max-width: 768px) { .pr-card { flex: 0 0 85%; } }
 
+            /* FLOATING NOTIFICATION */
+            .float-review { position: fixed; bottom: 30px; left: 30px; transform: translateX(-150%); opacity: 0; z-index: 9999; background: rgba(17,17,17,0.92); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #cb1515; border-radius: 12px; padding: 20px 25px; width: 340px; color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.4); transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s; pointer-events: none; }
+            .float-review.show { transform: translateX(0); opacity: 1; pointer-events: auto; }
+            .fr-close { position: absolute; top: 15px; right: 15px; font-size: 1.1rem; color: #888; cursor: pointer; transition: 0.2s; }
+            .fr-close:hover { color: white; }
+            .fr-stars { color: #fbbc04; font-size: 0.9rem; margin-bottom: 8px; }
+            .fr-text { font-size: 0.95rem; font-weight: 500; font-style: italic; margin-bottom: 8px; color: #e5e7eb; }
+            .fr-author { font-size: 0.85rem; color: #9ca3af; font-weight: 600; }
+            @media(max-width:768px){ .float-review{ left: 15px; right: 15px; width: auto; bottom: 20px; } }
+        </style>
+
+        <section id="section-reviews" class="premium-reviews">
+            <div class="pr-overlay"></div>
+            <div class="pr-container">
+                <div class="pr-header">
+                    <div class="pr-google-badge" data-aos="fade-up">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Google Reviews</span>
+                        <span class="stars">★★★★★</span>
+                        <span class="avg-rate">5.0</span>
                     </div>
+                    <h2 data-aos="fade-up" data-aos-delay="100" style="color: #cb1515;">Trusted by Travelers Everywhere</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">See what our customers have to say about their journeys with Autobotz Rentals.</p>
                 </div>
-            </section>
+
+                <div class="pr-carousel" id="reviewCarousel">
+                    
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-1">"Such a wonderful travel service. Nice service, on time driver, good condition vehicle, rates are affordable. Had an excellent experience with this autobotz travel service. Everything was well organized from booking to the end of the trip. The staff was polite, responsive, and very helpful throughout. The journey was comfortable, on time, and completely hassle-free. Highly recommended!"</div>
+                        <span class="pr-more" onclick="toggleReview('rt-1', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">M</div>
+                            <div>
+                                <h4 class="pr-name">Mäggïe Möön</h4>
+                                <span class="pr-time">3 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-2">"We had a wonderful trip to Idukki with our family, including kids. Manoj, our driver, was extremely kind, patient, and professional. Highly recommend him for family trips."</div>
+                        <span class="pr-more" style="display:none;" onclick="toggleReview('rt-2', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">B</div>
+                            <div>
+                                <h4 class="pr-name">Barani Kumar</h4>
+                                <span class="pr-time">3 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-3">"Neat, clean and comfortable. Friendly and responsible driver. Kudos to Mohan."</div>
+                        <span class="pr-more" style="display:none;" onclick="toggleReview('rt-3', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">BS</div>
+                            <div>
+                                <h4 class="pr-name">Beena Shankar</h4>
+                                <span class="pr-time">1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-4">"I had a pleasant journey. The vehicle was clean, the driver was polite, and the trip was comfortable and safe. Reached on time."</div>
+                        <span class="pr-more" style="display:none;" onclick="toggleReview('rt-4', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">S</div>
+                            <div>
+                                <h4 class="pr-name">SHREENITHI D</h4>
+                                <span class="pr-time">3 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-5">"Excellent vehicle and professional driver. Safe driving, clean maintenance, and overall very good experience."</div>
+                        <span class="pr-more" style="display:none;" onclick="toggleReview('rt-5', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">V</div>
+                            <div>
+                                <h4 class="pr-name">Vigadam.com</h4>
+                                <span class="pr-time">2 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pr-card">
+                        <div class="pr-quote-icon">"</div>
+                        <div class="pr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="pr-text" id="rt-6">"We had an amazing experience with Autobotz Travels! Their attention to detail and excellent service made our trip unforgettable."</div>
+                        <span class="pr-more" style="display:none;" onclick="toggleReview('rt-6', this)">Read more +</span>
+                        <div class="pr-author">
+                            <div class="pr-avatar">BM</div>
+                            <div>
+                                <h4 class="pr-name">Bala Murali</h4>
+                                <span class="pr-time">1 year ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pr-controls">
+                    <div class="pr-btn" onclick="scrollReviewCarousel(-1)"><i class="fa fa-chevron-left"></i></div>
+                    <div class="pr-btn" onclick="scrollReviewCarousel(1)"><i class="fa fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING REVIEW WIDGET -->
+        <div class="float-review" id="floatReview">
+            <i class="fa fa-times fr-close" onclick="closeFloatReview()"></i>
+            <div class="fr-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+            <div class="fr-text" id="fr-text">“Excellent service & smooth trip!”</div>
+            <div class="fr-author">— <span id="fr-author">Barani Kumar</span></div>
+        </div>
+
+        <script>
+            function toggleReview(id, btn) {
+                const text = document.getElementById(id);
+                if(text.classList.contains('expanded')) {
+                    text.classList.remove('expanded');
+                    btn.innerText = "Read more +";
+                } else {
+                    text.classList.add('expanded');
+                    btn.innerText = "Show less -";
+                }
+            }
+
+            // Carousel Autoplay Logic
+            const carousel = document.getElementById('reviewCarousel');
+            let isPaused = false;
+            let slideInterval;
+            
+            function startCarousel() {
+                slideInterval = setInterval(() => {
+                    if(!isPaused) {
+                        const cardWidth = window.innerWidth > 991 ? carousel.offsetWidth / 3 : (window.innerWidth > 768 ? carousel.offsetWidth / 2 : carousel.offsetWidth);
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 50) {
+                            carousel.scrollTo(0, 0); // Reset
+                        } else {
+                            carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                        }
+                    }
+                }, 3500);
+            }
+
+            carousel.addEventListener('mouseenter', () => isPaused = true);
+            carousel.addEventListener('mouseleave', () => isPaused = false);
+            carousel.addEventListener('touchstart', () => isPaused = true);
+            carousel.addEventListener('touchend', () => isPaused = false);
+            
+            startCarousel();
+
+            function scrollReviewCarousel(dir) {
+                const cardWidth = window.innerWidth > 991 ? carousel.offsetWidth / 3 : (window.innerWidth > 768 ? carousel.offsetWidth / 2 : carousel.offsetWidth);
+                carousel.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+            }
+
+            // Floating Notifications Logic
+            const floatData = [
+                { text: "“Had an excellent experience with autobotz travel service. Highly recommended!”", author: "Mäggïe Möön" },
+                { text: "“Manoj, our driver, was extremely kind, patient, and professional.”", author: "Barani Kumar" },
+                { text: "“Neat, clean and comfortable. Friendly and responsible driver.”", author: "Beena Shankar" },
+                { text: "“The vehicle was clean, the driver polite, trip was comfortable and safe.”", author: "SHREENITHI D" },
+                { text: "“Excellent vehicle and professional driver. Overall very good experience.”", author: "Vigadam.com" }
+            ];
+
+            const floatEl = document.getElementById('floatReview');
+            const frText = document.getElementById('fr-text');
+            const frAuthor = document.getElementById('fr-author');
+            let floatTimer;
+            let floatActive = true;
+
+            function popFloatReview() {
+                if(!floatActive) return;
+                const r = floatData[Math.floor(Math.random() * floatData.length)];
+                frText.innerText = r.text;
+                frAuthor.innerText = r.author;
+                
+                floatEl.classList.add('show');
+                
+                setTimeout(() => {
+                    if(floatEl.classList.contains('show')) floatEl.classList.remove('show');
+                }, 2500); // close after 2.5s
+            }
+
+            // Start triggering every 4.5 seconds (leaving a 2-second gap)
+            setTimeout(popFloatReview, 1000); // initial pop
+            floatTimer = setInterval(popFloatReview, 4500);
+
+            function closeFloatReview() {
+                floatEl.classList.remove('show');
+                floatActive = false; // Disable temporarily if user closes it
+                setTimeout(() => floatActive = true, 30000); // Re-enable after 30s
+            }
+        </script>
 
             <section id="section-faq">
                 <div class="container">
