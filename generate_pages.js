@@ -1,148 +1,251 @@
 const fs = require('fs');
+const templateStr = fs.readFileSync('kodaikanal.html', 'utf8');
 
-const placesData = {
-    ooty: {
-        title: "Ooty (Udhagamandalam)",
-        tagline: "Queen of Hill Stations. Rolling tea gardens, breathtaking viewpoints, and cool mountain breezes.",
-        aboutTitle: "Escape to the Hills",
-        aboutDesc: "<p>Ooty, nestled in the Nilgiri hills, is a premier hill station celebrated for its picturesque landscapes, colonial heritage, and the historic Nilgiri Mountain Railway.</p><p>Vast tea estates and pristine botanical gardens provide a lush, serene escape that draws nature lovers all year round.</p>",
-        dist: "85 km", time: "2.5-3 Hours",
-        heroImg: "https://images.unsplash.com/photo-1598893114003-88981d3bc01b?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1626207038166-70e6c5bbad42?auto=format&fit=crop&q=80", t: "Tea Gardens", p:"Endless lush green hills."},
-            {img: "https://images.unsplash.com/photo-1582223838275-cd337e6da48a?auto=format&fit=crop&q=80", t: "Ooty Lake", p:"Peaceful boating experience."},
-            {img: "https://images.unsplash.com/photo-1590483860086-a681c2f1f07f?auto=format&fit=crop&q=80", t: "Botanical Wonders", p:"Rare flora and heritage trees."}
-        ]
+const places = [
+    {
+        file: 'aliyardam.html',
+        title: 'Aliyar Dam',
+        tag: 'Coimbatore, Tamil Nadu',
+        tagline: 'A scenic reservoir nestled in the foothills of Valparai, perfect for boating and picnics.',
+        aboutTitle: 'Tranquil Reservoir',
+        aboutDesc: '<p>A stunning reservoir located at the foothills of Valparai in the Anaimalai range.</p><p>Surrounded by mountains on three sides, offering a serene environment for boating, magnificent park walks, and peaceful picnics with family.</p>',
+        dist: '65 km',
+        time: '1-2 Hours',
+        image: 'aliyar_dam.png',
+        high1Icon: 'fa-ship', high1Title: 'Boating', high1Desc: 'Enjoy paddle boating around the large reservoir with mountain slopes in the backdrop.',
+        high2Icon: 'fa-tree', high2Title: 'Dam Park', high2Desc: 'A well-maintained park and aquarium perfect for families.',
+        high3Icon: 'fa-mountain', high3Title: 'Valparai Foothills', high3Desc: 'Experience the scenic Western Ghats standing tall directly behind the beautiful dam.',
+        query: 'dam,reservoir,nature'
     },
-    marudhamalai: {
-        title: "Marudhamalai Temple",
-        tagline: "Sacred Heritage. A profound spiritual retreat dedicated to Lord Murugan situated beautifully upon a hillock.",
-        aboutTitle: "A Divine Journey",
-        aboutDesc: "<p>Marudhamalai is an ancient 12th-century hill temple located on the Western Ghats, renowned for its serene atmosphere and spiritual significance.</p><p>Surrounded by dense forests containing medicinal herbs, the clean mountain air offers an elevating spiritual experience to thousands of devotees everyday.</p>",
-        dist: "15 km", time: "1-2 Hours",
-        heroImg: "https://images.unsplash.com/photo-1610414457787-8ea0b9ce4fbc?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1590050720489-32541f4810ea?auto=format&fit=crop&q=80", t: "Dravidian Art", p:"Stunning temple architecture."},
-            {img: "https://images.unsplash.com/photo-1610414457787-8ea0b9ce4fbc?auto=format&fit=crop&q=80", t: "Hilltop Aura", p:"Beautiful panoramas."},
-            {img: "https://images.unsplash.com/photo-1627443851508-2cbaae1ed58c?auto=format&fit=crop&q=80", t: "Sacred Steps", p:"A spiritual climb."}
-        ]
+    {
+        file: 'topslip.html',
+        title: 'Topslip',
+        tag: 'Coimbatore, Tamil Nadu',
+        tagline: 'Located in the Anamalai Tiger Reserve, known for elephant safaris and pristine dense forests.',
+        aboutTitle: 'Into the Wild',
+        aboutDesc: '<p>Topslip is a magnificent slice of the Western Ghats located inside the Anamalai Tiger Reserve.</p><p>It is famously known for elephant camps, dense forest safaris, and preserving an incredibly rich biodiversity of flora and fauna.</p>',
+        dist: '75 km',
+        time: '3-4 Hours',
+        image: 'topslip.png',
+        high1Icon: 'fa-elephant', high1Title: 'Elephant Safari', high1Desc: 'A thrilling ride through the deep jungle guided by expert forest guards.',
+        high2Icon: 'fa-leaf', high2Title: 'Jungle Trekking', high2Desc: 'Walk through the towering dense trees taking part in deep nature walks.',
+        high3Icon: 'fa-paw', high3Title: 'Wildlife Watching', high3Desc: 'Spot exotic birds, deer, and maybe even a tiger roaming the Anamalai range.',
+        query: 'forest,jungle,safari'
     },
-    siruvani: {
-        title: "Siruvani Waterfalls",
-        tagline: "Nature's Paradise. Crystal clear, incredibly sweet water cascading through deep Western Ghat forests.",
-        aboutTitle: "Taste Incredible Waters",
-        aboutDesc: "<p>The Siruvani river is world-renowned for the unique sweetness of its water. The magnificent waterfall forms deep inside the verdant Nilgiri Biosphere Reserve.</p><p>A trek through these dense, pristine forests provides the perfect rugged adventure, ending in a refreshing natural pool beloved by locals and tourists alike.</p>",
-        dist: "35 km", time: "2-3 Hours",
-        heroImg: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80", t: "Cascading Beauty", p:"The majestic main drop."},
-            {img: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&q=80", t: "Forest Trails", p:"Trek through dense canopy."},
-            {img: "https://images.unsplash.com/photo-1504646736773-45c1a8bd5cb2?auto=format&fit=crop&q=80", t: "Natural Pools", p:"Serene clear waters."}
-        ]
+    {
+        file: 'coonoor.html',
+        title: 'Coonoor',
+        tag: 'Nilgiris, Tamil Nadu',
+        tagline: 'Famous for its production of Nilgiri tea, Coonoor offers sweeping views of the lush tea estates and the Heritage Train.',
+        aboutTitle: 'The Tea Capital',
+        aboutDesc: '<p>Coonoor is the second largest hill station in the Nilgiri hills, known for its sprawling tea estates.</p><p>A noticeably quieter town compared to Ooty, offering a perfectly relaxing atmosphere among the misty hills and old colonial bungalows.</p>',
+        dist: '70 km',
+        time: '4-5 Hours',
+        image: 'coonoor.png',
+        high1Icon: 'fa-leaf', high1Title: 'Tea Gardens', high1Desc: 'Take a walk inside incredibly lush green slopes that produce the famous Nilgiri Tea.',
+        high2Icon: 'fa-train', high2Title: 'Nilgiri Mountain Railway', high2Desc: 'Take the iconic toy train offering unforgettable views of the valleys.',
+        high3Icon: 'fa-binoculars', high3Title: 'Sims Park', high3Desc: 'Explore beautiful botanical gardens housing numerous exotic plant species.',
+        query: 'tea,nilgiris,hills'
     },
-    valparai: {
-        title: "Valparai",
-        tagline: "Lush Tea Estates. A bio-diverse paradise holding dozens of hairpin bends and massive evergreen forests.",
-        aboutTitle: "An Untouched Hill Station",
-        aboutDesc: "<p>Valparai is a pristine hill station standing at 3500 feet above sea level, famously surrounded by the Anamalai Tiger Reserve and vast expanse of tea and coffee plantations.</p><p>Unlike heavily commercialized spots, Valparai retains its raw, untouched beauty offering serene misty mornings and thrilling wildlife spotting opportunities.</p>",
-        dist: "105 km", time: "3-4 Hours",
-        heroImg: "https://images.unsplash.com/photo-1625805792945-31f4fc1424ed?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1625805792945-31f4fc1424ed?auto=format&fit=crop&q=80", t: "Endless Green", p:"Rolling tea plantations."},
-            {img: "https://images.unsplash.com/photo-1621831776943-448f2a58baf0?auto=format&fit=crop&q=80", t: "Mist & Clouds", p:"Ethereal mornings."},
-            {img: "https://images.unsplash.com/photo-1598893114003-88981d3bc01b?auto=format&fit=crop&q=80", t: "Hairpin Bends", p:"Thrilling scenic drives."}
-        ]
+    {
+        file: 'munnar.html',
+        title: 'Munnar',
+        tag: 'Idukki, Kerala',
+        tagline: 'Kerala’s most iconic hill station, marked by sprawling tea plantations, winding roads, and misty mountain tops.',
+        aboutTitle: 'Misty Mountains',
+        aboutDesc: '<p>Munnar rises as three mountain streams merge—Mudrapuzha, Nallathanni and Kundala.</p><p>Known as the Kashmir of South India, it’s characterized by unending expanses of tea plantations, pristine valleys, and mountains covered in clouds.</p>',
+        dist: '160 km',
+        time: '5-6 Hours',
+        image: 'munnar.png',
+        high1Icon: 'fa-leaf', high1Title: 'Tea Estates', high1Desc: 'Endless carpets of green tea bushes rolling over vibrant hills.',
+        high2Icon: 'fa-water', high2Title: 'Cascading Waterfalls', high2Desc: 'Visit majestic roaring falls like Attukal and Cheeyappara.',
+        high3Icon: 'fa-camera', high3Title: 'Echo Point', high3Desc: 'A picturesque location where natural sounds resonate across the valley.',
+        query: 'munnar,hills,tea'
     },
-    perur: {
-        title: "Perur Pateeswarar Temple",
-        tagline: "Historical Architecture. An ancient Chola-built marvel depicting unparalleled stone carvings and sculptures.",
-        aboutTitle: "Immersed in History",
-        aboutDesc: "<p>Constructed by Karikala Chola in the 2nd century, the Perur Temple dedicated to Lord Shiva features the spectacular 'Kanaka Sabha' (Golden Hall) with exquisite stone carvings.</p><p>Every pillar tells deeply intricate stories of ancient mythology, making it not just a spiritual destination but a masterclass in ancient Dravidian heritage.</p>",
-        dist: "9 km", time: "1-2 Hours",
-        heroImg: "https://images.unsplash.com/photo-1600080336214-72213cf9a3e6?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1600080336214-72213cf9a3e6?auto=format&fit=crop&q=80", t: "Golden Hall", p:"Stunning Kanaka Sabha pillars."},
-            {img: "https://images.unsplash.com/photo-1590050720489-32541f4810ea?auto=format&fit=crop&q=80", t: "Stone Carvings", p:"Intricate mythological art."},
-            {img: "https://images.unsplash.com/photo-1610414457787-8ea0b9ce4fbc?auto=format&fit=crop&q=80", t: "Temple Pond", p:"Classical architecture."}
-        ]
+    {
+        file: 'varkala.html',
+        title: 'Varkala',
+        tag: 'Trivandrum, Kerala',
+        tagline: 'A unique coastal town in Kerala where red laterite cliffs plunge directly into the Arabian Sea.',
+        aboutTitle: 'The Cliff Beach',
+        aboutDesc: '<p>Varkala is the only place in southern Kerala where towering cliffs are found adjacent to the Arabian Sea.</p><p>These majestic Cenozoic sedimentary formation cliffs drop sharply into pristine waters, dotted with aesthetic cafes and spiritual spots.</p>',
+        dist: '300 km',
+        time: 'Full Day',
+        image: 'varkala.png',
+        high1Icon: 'fa-water', high1Title: 'Papanasam Beach', high1Desc: 'A beautiful beach backed by magnificent cliffs and natural springs.',
+        high2Icon: 'fa-coffee', high2Title: 'Cliff Cafes', high2Desc: 'Enjoy delicious seafood and incredible sunsets at the cliff-edge cafes.',
+        high3Icon: 'fa-wind', high3Title: 'Surfing & Yoga', high3Desc: 'A perfect hub for digital nomads seeking waves and inner peace.',
+        query: 'varkala,beach,cliffs'
     },
-    isha: {
-        title: "Isha Yoga Center",
-        tagline: "Inner Peace. A magnificent sacred space established for profound personal transformation.",
-        aboutTitle: "Discover Inner Clarity",
-        aboutDesc: "<p>The Isha Yoga Center is a spiritually powerful destination featuring the Dhyanalinga - a profound meditative space that doesn't ascribe to any particular belief system.</p><p>Visitors can also immerse themselves in the energized waters of the surya kund and chandra kund, providing deep mental and physical rejuvenation.</p>",
-        dist: "30 km", time: "4-5 Hours",
-        heroImg: "https://images.unsplash.com/photo-1602416049286-90f757d5494a?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1602416049286-90f757d5494a?auto=format&fit=crop&q=80", t: "Sacred Geometrics", p:"Incredible architectural domes."},
-            {img: "images/places/adiyogi2.jpeg", t: "Adiyogi Proximity", p:"Right next to the famous statue."},
-            {img: "https://images.unsplash.com/photo-1604085448655-08e1b10697d4?auto=format&fit=crop&q=80", t: "Tranquil Flow", p:"Lush peaceful environment."}
-        ]
+    {
+        file: 'tirupati.html',
+        title: 'Tirupati',
+        tag: 'Chittoor, Andhra Pradesh',
+        tagline: 'One of the holiest Hindu pilgrimage sites, home to the majestic Sri Venkateswara Temple on the Tirumala Hills.',
+        aboutTitle: 'Divine Pilgrimage',
+        aboutDesc: '<p>Tirupati is a major pilgrimage and cultural city in the Rayalaseema region of Andhra.</p><p>Surrounded by the holy Seshachalam Hills, it features intricate Dravidian architecture and draws millions of devotees worldwide for absolute blessings.</p>',
+        dist: '450 km',
+        time: '1-2 Days',
+        image: 'tirupati.png',
+        high1Icon: 'fa-om', high1Title: 'Sri Venkateswara Temple', high1Desc: 'The incredibly wealthy and culturally monumental hilltop temple.',
+        high2Icon: 'fa-archway', high2Title: 'Dravidian Architecture', high2Desc: 'Exceptional ancient carvings, golden vimanas, and huge gopurams.',
+        high3Icon: 'fa-mountain', high3Title: 'Tirumala Hills', high3Desc: 'A lush green hill range with spiritual pathways to the divine.',
+        query: 'temple,hindu,india'
     },
-    kodaikanal: {
-        title: "Kodaikanal",
-        tagline: "The Princess of Hill Stations. A breathtaking high-altitude sanctuary known for its star-shaped lake and pine forests.",
-        aboutTitle: "Above the Clouds",
-        aboutDesc: "<p>Set in an area of granite cliffs, forested valleys, lakes, and waterfalls, Kodaikanal centers around its man-made, star-shaped Kodai Lake.</p><p>Trek through dense Pine Forests, discover the thrilling Pillar Rocks, or simply enjoy homemade mountain chocolate while breathing in the incredibly crisp, cold air.</p>",
-        dist: "170 km", time: "4-5 Hours",
-        heroImg: "https://images.unsplash.com/photo-1582223838275-cd337e6da48a?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1582223838275-cd337e6da48a?auto=format&fit=crop&q=80", t: "Kodai Lake", p:"The heart of the town."},
-            {img: "https://images.unsplash.com/photo-1594895085472-8874fa703fb7?auto=format&fit=crop&q=80", t: "Pine Forests", p:"Tall majestic woods."},
-            {img: "https://images.unsplash.com/photo-1626207038166-70e6c5bbad42?auto=format&fit=crop&q=80", t: "Pillar Rocks", p:"Towering granite cliffs."}
-        ]
+    {
+        file: 'alleppey.html',
+        title: 'Alleppey',
+        tag: 'Alappuzha, Kerala',
+        tagline: 'Venice of the East, famous for its grand houseboat cruises taking you through the serene Kerala Backwaters.',
+        aboutTitle: 'Backwater Serenity',
+        aboutDesc: '<p>Alleppey is best known for houseboat cruises along the rustic Kerala backwaters.</p><p>A network of tranquil canals, lagoons, and elegant houseboats that smoothly float past paddy fields and tiny village settlements.</p>',
+        dist: '240 km',
+        time: 'Full Day',
+        image: 'alleppey.png',
+        high1Icon: 'fa-ship', high1Title: 'Houseboat Cruise', high1Desc: 'Float along the serene backwaters in a traditional premium Kettuvallam.',
+        high2Icon: 'fa-water', high2Title: 'Vembanad Lake', high2Desc: 'The longest lake in India, deeply majestic with incredible biodiversity.',
+        high3Icon: 'fa-tree', high3Title: 'Paddy Fields', high3Desc: 'Vibrant green agricultural fields operating below sea level.',
+        query: 'kerala,backwaters,boat'
     },
-    blackthunder: {
-        title: "Black Thunder",
-        tagline: "Adventure & Thrills. Asia's No.1 water theme park situated beautifully at the foothills of Nilgiris.",
-        aboutTitle: "Exhilarating Fun",
-        aboutDesc: "<p>Black Thunder is a premier 75-acre water theme park offering dozens of thrilling rides, massive wave pools, and massive slides perfectly integrated into the natural landscape.</p><p>It serves as the ultimate family getaway. Beyond the wild water rides, it also features a massive dry-park, ensuring absolutely endless entertainment for all ages.</p>",
-        dist: "40 km", time: "6-8 Hours",
-        heroImg: "https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&q=80",
-        gal: [
-            {img: "https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&q=80", t: "Wave Pool", p:"Artificial beach experience."},
-            {img: "https://images.unsplash.com/photo-1583344600109-1cdcb40d512a?auto=format&fit=crop&q=80", t: "Massive Slides", p:"Adrenaline rushing drops."},
-            {img: "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&q=80", t: "Family Rides", p:"Endless group joy."}
-        ]
+    {
+        file: 'mysore.html',
+        title: 'Mysore',
+        tag: 'Karnataka, India',
+        tagline: 'A city of royal heritage, featuring the spectacular illumination of the Mysore Palace and rich cultural history.',
+        aboutTitle: 'Royal Heritage',
+        aboutDesc: '<p>Mysore is the cultural capital of Karnataka, serving historically as times of the Wodeyar dynasty.</p><p>The city is famous globally for its grand incredibly ornate palaces, premium silk sarees, yoga heritage, and the spectacular Dasara festival.</p>',
+        dist: '200 km',
+        time: 'Full Day',
+        image: 'mysore.png',
+        high1Icon: 'fa-chess-rook', high1Title: 'Mysore Palace', high1Desc: 'Incredibly radiant palace illuminated by thousands of bulbs.',
+        high2Icon: 'fa-om', high2Title: 'Chamundi Hills', high2Desc: 'Climb the traditional stone steps to visit the majestic temple at the top.',
+        high3Icon: 'fa-leaf', high3Title: 'Brindavan Gardens', high3Desc: 'Extensive terrace gardens featuring magical musical fountains.',
+        query: 'mysore,palace,india'
+    },
+    {
+        file: 'pondicherry.html',
+        title: 'Pondicherry',
+        tag: 'Puducherry, India',
+        tagline: 'A beautiful blend of French colonial architecture and Indian culture, offering quiet beaches and vibrant streets.',
+        aboutTitle: 'French Riviera',
+        aboutDesc: '<p>Pondicherry beautifully retains its French colonial heritage with gorgeous tree-lined streets, mustard-yellow villas, and chic boutiques.</p><p>The aesthetic town offers a rare and beautiful blend of spiritual tranquility at Auroville alongside laid-back coastal aesthetics.</p>',
+        dist: '380 km',
+        time: 'Full Day',
+        image: 'pondicherry.png',
+        high1Icon: 'fa-building', high1Title: 'White Town', high1Desc: 'Walk past aesthetic vintage French colonial villas wrapped in bougainvillea.',
+        high2Icon: 'fa-water', high2Title: 'Promenade Beach', high2Desc: 'A relaxing long coastal stretch flanked by historical statues.',
+        high3Icon: 'fa-om', high3Title: 'Auroville', high3Desc: 'An experimental spiritual township focused on human unity and peace.',
+        query: 'pondicherry,colonial,aesthetic'
+    },
+    {
+        file: 'gokarna.html',
+        title: 'Gokarna',
+        tag: 'Uttara Kannada, Karnataka',
+        tagline: 'A temple town famous for its pristine beaches like Om Beach, blending spiritual tranquility with a tropical vibe.',
+        aboutTitle: 'Tropical Spirituality',
+        aboutDesc: '<p>Gokarna is traditionally a Hindu pilgrimage town that has transformed into a beach lover paradise.</p><p>It features ruggedly beautiful beaches, incredible trekking routes over coastal cliffs, and a uniquely rustic bohemian energy.</p>',
+        dist: '720 km',
+        time: '2-3 Days',
+        image: 'gokarna.png',
+        high1Icon: 'fa-water', high1Title: 'Om Beach', high1Desc: 'A majestic beach naturally shaped like the auspicious Om symbol.',
+        high2Icon: 'fa-route', high2Title: 'Beach Trekking', high2Desc: 'Magnificent trails connecting Paradise, Half-Moon, and Kudle beach.',
+        high3Icon: 'fa-om', high3Title: 'Mahabaleshwar Temple', high3Desc: 'Explore historic deep rooted culture inside ancient temple complexes.',
+        query: 'gokarna,beach,sea'
+    },
+    {
+        file: 'kanyakumari.html',
+        title: 'Kanyakumari',
+        tag: 'Tamil Nadu, India',
+        tagline: 'The southernmost tip of the Indian peninsula where three vibrant oceans meet.',
+        aboutTitle: 'The Southern Tip',
+        aboutDesc: '<p>Kanyakumari sits at the absolute geographical tip of the Indian subcontinent.</p><p>It famously hosts the confluence of the Arabian Sea, the Bay of Bengal, and the Indian Ocean, offering magnificent simultaneous sunsets and moonrises.</p>',
+        dist: '430 km',
+        time: '1-2 Days',
+        image: 'kanyakumari.png',
+        high1Icon: 'fa-sun', high1Title: 'Sunrise Spectacle', high1Desc: 'Unmatched sunrise views rising directly over the intersection of three oceans.',
+        high2Icon: 'fa-monument', high2Title: 'Vivekananda Rock', high2Desc: 'A grand spiritual monument isolated beautifully in the roaring sea.',
+        high3Icon: 'fa-torii-gate', high3Title: 'Thiruvalluvar Statue', high3Desc: 'An impressive 133-foot stone statue dedicated to the famous poet.',
+        query: 'kanyakumari,ocean,sunrise'
     }
-};
+];
 
-let template = fs.readFileSync('place-detail.html', 'utf8');
-
-// Strip out the massive script section entirely so static files are clean!
-template = template.replace(/<script>[\s\S]*?<\/script>/g, '');
-
-for (const [key, data] of Object.entries(placesData)) {
-    let output = template;
-
-    // Use regular expressions to surgically inject the correct content into the template without requiring IDs
-    output = output.replace(/<title>.*?<\/title>/, `<title>${data.title} - Famous Destinations | AUTOBOTZ</title>`);
-    output = output.replace(/<h1 class="hero-title" id="dy-title">.*?<\/h1>/, `<h1 class="hero-title" id="dy-title">${data.title}</h1>`);
-    output = output.replace(/<p class="hero-tagline" id="dy-tagline">.*?<\/p>/, `<p class="hero-tagline" id="dy-tagline">${data.tagline}</p>`);
-    output = output.replace(/id="dy-hero-bg" src=".*?"/, `id="dy-hero-bg" src="${data.heroImg}"`);
+places.forEach(place => {
+    let output = templateStr;
     
-    output = output.replace(/<h2 id="dy-about-title">.*?<\/h2>/, `<h2 id="dy-about-title">${data.aboutTitle}</h2>`);
-    output = output.replace(/<div id="dy-about-desc">[\s\S]*?<\/div>/, `<div id="dy-about-desc">\n                    ${data.aboutDesc}\n                </div>`);
-    output = output.replace(/<strong id="dy-dist">.*?<\/strong>/, `<strong id="dy-dist">${data.dist}</strong>`);
-    output = output.replace(/<strong id="dy-time">.*?<\/strong>/, `<strong id="dy-time">${data.time}</strong>`);
+    // Replace Meta Titles
+    output = output.replace(/<title>.*?<\/title>/, \`<title>\${place.title} - Famous Destinations | AUTOBOTZ</title>\`);
     
-    // Replace gallery images and text
-    output = output.replace(/id="dy-about-img" src=".*?"/, `id="dy-about-img" src="${data.gal[0].img}"`);
-    output = output.replace(/id="dy-gal-1" src=".*?"/, `id="dy-gal-1" src="${data.gal[0].img}"`);
-    output = output.replace(/<h3 id="dy-gal-t1">.*?<\/h3>/, `<h3 id="dy-gal-t1">${data.gal[0].t}</h3>`);
-    output = output.replace(/<p id="dy-gal-p1">.*?<\/p>/, `<p id="dy-gal-p1">${data.gal[0].p}</p>`);
+    // Replace Hero Bg
+    output = output.replace(/src="images\/places\/kodaikanal1.png"/g, \`src="images/places/\${place.image}"\`);
     
-    output = output.replace(/id="dy-gal-2" src=".*?"/, `id="dy-gal-2" src="${data.gal[1].img}"`);
-    output = output.replace(/<h3 id="dy-gal-t2">.*?<\/h3>/, `<h3 id="dy-gal-t2">${data.gal[1].t}</h3>`);
-    output = output.replace(/<p id="dy-gal-p2">.*?<\/p>/, `<p id="dy-gal-p2">${data.gal[1].p}</p>`);
+    // Replace Tag, Title, Tagline
+    output = output.replace(/<span class="hero-tag">.*?<\/span>/, \`<span class="hero-tag"><i class="fa fa-map-marker-alt" style="margin-right: 8px;"></i> \${place.tag}</span>\`);
+    output = output.replace(/<h1 class="hero-title" id="dy-title">.*?<\/h1>/, \`<h1 class="hero-title" id="dy-title">\${place.title}</h1>\`);
+    output = output.replace(/<p class="hero-tagline" id="dy-tagline">.*?<\/p>/, \`<p class="hero-tagline" id="dy-tagline">\${place.tagline}</p>\`);
     
-    output = output.replace(/id="dy-gal-3" src=".*?"/, `id="dy-gal-3" src="${data.gal[2].img}"`);
-    output = output.replace(/<h3 id="dy-gal-t3">.*?<\/h3>/, `<h3 id="dy-gal-t3">${data.gal[2].t}</h3>`);
-    output = output.replace(/<p id="dy-gal-p3">.*?<\/p>/, `<p id="dy-gal-p3">${data.gal[2].p}</p>`);
+    // Replace About Text
+    output = output.replace(/<h2 id="dy-about-title">.*?<\/h2>/, \`<h2 id="dy-about-title">\${place.aboutTitle}</h2>\`);
+    output = output.replace(/<div id="dy-about-desc">.*?<\/div>/s, \`<div id="dy-about-desc">\${place.aboutDesc}</div>\`);
+    
+    // Replace Stats
+    output = output.replace(/<strong id="dy-dist">.*?<\/strong>/, \`<strong id="dy-dist">\${place.dist}</strong>\`);
+    output = output.replace(/<strong id="dy-time">.*?<\/strong>/, \`<strong id="dy-time">\${place.time}</strong>\`);
+    
+    // Replace About Image
+    output = output.replace(/src="images\/places\/kodaikanal2.png"/g, \`src="https://loremflickr.com/800/600/\${place.query.split(',')[0]}?random=9"\`);
+    output = output.replace(/alt="Kodaikanal Pine Forest"/g, \`alt="\${place.title} View"\`);
 
-    const splitTitle = data.title.split(' ')[0];
-    output = output.replace(/<h2 id="dy-cta">.*?<\/h2>/, `<h2 id="dy-cta">Ready to explore ${splitTitle}?</h2>`);
+    // Replace Highlights
+    let highlightHtml = \`
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fa-solid \${place.high1Icon}"></i></div>
+                    <h3>\${place.high1Title}</h3>
+                    <p>\${place.high1Desc}</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fa-solid \${place.high2Icon}"></i></div>
+                    <h3>\${place.high2Title}</h3>
+                    <p>\${place.high2Desc}</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fa-solid \${place.high3Icon}"></i></div>
+                    <h3>\${place.high3Title}</h3>
+                    <p>\${place.high3Desc}</p>
+                </div>\`;
+    output = output.replace(/<div class="highlights-grid">.*?<\/section>/s, \`<div class="highlights-grid">\${highlightHtml}</div></div></section>\`);
 
-    fs.writeFileSync(`${key}.html`, output);
-    console.log(`Generated ${key}.html`);
-}
+    // Replace Gallery
+    let galleryHtml = \`
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/places/\${place.image}" alt="\${place.title}">
+                <div class="gallery-caption">
+                    <h3>\${place.title} Panorama</h3>
+                    <p>Beautiful scenic view.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://loremflickr.com/600/400/\${place.query.split(',')[0]}?random=1" alt="\${place.title} Snapshot">
+                <div class="gallery-caption">
+                    <h3>Aesthetic View</h3>
+                    <p>Captivating perspective.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://loremflickr.com/600/400/\${place.query.split(',')[0]}?random=2" alt="\${place.title} Detail">
+                <div class="gallery-caption">
+                    <h3>Local Heritage</h3>
+                    <p>Rich culture and terrain.</p>
+                </div>
+            </div>
+        </div>\`;
+    output = output.replace(/<div class="gallery-grid">.*?<\/div>\s*<!-- WHY CHOOSE US -->/s, \`\${galleryHtml}\n\n        <!-- WHY CHOOSE US -->\`);
+
+    // Replace CTA
+    output = output.replace(/<h2 id="dy-cta">.*?<\/h2>/, \`<h2 id="dy-cta">Ready to explore \${place.title}?</h2>\`);
+
+    fs.writeFileSync(place.file, output);
+    console.log('Generated ' + place.file);
+});

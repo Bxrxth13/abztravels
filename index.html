@@ -1460,6 +1460,85 @@
             }
         }
     </style>
+        <!-- Destination Toggle & Modal CSS -->
+        <style>
+            /* TAB TOGGLE STYLES */
+            .dest-toggle-wrapper {
+                display: flex;
+                justify-content: center;
+                margin: 30px auto 40px;
+            }
+            .dest-toggle {
+                display: flex;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50px;
+                padding: 5px;
+                box-shadow: inset 0 2px 10px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+                position: relative;
+                border: 1px solid rgba(0,0,0,0.05);
+            }
+            .dest-toggle-btn {
+                padding: 12px 30px;
+                border-radius: 50px;
+                border: none;
+                background: transparent;
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--text-muted);
+                cursor: pointer;
+                transition: all 0.4s ease;
+                position: relative;
+                z-index: 2;
+            }
+            .dest-toggle-btn.active {
+                color: #fff;
+            }
+            .dest-toggle-indicator {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                bottom: 5px;
+                width: calc(50% - 5px);
+                background: linear-gradient(135deg, var(--primary-red), #ff5555);
+                border-radius: 50px;
+                transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                z-index: 1;
+                box-shadow: 0 4px 15px rgba(203, 21, 21, 0.4);
+            }
+
+            /* TAB PANELS */
+            .dest-tab { display: none; animation: fadeSlideUp 0.6s ease forwards; }
+            .dest-tab.active { display: block; }
+            @keyframes fadeSlideUp {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* MODAL UI */
+            .dest-modal {
+                position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+                z-index: 9999; display: flex; align-items: center; justify-content: center;
+                opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+            }
+            .dest-modal.active { opacity: 1; pointer-events: all; }
+            .dest-modal-content {
+                background: #fff; width: 90%; max-width: 1000px; height: 85vh; border-radius: 20px;
+                overflow: hidden; display: flex; flex-direction: column; transform: translateY(50px);
+                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            }
+            .dest-modal.active .dest-modal-content { transform: translateY(0); }
+            .dest-modal-header { padding: 20px 30px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+            .dest-modal-header h3 { margin: 0; font-size: 1.8rem; font-weight: 800; }
+            .dest-modal-close { background: #f4f4f4; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; transition: background 0.3s; }
+            .dest-modal-close:hover { background: #e4e4e4; }
+            .dest-modal-body { flex: 1; overflow-y: auto; padding: 30px; }
+            .dest-modal-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+            .dest-modal-gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; transition: transform 0.3s; }
+            .dest-modal-gallery img:hover { transform: scale(1.05); }
+            .dest-modal-info { font-size: 1.1rem; color: #444; line-height: 1.6; margin-bottom: 20px; }
+            .dest-modal-highlights { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+            .modal-badge { background: rgba(203, 21, 21, 0.1); color: var(--primary-red); padding: 8px 15px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; }
+        </style>
 </head>
 
 <body onload="initialize()">
@@ -2966,6 +3045,16 @@
                     <p>From spiritual retreats nestled deep in the Western Ghats to scenic, cloud-covered hill stations.</p>
                 </div>
 
+                <div class="dest-toggle-wrapper">
+                    <div class="dest-toggle" id="destToggle">
+                        <div class="dest-toggle-indicator" id="destToggleIndicator"></div>
+                        <button class="dest-toggle-btn active" onclick="switchDestTab('coimbatore', this)">Coimbatore Spots</button>
+                        <button class="dest-toggle-btn" onclick="switchDestTab('south-india', this)">South India Destinations</button>
+                    </div>
+                </div>
+
+                <!-- Coimbatore Spots Tab -->
+                <div class="dest-tab active" id="tab-coimbatore">
                 <div class="bento-grid">
                     <!-- Card 1: Adiyogi (Large Vert) -->
                     <div class="bento-card bspan-2 brow-2" onclick="window.location.href='adiyogi.html'">
@@ -3083,7 +3172,141 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Card 10: Aliyar Dam (Horiz) -->
+                    <div class="bento-card bspan-2" onclick="window.location.href='aliyardam.html'">
+                        <img src="images/places/aliyar_dam.png" alt="Aliyar Dam" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">65 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Aliyar Dam</h3>
+                                <p class="bento-subtitle">Scenic Reservior</p>
+                                <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11: Topslip -->
+                    <div class="bento-card" onclick="window.location.href='topslip.html'">
+                        <img src="images/places/topslip.png" alt="Topslip" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">75 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Topslip</h3>
+                                <p class="bento-subtitle">Anamalai Tiger Reserve</p>
+                                <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12: Coonoor -->
+                    <div class="bento-card" onclick="window.location.href='coonoor.html'">
+                        <img src="images/places/coonoor.png" alt="Coonoor" class="bento-img">
+                        <div class="bento-overlay">
+                            <span class="bento-distance">70 km away</span>
+                            <div class="bento-content-wrap">
+                                <h3 class="bento-title">Coonoor</h3>
+                                <p class="bento-subtitle">Nilgiri Tea Estates</p>
+                                <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End of Coimbatore Bento Grid -->
+                </div> <!-- End of Coimbatore Tab -->
+
+                <!-- South India Tab -->
+                <div class="dest-tab" id="tab-south-india">
+                    <div class="bento-grid">
+                        <div class="bento-card bspan-2 brow-2" onclick="window.location.href='munnar.html'">
+                            <img src="images/places/munnar.png" alt="Munnar" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Munnar, Kerala</h3>
+                                    <p class="bento-subtitle">Hill Station Paradise</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card" onclick="window.location.href='varkala.html'">
+                            <img src="images/places/varkala.png" alt="Varkala" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Varkala</h3>
+                                    <p class="bento-subtitle">Cliff Beach</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card" onclick="window.location.href='tirupati.html'">
+                            <img src="images/places/tirupati.png" alt="Tirupati" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Tirupati</h3>
+                                    <p class="bento-subtitle">Spiritual Capital</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card bspan-2" onclick="window.location.href='alleppey.html'">
+                            <img src="images/places/alleppey.png" alt="Alleppey" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Alleppey</h3>
+                                    <p class="bento-subtitle">Kerala Backwaters</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card" onclick="window.location.href='mysore.html'">
+                            <img src="images/places/mysore.png" alt="Mysore" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Mysuru</h3>
+                                    <p class="bento-subtitle">Royal Heritage</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card" onclick="window.location.href='pondicherry.html'">
+                            <img src="images/places/pondicherry.png" alt="Pondicherry" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Puducherry</h3>
+                                    <p class="bento-subtitle">French Riviera of the East</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card bspan-2" onclick="window.location.href='gokarna.html'">
+                            <img src="images/places/gokarna.png" alt="Gokarna" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Gokarna</h3>
+                                    <p class="bento-subtitle">Om Beach & Spirituality</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bento-card" onclick="window.location.href='kanyakumari.html'">
+                            <img src="images/places/kanyakumari.png" alt="Kanyakumari" class="bento-img">
+                            <div class="bento-overlay">
+                                <div class="bento-content-wrap">
+                                    <h3 class="bento-title">Kanyakumari</h3>
+                                    <p class="bento-subtitle">Southern Tip</p>
+                                    <span class="bento-explore">Explore <i class="fa fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of South India Bento Grid -->
+                </div> <!-- End of South India Tab -->
 
                 <div class="dest-cta-area">
                     <div class="cta-text-left">
@@ -3652,6 +3875,82 @@
                 }
             }
         </style>
+    <!-- Destination Modal HTML -->
+    <div class="dest-modal" id="destModal" onclick="closePlaceModal(event)">
+        <div class="dest-modal-content">
+            <div class="dest-modal-header">
+                <h3 id="modalTitle">Destination</h3>
+                <button class="dest-modal-close" onclick="closePlaceModal(event, true)"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="dest-modal-body">
+                <div class="dest-modal-highlights" id="modalHighlights"></div>
+                <p class="dest-modal-info" id="modalDesc"></p>
+                <h4 style="margin-top: 20px; font-weight: 700;">Immersive Gallery</h4>
+                <div class="dest-modal-gallery" id="modalGallery"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Toggling logic
+        function switchDestTab(tab, btn) {
+            document.querySelectorAll('.dest-tab').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.dest-toggle-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('tab-' + tab).classList.add('active');
+            btn.classList.add('active');
+            
+            const indicator = document.getElementById('destToggleIndicator');
+            if (tab === 'south-india') {
+                indicator.style.transform = 'translateX(100%)';
+            } else {
+                indicator.style.transform = 'translateX(0)';
+            }
+        }
+
+        // Modal logic with data
+        const placeData = {
+            'Aliyar Dam': { desc: 'A scenic reservoir nestled in the foothills of Valparai, perfect for boating and picnics.', badges: ['Scenic Nature', 'Boating', 'Reservoir'], query: 'lake,dam,landscape' },
+            'Topslip': { desc: 'Located in the Anamalai Tiger Reserve, known for elephant safaris and pristine dense forests.', badges: ['Wildlife Safari', 'Forest Trek', 'Elephant Camp'], query: 'forest,safari,jungle' },
+            'Coonoor': { desc: 'Famous for its production of Nilgiri tea, Coonoor offers sweeping views of the lush tea estates and the Heritage Train.', badges: ['Tea Gardens', 'Hill Station', 'Cool Climate'], query: 'tea,nilgiris,coonoor' },
+            'Munnar': { desc: 'Kerala’s most iconic hill station, marked by sprawling tea plantations, winding roads, and misty mountain tops.', badges: ['Hill Station', 'Tea Estates', 'Honeymoon'], query: 'munnar,hills,tea' },
+            'Varkala': { desc: 'A unique coastal town in Kerala where red laterite cliffs plunge directly into the Arabian Sea.', badges: ['Beach', 'Cliffs', 'Coastal'], query: 'varkala,beach,cliffs' },
+            'Tirupati': { desc: 'One of the holiest Hindu pilgrimage sites, home to the majestic Sri Venkateswara Temple on the Tirumala Hills.', badges: ['Pilgrimage', 'Temple', 'Heritage'], query: 'temple,hindu,india' },
+            'Alleppey': { desc: 'Venice of the East, famous for its grand houseboat cruises taking you through the serene Kerala Backwaters.', badges: ['Backwaters', 'Houseboat', 'Relaxation'], query: 'kerala,backwaters,boat' },
+            'Mysore': { desc: 'A city of royal heritage, featuring the spectacular illumination of the Mysore Palace and rich cultural history.', badges: ['Palace', 'Heritage', 'Royal City'], query: 'mysore,palace,india' },
+            'Pondicherry': { desc: 'A beautiful blend of French colonial architecture and Indian culture, offering quiet beaches and charming vibrant streets.', badges: ['French Colony', 'Beach', 'Cafes'], query: 'pondicherry,colonial,aesthetic' },
+            'Gokarna': { desc: 'A temple town famous for its pristine beaches like Om Beach, blending spiritual tranquility with a tropical vibe.', badges: ['Pristine Beaches', 'Temples', 'Yoga'], query: 'gokarna,beach,sea' },
+            'Kanyakumari': { desc: 'The southernmost tip of the Indian peninsula where three vibrant oceans meet.', badges: ['Ocean Confluence', 'Sunrise View', 'Monuments'], query: 'kanyakumari,ocean,sunrise' }
+        };
+
+        function openPlaceModal(place) {
+            let data = placeData[place];
+            if(!data) data = { desc: 'A beautiful destination worth exploring.', badges: ['Travel', 'Explore'], query: 'travel,landscape' };
+
+            document.getElementById('modalTitle').innerText = place;
+            document.getElementById('modalDesc').innerText = data.desc;
+            
+            const highlightsHtml = data.badges.map(b => `<span class="modal-badge">${b}</span>`).join('');
+            document.getElementById('modalHighlights').innerHTML = highlightsHtml;
+
+            let galleryHtml = '';
+            let query = data.query;
+            for(let i=1; i<=12; i++) { 
+                galleryHtml += `<img src="https://loremflickr.com/600/400/${query}?random=${i}" alt="${place} Gallery ${i}" loading="lazy">`;
+            }
+            document.getElementById('modalGallery').innerHTML = galleryHtml;
+
+            document.getElementById('destModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePlaceModal(event, force=false) {
+            if(force || event.target.id === 'destModal') {
+                document.getElementById('destModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
 </body>
 
 </html>
